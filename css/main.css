@@ -1,48 +1,89 @@
-.box{
+.box {
     font-family: 'Courier New', Courier, monospace;
-    }
-    .header_1{
-        background-color: burlywood;
-        width:auto;
-        height:50px;
-    }
-    .header_candado{
+}
+
+.header_1 {
+    background-color: burlywood;
+    width: auto;
+    height: 50px;
+}
+
+.header_candado {
     margin-top: 10px;
     height: 30px;
-    width:33px;
+    width: 33px;
     float: right;
     padding-right: 50px;
-    }
-    .header_2{
-        background-color:bisque;
+}
+
+.header_2 {
+    background-color: bisque;
     width: auto;
     height: 200px;
-    
-    }
-    .logotipo{
-    width:225px;
+
+}
+
+.logotipo {
+    width: 225px;
     height: auto;
     padding-left: 50px;
-    padding-top:30px;
-    }
+    padding-top: 30px;
+}
 
-    #menu{
-margin-top: -120px;
-margin-left:350px;
-    }
-#menu ul{
-    list-style:none;
-    margin:0;
+#menu {
+    margin-top: -50px;;
+    margin-left: 350px;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
     padding: 0;
-    }
-#menu ul li{
-    display:inline-block;
-    }
-#menu ul li a{
-    color:black;
+}
+
+#menu ul li {
+    display: inline-block;
+}
+
+#menu ul li a {
+    color: black;
     text-decoration: none;
     padding: 10px;
-    }
-#menu ul li a:hover{
-        background-color: burlywood;
-    }
+}
+
+#menu ul li a:hover {
+    background-color: burlywood;
+}
+
+#user_cart {
+    float: right;
+    margin-top: -20px;
+    margin-left: 350px;
+    padding-right: 50px;
+}
+
+#user_cart ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#user_cart ul li {
+    display: inline-block;
+}
+
+#user_cart ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#user_cart ul li a:hover {
+    background-color: burlywood;
+}
+.usuario{
+    width:20px;
+}
+.carrito{
+    width:20px;
+}
