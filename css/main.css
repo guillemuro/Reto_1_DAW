@@ -1,6 +1,25 @@
 .box{
-
+font-family: 'Courier New', Courier, monospace;
+}
+.header_1{
+    background-color: burlywood;
+    width:auto;
+    height:50px;
 }
 .header_candado{
-height: 20px;
+margin-top: 10px;
+height: 30px;
+width:33px;
+float: right;
+padding-right: 50px;
+}
+.header_2{
+    background-color:bisque;
+width: auto;
+height: 50px;
+}
+.logotipo{
+width:150px;
+height: auto;
+
 }
