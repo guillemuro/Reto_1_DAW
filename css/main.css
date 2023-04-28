@@ -3,13 +3,15 @@
 }
 
 .header_1 {
-    background-color: burlywood;
-    width: auto;
-    height: 50px;
+    margin-top:-10px;
+    background-color: #542d21;
+    width: 1450px;
+    height: 30px;
+    margin-left:-10px;
+    margin-right: -10px;
 }
 
 .header_candado {
-    margin-top: 10px;
     height: 30px;
     width: 33px;
     float: right;
@@ -17,7 +19,6 @@
 }
 
 .header_2 {
-    background-color: bisque;
     width: auto;
     height: 200px;
 
@@ -86,4 +87,9 @@
 }
 .carrito{
     width:20px;
+}
+body{
+background-image: url(../imagenes/banner.png);
+background-size: 100% auto;
+  background-repeat: no-repeat;
 }
