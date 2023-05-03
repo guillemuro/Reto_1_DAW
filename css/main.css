@@ -6,10 +6,6 @@ body {
     margin: 0;
 }
 
-.boton_menu_responsive {
-    display: none;
-}
-
 .tamanyo_h1 {
     font-size: 3.2vw;
     color: #fff;
@@ -326,6 +322,8 @@ body {
 .newsletter {
     display: flex;
     padding-bottom: 1vw;
+    height: 1.8vw;
+    height: auto;
 }
 
 .boton_newsletter {
