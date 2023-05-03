@@ -6,10 +6,6 @@ body {
     margin: 0;
 }
 
-.boton_menu_responsive {
-    display: none;
-}
-
 .tamanyo_h1 {
     font-size: 3.2vw;
     color: #fff;
