@@ -326,6 +326,8 @@ body {
 .newsletter {
     display: flex;
     padding-bottom: 1vw;
+    height: 1.8vw;
+    height: auto;
 }
 
 .boton_newsletter {
