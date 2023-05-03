@@ -19,6 +19,7 @@ a:visited {
     color: #fff;
 }
   
+
 .tamanyo_h1 {
     font-size: 3.2vw;
     color: #fff;
@@ -119,185 +120,42 @@ a:visited {
     width: 1.4vw;
 }
 
-.cursiva {
-    font-weight: 300;
-}
-
-.contenedor_banner_principal {
-    position: relative;
-}
-
-.texto_banner_principal {
-    position: absolute;
-    z-index: 1;
-    top: 32%;
-    right: 0;
-    text-align: right;
-    padding-right: 3.9vw;
-}
 
 .banner {
     width: 100%;
     display: block;
 }
 
-.banner_tea {
+.contenedor_privacy_policy {
     position: relative;
-    overflow: hidden;
 }
 
-.info_banner_tea {
-    position: absolute;
-    z-index: 1; 
-    left: 5%;
-    top: 12%;
-}
-
-.boton_bad_coffee {
-    font-family: 'Inter', sans-serif;
-    background-color: #43241a;
-    color: #fff;
-    border: #43241a;
-    float: right;
-    padding: 1.2vw;
-    font-size: 1.1vw;
-    width: 15vw;
-}
-
-.boton_tea {
-    font-family: 'Inter', sans-serif;
-    background-color: #43241a;
-    color: #fff;
-    border: #43241a;
-    float: right;
-    padding: 1.2vw;
-    font-size:  1.1vw;
-    width: 10vw;
-}
-
-.cuadrados_body {
-    display: grid;
-    padding: 3.33vw;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: auto;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    column-gap: 3.33vw;
-    grid-row-gap: 3.3vw;
-    color: #000;
-}
-
-.imagen_grid {
-    width: 100%;
-}
-
-.grid_body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.texto_grid_body {
+.titulo_principal {
     position: absolute;
     color: #fff;
     font-size: 2.8vw;
-    text-align: center;
-}
-
-.texto_grid_body_2 {
-    font-weight: 300;
-    font-size: 1.5vw;
-    color: #fff;
-}
-
-#banner_coffee_of_the_month {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-    top: 22%;
-}
-
-.flex_coffee_month {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.teclas {
-    padding-right: 1.3vw;
-    width: 12vw;
-    height: 5.3vw;
-}
-
-.boton_coffee_month {
-    font-family: 'Inter', sans-serif;
-    background-color: #43241a;
-    color: #fff;
-    border: #43241a;
-    padding: 1.2vw;
-    font-size: 1.1vw;
-    width: 10vw;
-}
-
-.texto_coffee_month {
-    color: #fff;
-    font-weight: 300;
-    font-size: 1.5vw;
-    padding-bottom: 1vw;
-}
-
-.sello_coffee {
-    position: absolute;
-    width: 10%;
-    top: 5%;
+    width: 100%;
+    top: 43%;
     right: 0;
-    padding-right: 4vw;
+    text-align: right;
+    padding-right: 3.9vw;
 }
 
-.cafeteria_ubicacion {
-    display: flex;
+.subtitulos {
+    font-weight: 300;
+    font-size: 1.5vw;
+    background-color: #43241a;
+    padding: 0.8vw;
 }
 
-.direccion_cafeteria {
-    width: 70%;
+.marron {
+    color: rgb(114, 40, 20);
 }
 
-.cafeteria {
-    display: block;
-    width: 45%;
-}
-
-.granos_cafe {
-    width: 10vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.ubi_cafeteria {
-    width: 3vw;
-    height: 3vw;
-    margin-top: 2.3vw;
-    padding-right: 0.7vw;
-}
-
-.titulo_cafeteria {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-top: 3vw;
-}
-
-.texto_cafeteria {
+.cuerpo_mensaje {
+    margin: 5vw 10vw;
     text-align: justify;
-    margin-left: 18%;
-    margin-right: 17%;
-    font-size: 1.2vw;
-    margin-top: -10px;
-    padding-bottom: 1.5vw;
+    font-size: 1.1vw;
 }
 
 .footer {
