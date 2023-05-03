@@ -24,7 +24,6 @@ body {
     color: #000;
 }
 
-/*HEADER*/
 .header {
     width: 100%;
     position: absolute;
@@ -52,7 +51,7 @@ body {
     align-items: center;
 }
 
-.logotipo { /*LOOOOOOOOOOOOOOOOOOOOOOGOTIPO*/
+.logotipo { 
     width: 14vw;
     height: auto;
     padding-left: 4.5vw;
@@ -80,20 +79,12 @@ body {
 }
 
 #user_cart {
-    /*padding-left: 15.5vw;*/
     position: absolute;
     right: 0;
     padding-right: 3.9vw;
     margin: 0;
     top: 50%;
 }
-
-
-
-
-
-
-
 
 #user_cart ul {
     list-style: none;
@@ -119,12 +110,6 @@ body {
     width: 1.4vw;
 }
 
-
-
-
-
-
-
 .cursiva {
     font-weight: 300;
 }
@@ -142,9 +127,6 @@ body {
     padding-right: 3.9vw;
 }
 
-
-
-/*BODY*/
 .banner {
     width: 100%;
     display: block;
@@ -309,9 +291,6 @@ body {
     padding-bottom: 1.5vw;
 }
 
-
-
-/*FOOTER*/
 .footer {
     background-color: #43241a;
     padding: 2vw;
@@ -371,15 +350,12 @@ body {
     margin-left: 0;
 }
 
-
-/*MENU RESPONSIVE*/
 @media (max-width: 780px) {
     #menu {
     font-size: 2vw;
     }
 
     #user_cart {
-        /*padding-left: 15.5vw;*/
         padding-right: 3.9vw;
         margin: 0;
         top: 45%;
