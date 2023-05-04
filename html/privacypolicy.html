@@ -19,29 +19,48 @@
         <div class="box">
             <header class="header">
                 <div class="header_1">
-                    <a href="lock.html"><img class="header_candado"
-                            src="../imagenes/candado_header.png"></a>
-                </div>
-                <div id="user_cart">
-                    <ul>
-                        <li><a href="#"><img class="usuario"
-                                    src="../imagenes/usuario.png"></a></li>
-                        <li><a href="#"><img class="carrito"
-                                    src="../imagenes/carrito-de-compras.png"></a></li>
-                    </ul>
-                </div>
-                <div class="header_2">
-                    <a href="./main.html"><img class="logotipo"
-                            src="../imagenes/logotipo_blanco.png"></a>
-                    <div id="menu">
+                    <div class="container">
+                        <div class="overlay">
+                            <img class="header_candado" src="../imagenes/candado_header.png">
+                        </div>
+                        <div class="blur-layer"></div>
+                        <div class="message-overlay">
+                            <div class="contenedor_zona_privada">
+                                <div class="informacion_zona_privada">
+                                    <img class="x_zona_privada" src="../imagenes/x.png"/>
+                                    <img class="candado_zona_privada" src="../imagenes/candado_priv.png"/>
+                                    <h1 class="h1_black">Private zone</h1>
+                                    <div class="contenedor_correo">
+                                        <input type="text" id="input" required="Comp">
+                                        <label for="input" class="label">Enter your email address</label>
+                                        <div class="underline"></div>
+                                    </div> 
+                                    <a href="../html/lock.html"><button class="boton_zona_privada" type="submit"><strong>GO THERE!</strong></button></a>         
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    </div>
+                    <div id="user_cart">
                         <ul>
+                            <li><a href="#"><img class="usuario" src="../imagenes/usuario.png"></a></li>
+                            <li><a href="#"><img class="carrito" src="../imagenes/carrito-de-compras.png"></a></li>            
+                        </ul>
+                    </div>
+                    <div class="header_2">
+                        <a href="../html/main.html"><img class="logotipo" src="../imagenes/logotipo_blanco.png"></a>
+                        <div id="menu">
+                            <ul>
                             <li><a href="#">Our coffees</a></li>
                             <li><a href="#">Our menu</a></li>
                             <li><a href="#">Merchandising</a></li>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </header>
+                </header>
+                
+            <img onclick="topFunction()" id="boton_scroll" title="boton_scroll" src="../imagenes/scroll.png"/>
 
             <div class="contenedor_privacy_policy">
                 <h1 class="titulo_principal">Privacy policy<br><span
@@ -140,7 +159,7 @@
                         <p><a href="privacypolicy.html">Privacy Policy</a></p>
                         <p>Terms of Service</p>
                         <p>Cookie Policy</p>
-                        <p>Conditions of Sale<br> and Contracting</p>
+                        <p>Conditions of Sale and <br>Contracting</p>
                     </div>
                     <div>
                         <h3>Customer care</h3>
@@ -162,6 +181,7 @@
                         the <a href="privacypolicy.html"><u>Privacy Policy</u></a>
                         and <u>Terms of Service</u>
                         <br>
+                        <br>
                         <h3>Connect with Us</h3>
                         <div class="iconos_footer">
                             <img class="icono_f"
@@ -182,6 +202,7 @@
                 <p class="copyright">© 2023 <strong>Ctlr Alt + Coffee</strong>.
                     All rights reserved</p>
             </footer>
+            <script src="../javascript/main.js"></script>
         </div>
     </body>
 </html>
