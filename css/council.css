@@ -2,6 +2,7 @@
     font-family: 'Inter', sans-serif;
 }
 
+
 body {
     margin: 0;
 }
@@ -10,15 +11,15 @@ a {
     outline: none;
     text-decoration: none;
 }
-  
+
 a:link {
     color: #fff;
 }
-  
+
 a:visited {
     color: #fff;
 }
-  
+
 
 .tamanyo_h1 {
     font-size: 3.2vw;
@@ -61,7 +62,7 @@ a:visited {
     align-items: center;
 }
 
-.logotipo { 
+.logotipo {
     width: 14vw;
     height: auto;
     padding-left: 4.5vw;
@@ -111,12 +112,12 @@ a:visited {
     text-decoration: none;
 }
 
-.usuario{
+.usuario {
     width: 1.4vw;
     padding-right: 1.2vw;
 }
 
-.carrito{
+.carrito {
     width: 1.4vw;
 }
 
@@ -155,7 +156,10 @@ a:visited {
 .cuerpo_mensaje {
     margin: 5vw 10vw;
     text-align: justify;
+    justify-content: center;
+    align-items: center;
     font-size: 1.1vw;
+    padding-left: 5%;
 }
 
 .footer {
@@ -164,7 +168,7 @@ a:visited {
     color: #fff;
 }
 
-.contenedor_footer { 
+.contenedor_footer {
     display: flex;
     font-size: 1vw;
 }
@@ -236,7 +240,7 @@ a:visited {
 
 @media (max-width: 780px) {
     #menu {
-    font-size: 2vw;
+        font-size: 2vw;
     }
 
     #user_cart {
@@ -245,11 +249,11 @@ a:visited {
         top: 45%;
     }
 
-    .usuario{
+    .usuario {
         width: 2vw;
     }
-    
-    .carrito{
+
+    .carrito {
         width: 2vw;
     }
 
@@ -261,10 +265,10 @@ a:visited {
 
 
 #boton_scroll {
-    display: none; 
-    position: fixed; 
-    bottom: 0; 
-    right: 1.5vw; 
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 1.5vw;
     z-index: 99;
     cursor: pointer;
     background-color: red;
@@ -272,9 +276,9 @@ a:visited {
     padding: 0.8vw;
     margin-bottom: 2vw;
 }
-  
+
 #boton_scroll:hover {
-    background-color: red; 
+    background-color: red;
 }
 
 .contenedor_zona_privada {
@@ -286,7 +290,7 @@ a:visited {
     position: absolute;
     z-index: 2;
     background-color: #fff;
-    padding: 4vw; 
+    padding: 4vw;
     top: 20vw;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -315,7 +319,7 @@ a:visited {
     padding: 0.4vw 0vw;
     outline: none;
 }
-  
+
 .contenedor_correo .label {
     position: absolute;
     top: 0;
@@ -323,9 +327,9 @@ a:visited {
     color: #ccc;
     transition: all 0.3s ease;
 }
-  
-.contenedor_correo input[type="text"]:focus ~ .label,
-.contenedor_correo input[type="text"]:valid ~ .label {
+
+.contenedor_correo input[type="text"]:focus~.label,
+.contenedor_correo input[type="text"]:valid~.label {
     top: -1.5vw;
     font-size: 0.9vw;
     color: #43241a;
@@ -334,7 +338,7 @@ a:visited {
 .h1_black {
     font-size: 2.5vw;
 }
-  
+
 .contenedor_correo .underline {
     position: absolute;
     bottom: 0;
@@ -345,9 +349,9 @@ a:visited {
     transform: scaleX(0);
     transition: all 0.3s ease;
 }
-  
-.contenedor_correo input[type="text"]:focus ~ .underline,
-.contenedor_correo input[type="text"]:valid ~ .underline {
+
+.contenedor_correo input[type="text"]:focus~.underline,
+.contenedor_correo input[type="text"]:valid~.underline {
     transform: scaleX(1);
 }
 
@@ -370,7 +374,7 @@ a:visited {
     padding-right: 1vw;
     padding-top: 1vw;
     cursor: pointer;
-  }
+}
 
 .overlay {
     cursor: pointer;
