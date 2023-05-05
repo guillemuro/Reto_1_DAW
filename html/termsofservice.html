@@ -19,20 +19,37 @@
         <div class="box">
             <header class="header">
                 <div class="header_1">
-                    <a href="lock.html"><img class="header_candado"
-                            src="../imagenes/candado_header.png"></a>
+                    <div class="container">
+                        <div class="overlay">
+                            <img class="header_candado" src="../imagenes/candado_header.png">
+                        </div>
+                        <div class="blur-layer"></div>
+                        <div class="message-overlay">
+                            <div class="contenedor_zona_privada">
+                                <div class="informacion_zona_privada">
+                                    <img class="x_zona_privada" src="../imagenes/x.png"/>
+                                    <img class="candado_zona_privada" src="../imagenes/candado_priv.png"/>
+                                    <h1 class="h1_black">Private zone</h1>
+                                    <div class="contenedor_correo">
+                                        <input type="text" id="input" required="Comp">
+                                        <label for="input" class="label">Enter your email address</label>
+                                        <div class="underline"></div>
+                                    </div> 
+                                    <a href="../html/lock.html"><button class="boton_zona_privada" type="submit"><strong>GO THERE!</strong></button></a>         
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+    
                 <div id="user_cart">
                     <ul>
-                        <li><a href="#"><img class="usuario"
-                                    src="../imagenes/usuario.png"></a></li>
-                        <li><a href="#"><img class="carrito"
-                                    src="../imagenes/carrito-de-compras.png"></a></li>
+                        <li><a href="#"><img class="usuario" src="../imagenes/usuario.png"></a></li>
+                        <li><a href="#"><img class="carrito" src="../imagenes/carrito-de-compras.png"></a></li>            
                     </ul>
                 </div>
                 <div class="header_2">
-                    <a href="./main.html"><img class="logotipo"
-                            src="../imagenes/logotipo_blanco.png"></a>
+                    <a href="../html/main.html"><img class="logotipo" src="../imagenes/logotipo_blanco.png"></a>
                     <div id="menu">
                         <ul>
                             <li><a href="#">Our coffees</a></li>
@@ -42,6 +59,8 @@
                     </div>
                 </div>
             </header>
+                
+            <img onclick="topFunction()" id="boton_scroll" title="boton_scroll" src="../imagenes/scroll.png"/>
 
             <div class="contenedor_privacy_policy">
                 <h1 class="titulo_principal">Terms of Service<br><span
@@ -51,9 +70,8 @@
             </div>
 
             <div class="cuerpo_mensaje">
-
-                <h3 class="marron">Terms of Service?</h3>
-                <p>"Welcome to our café! These Terms of Service ("Terms")
+                <h3 class="marron">Terms of Service</h3>
+                <p>Welcome to our coffee shop! These Terms of Service ("Terms")
                     outline the rules and regulations that govern your use of
                     our website,
                     mobile app, and any other services we offer (collectively,
@@ -61,7 +79,7 @@
                     agree to
                     abide by these Terms and our Privacy Policy. If you do not
                     agree to these Terms or our Privacy Policy, please refrain
-                    from using our Services."</p>
+                    from using our Services.</p>
                 <br>
 
                 <h3 class="marron">Use of Our Services</h3>
@@ -84,7 +102,6 @@
                     your account. You agree to notify us immediately of any
                     unauthorized use of your account or password or any other
                     breach of security.</p>
-
                 <br>
                 <h3 class="marron">Pricing and Payment</h3>
                 <p>We reserve the right to change our pricing and payment
@@ -145,85 +162,73 @@
                 <h3 class="marron">Governing Law and Jurisdiction</h3>
                 <p>These Terms shall be governed by and construed in accordance
                     with the laws of the State of New York, without giving
-                    effect to</p>
+                    effect to any principles of conflicts of law. You agree that 
+                    any action at law or in equity arising out of or relating to 
+                    these Terms or the Service shall be filed only in the state 
+                    or federal courts located in New York County, New York, and 
+                    you hereby consent and submit to the personal jurisdiction 
+                    of such courts for the purposes of litigating any such action.</p>
             </div>
 
             <footer class="footer">
                 <div class="contenedor_footer">
                     <div>
-                        <img class="logotipo_footer"
-                            src="../imagenes/logotipo_blanco.png"/>
+                        <img class="logotipo_footer" src="../imagenes/logotipo_blanco.png"/>
                         <h3>Payment options</h3>
                         <div class="tarjetas_credito">
-                            <img id="icono_tarjeta"
-                                src="../imagenes/tarjeta_mastercard.png"/>
-                            <img id="icono_tarjeta"
-                                src="../imagenes/tarjeta_visa.png"/>
-                            <img id="icono_tarjeta"
-                                src="../imagenes/tarjeta_amex.png"/>
+                            <img id="icono_tarjeta" src="../imagenes/tarjeta_mastercard.png"/>
+                            <img id="icono_tarjeta" src="../imagenes/tarjeta_visa.png"/>
+                            <img id="icono_tarjeta" src="../imagenes/tarjeta_amex.png"/>
                             <br>
-                            <img id="icono_tarjeta"
-                                src="../imagenes/tarjeta_paypal.png"/>
-                            <img id="icono_tarjeta"
-                                src="../imagenes/tarjeta_discover.png"/>
-                            <img id="icono_tarjeta"
-                                src="../imagenes/tarjeta_jcb.png"/>
+                            <img id="icono_tarjeta" src="../imagenes/tarjeta_paypal.png"/>
+                            <img id="icono_tarjeta" src="../imagenes/tarjeta_discover.png"/>
+                            <img id="icono_tarjeta" src="../imagenes/tarjeta_jcb.png"/>
                         </div>
                         <br>
-                    </div>
-                    <div>
+                    </div>  
+                    <div class="about">
                         <h3>About</h3>
                         <p>Our Story</p>
-                        <p>Work with Us</p>
+                        <p><a href="workUs.html">Work with us</a></p>
                         <p>Allergens</p>
                     </div>
-                    <div>
+                    <div class="site_terms">
                         <h3>Site terms</h3>
                         <p><a href="privacypolicy.html">Privacy Policy</a></p>
-                        <p>Terms of Service</p>
-                        <p>Cookie Policy</p>
+                        <p><a href="termsofservice.html">Terms of Service</a></p>
+                        <p><a href="cookies.html">Cookie Policy</a></p>
                         <p>Conditions of Sale<br> and Contracting</p>
                     </div>
-                    <div>
+                    <div class="customer_care">
                         <h3>Customer care</h3>
                         <p>Contact us</p>
                         <p>Shipping & Returns</p>
                     </div>
-                    <div>
-                        <h3>News, promotions and discounts: all in one place.
-                            <br>Suscribe now!</h3>
+                    <div class="otra_columna">
+                        <h3>News, promotions and discounts: all in one place. <br>Suscribe now!</h3>
                         <div class="newsletter">
                             <form>
-                                <input type="text" name="newsletter"
-                                    class="email_newsletter">
+                                <input type="text" name="newsletter" class="email_newsletter">
                             </form>
                             <button class="boton_newsletter" type="submit"><strong>JOIN</strong></button>
                         </div>
-                        <input type="checkbox" name="terms" value="Acepta"
-                            class="checkbox_newsletter"> I have read and accept
-                        the <a href="privacypolicy.html"><u>Privacy Policy</u></a>
-                        and <u>Terms of Service</u>
+                        <input type="checkbox" name="terms" value="Acepta" class="checkbox_newsletter">  I have read and accept the <a href="privacypolicy.html"><u>Privacy Policy</u></a> and <u>Terms of Service</u>
+                        <br>
                         <br>
                         <h3>Connect with Us</h3>
                         <div class="iconos_footer">
-                            <img class="icono_f"
-                                src="../imagenes/footer_facebook.png"/>
-                            <img class="icono_f"
-                                src="../imagenes/footer_twitter.png"/>
-                            <img class="icono_f"
-                                src="../imagenes/footer_instagram.png"/>
-                            <img class="icono_f"
-                                src="../imagenes/footer_youtube.png"/>
-                            <img class="icono_f"
-                                src="../imagenes/footer_pinterest.png"/>
-                            <img class="icono_f"
-                                src="../imagenes/footer_tiktok.png"/>
+                            <img class="icono_f" src="../imagenes/footer_facebook.png"/>
+                            <img class="icono_f" src="../imagenes/footer_twitter.png"/>
+                            <img class="icono_f" src="../imagenes/footer_instagram.png"/>
+                            <img class="icono_f" src="../imagenes/footer_youtube.png"/>
+                            <img class="icono_f" src="../imagenes/footer_pinterest.png"/>
+                            <img class="icono_f" src="../imagenes/footer_tiktok.png"/>
                         </div>
                     </div>
                 </div>
-                <p class="copyright">© 2023 <strong>Ctlr Alt + Coffee</strong>.
-                    All rights reserved</p>
+                <p class="copyright">© 2023 <strong>Ctlr Alt + Coffee</strong>. All rights reserved</p>
             </footer>
+            <script src="../javascript/main.js"></script>
         </div>
     </body>
 </html>

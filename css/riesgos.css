@@ -189,11 +189,27 @@ a:visited {
     color: #fff;
 }
 
-.contenedor_footer {
+.contenedor_footer { 
     display: flex;
     font-size: 1vw;
-    column-gap: 5.8vw;
 }
+
+.about {
+    padding-left: 10vw;
+}
+
+.site_terms {
+    padding-left: 4.9vw;
+}
+
+.customer_care {
+    padding-left: 4.9vw;
+}
+
+.otra_columna {
+    padding-left: 4.9vw;
+}
+
 
 .copyright {
     text-align: center;
@@ -336,9 +352,13 @@ a:visited {
   
 .contenedor_correo input[type="text"]:focus ~ .label,
 .contenedor_correo input[type="text"]:valid ~ .label {
-    top: -20px;
+    top: -1.5vw;
     font-size: 0.9vw;
     color: #43241a;
+}
+
+.h1_black {
+    font-size: 2.5vw;
 }
   
 .contenedor_correo .underline {

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Reto 1DAW"/>
         <meta name="authors" content="Eva, Paula, Guillermo"/>
-        <title>Pagina COOKIES POLICY</title>
+        <title>Pagina COOKIE POLICY</title>
         <link rel="stylesheet" href="../css/cookies.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,20 +19,37 @@
         <div class="box">
             <header class="header">
                 <div class="header_1">
-                    <a href="lock.html"><img class="header_candado"
-                            src="../imagenes/candado_header.png"></a>
+                    <div class="container">
+                        <div class="overlay">
+                            <img class="header_candado" src="../imagenes/candado_header.png">
+                        </div>
+                        <div class="blur-layer"></div>
+                        <div class="message-overlay">
+                            <div class="contenedor_zona_privada">
+                                <div class="informacion_zona_privada">
+                                    <img class="x_zona_privada" src="../imagenes/x.png"/>
+                                    <img class="candado_zona_privada" src="../imagenes/candado_priv.png"/>
+                                    <h1 class="h1_black">Private zone</h1>
+                                    <div class="contenedor_correo">
+                                        <input type="text" id="input" required="Comp">
+                                        <label for="input" class="label">Enter your email address</label>
+                                        <div class="underline"></div>
+                                    </div> 
+                                    <a href="../html/lock.html"><button class="boton_zona_privada" type="submit"><strong>GO THERE!</strong></button></a>         
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+    
                 <div id="user_cart">
                     <ul>
-                        <li><a href="#"><img class="usuario"
-                                    src="../imagenes/usuario.png"></a></li>
-                        <li><a href="#"><img class="carrito"
-                                    src="../imagenes/carrito-de-compras.png"></a></li>
+                        <li><a href="#"><img class="usuario" src="../imagenes/usuario.png"></a></li>
+                        <li><a href="#"><img class="carrito" src="../imagenes/carrito-de-compras.png"></a></li>            
                     </ul>
                 </div>
                 <div class="header_2">
-                    <a href="./main.html"><img class="logotipo"
-                            src="../imagenes/logotipo_blanco.png"></a>
+                    <a href="../html/main.html"><img class="logotipo" src="../imagenes/logotipo_blanco.png"></a>
                     <div id="menu">
                         <ul>
                             <li><a href="#">Our coffees</a></li>
@@ -42,6 +59,8 @@
                     </div>
                 </div>
             </header>
+                
+            <img onclick="topFunction()" id="boton_scroll" title="boton_scroll" src="../imagenes/scroll.png"/>
 
             <div class="contenedor_privacy_policy">
                 <h1 class="titulo_principal">Cookie policy<br><span
@@ -53,7 +72,7 @@
             <div class="cuerpo_mensaje">
                 <h3 class="marron">What are Cookies?</h3>
                 <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website.
-                    They can be used to remember your preferences, track your activities, and improve your user experience..</p>
+                    They can be used to remember your preferences, track your activities, and improve your user experience.</p>
                 <br>
                 <h3 class="marron">Types of Cookies We Use</h3>
                 <p>We use the following types of cookies on our website:</p>
@@ -88,7 +107,7 @@
                 </p>
                 <br>
                 <h3 class="marron">Contact Us</h3>
-                <p>If you have any questions or concerns about our use of cookies, please contact us at [insert contact information].
+                <p>If you have any questions or concerns about our use of cookies, please contact us using the Contact Us page.
                 </p>
                 <br>
             </div>
@@ -109,25 +128,25 @@
                         </div>
                         <br>
                     </div>  
-                    <div>
+                    <div class="about">
                         <h3>About</h3>
                         <p>Our Story</p>
                         <p><a href="workUs.html">Work with us</a></p>
                         <p>Allergens</p>
                     </div>
-                    <div>
+                    <div class="site_terms">
                         <h3>Site terms</h3>
                         <p><a href="privacypolicy.html">Privacy Policy</a></p>
                         <p><a href="termsofservice.html">Terms of Service</a></p>
                         <p><a href="cookies.html">Cookie Policy</a></p>
                         <p>Conditions of Sale<br> and Contracting</p>
                     </div>
-                    <div>
+                    <div class="customer_care">
                         <h3>Customer care</h3>
                         <p>Contact us</p>
                         <p>Shipping & Returns</p>
                     </div>
-                    <div>
+                    <div class="otra_columna">
                         <h3>News, promotions and discounts: all in one place. <br>Suscribe now!</h3>
                         <div class="newsletter">
                             <form>
@@ -151,6 +170,7 @@
                 </div>
                 <p class="copyright">© 2023 <strong>Ctlr Alt + Coffee</strong>. All rights reserved</p>
             </footer>
+            <script src="../javascript/main.js"></script>
         </div>
     </body>
 </html>
