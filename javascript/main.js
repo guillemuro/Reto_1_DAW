@@ -18,19 +18,18 @@ function topFunction() {
 
 
 /*ZONA PRIVADA*/
-window.onload = function() {
-  var container = document.querySelector('.container');
-  container.addEventListener('click', function() {
-    container.classList.toggle('active');
-  });
+var btnAbrirPopup = document.getElementById('header_candado'),
+	overlay = document.getElementById('overlay'),
+	popup = document.getElementById('popup'),
+	btnCerrarPopup = document.getElementById('x_zona_privada');
 
-  var messageOverlay = document.querySelector('.message-overlay');
-  messageOverlay.addEventListener('click', function(event) {
-    event.stopPropagation();
-  });
+btnAbrirPopup.addEventListener('click', function(){
+	overlay.classList.add('active');
+	popup.classList.add('active');
+});
 
-  var closeButton = document.querySelector('.x_zona_privada');
-  closeButton.addEventListener('click', function() {
-    container.classList.remove('active');
-  });
-};
+btnCerrarPopup.addEventListener('click', function(e){
+	e.preventDefault();
+	overlay.classList.remove('active');
+	popup.classList.remove('active');
+});

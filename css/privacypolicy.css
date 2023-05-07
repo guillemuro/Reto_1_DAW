@@ -50,8 +50,9 @@ a:visited {
     height: 1.8vw;
     width: 2vw;
     float: right;
-    padding-right: 3.5vw;
+    margin-right: 3.5vw;
     margin-top: 0.2vw;
+    cursor: pointer;
 }
 
 .header_2 {
@@ -85,7 +86,7 @@ a:visited {
     color: white;
     text-decoration: none;
     padding: 10px;
-    padding-right: 5vw;
+    margin-right: 5vw;
 }
 
 #user_cart {
@@ -277,28 +278,6 @@ a:visited {
     background-color: red; 
 }
 
-.contenedor_zona_privada {
-    position: relative;
-    text-align: center;
-}
-
-.informacion_zona_privada {
-    position: absolute;
-    z-index: 2;
-    background-color: #fff;
-    padding: 4vw; 
-    top: 20vw;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.candado_zona_privada {
-    width: 8vw;
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 1vw;
-}
-
 .contenedor_correo {
     position: relative;
     margin: 2.5vw auto;
@@ -351,6 +330,13 @@ a:visited {
     transform: scaleX(1);
 }
 
+.candado_zona_privada {
+    width: 8vw;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 1vw;
+}
+
 .boton_zona_privada {
     width: 20vw;
     font-family: 'Inter', sans-serif;
@@ -370,45 +356,40 @@ a:visited {
     padding-right: 1vw;
     padding-top: 1vw;
     cursor: pointer;
-  }
+}
 
 .overlay {
-    cursor: pointer;
-}
-
-.container:hover .overlay {
-    opacity: 1;
-}
-
-.blur-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
+	background-color: rgba(1, 1, 1, 0);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+	z-index: 3;
+	backdrop-filter: blur(7px);
     opacity: 0;
-    transition: .5s ease;
-    pointer-events: none;
-    z-index: 2;
+	transition: background-color 0.9s ease;
 }
 
-.container.active .blur-layer {
-    opacity: 1;
-    pointer-events: auto;
+.overlay.active {
+	visibility: visible;
+    opacity: 1; 
+    background-color: rgba(1, 1, 1, 0.5);
 }
 
-.message-overlay {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: .5s ease;
-    z-index: 2;
+.popup.active {	
+    transform: scale(1); 
+    opacity: 1; 
 }
 
-.container.active .message-overlay {
-    opacity: 1;
+.popup {
+	background: #fff;
+	padding: 4vw;
+	text-align: center;
+	opacity: 1;
+    top: 18vw;
 }
