@@ -25,6 +25,10 @@ a:visited {
     color: #fff;
 }
 
+.icono_f:hover {
+    transform: scale(1.25);
+}
+
 .tamanyo_2 {
     font-size: 3vw;
     color: #fff;

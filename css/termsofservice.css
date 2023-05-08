@@ -30,6 +30,10 @@ a:visited {
     color: #fff;
 }
 
+.icono_f:hover {
+    transform: scale(1.25);
+}
+
 #tamanyo_h1_cafeteria {
     color: #000;
 }

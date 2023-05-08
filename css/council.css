@@ -24,6 +24,9 @@ a:visited {
     color: #fff;
 }
 
+.icono_f:hover {
+    transform: scale(1.25);
+}
 
 .tamanyo_h1 {
     font-size: 3.2vw;

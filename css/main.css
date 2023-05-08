@@ -342,6 +342,11 @@ a:visited {
 .icono_f {
     width: 2.5vw;
     margin-right: 0.2vw;
+
+}
+
+.icono_f:hover {
+    transform: scale(1.25);
 }
 
 #icono_tarjeta {
