@@ -98,3 +98,57 @@ sumar.addEventListener('click', function(){
     numActual.innerText = i;
     console.log(i);
 });
+
+
+
+var restar_2 = document.getElementById('resta_2'),
+    sumar_2 = document.getElementById('suma_2'),
+    numActual_2 = document.getElementById('numero_2');
+restar_2.addEventListener('click', function(){
+    if (i > 1) {
+        i--;
+        numActual_2.innerText = i;
+        console.log(i);
+    }
+});
+sumar_2.addEventListener('click', function(){
+    i++;
+    numActual_2.innerText = i;
+    console.log(i);
+});
+
+
+
+var restar_3 = document.getElementById('resta_3'),
+    sumar_3 = document.getElementById('suma_3'),
+    numActual_3 = document.getElementById('numero_3');
+restar_3.addEventListener('click', function(){
+    if (i > 1) {
+        i--;
+        numActual_3.innerText = i;
+        console.log(i);
+    }
+});
+sumar_3.addEventListener('click', function(){
+    i++;
+    numActual_3.innerText = i;
+    console.log(i);
+});
+
+
+
+var restar_4 = document.getElementById('resta_4'),
+    sumar_4 = document.getElementById('suma_4'),
+    numActual_4 = document.getElementById('numero_4');
+restar_4.addEventListener('click', function(){
+    if (i > 1) {
+        i--;
+        numActual_4.innerText = i;
+        console.log(i);
+    }
+});
+sumar_4.addEventListener('click', function(){
+    i++;
+    numActual_4.innerText = i;
+    console.log(i);
+});

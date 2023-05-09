@@ -411,7 +411,7 @@ a:visited {
     justify-content: space-between;
 }
 
-.producto_1_popup {
+.producto_popup {
     background-color: #fff;
     padding: 2.5vw;
     visibility: hidden;
@@ -419,7 +419,7 @@ a:visited {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50vw; /*SE PUEDE MODIFICAR*/
+    width: 54vw; /*SE PUEDE MODIFICAR*/
     height: 38vw;
     z-index: 5;
     opacity: 0;
@@ -428,73 +428,22 @@ a:visited {
     transition: opacity 0.5s ease-in-out;
 }
 
-.producto_1_popup.active {
+#producto_1_popup.active {
     visibility: visible;
     opacity: 1;
 }
 
-.producto_2_popup {
-    background-color: #fff;
-    padding: 2.5vw;
-    visibility: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vw; /*SE PUEDE MODIFICAR*/
-    height: 38vw;
-    z-index: 5;
-    opacity: 0;
-    border: 5px solid #43241a;
-    display: flex;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.producto_2_popup.active {
+#producto_2_popup.active {
     visibility: visible;
     opacity: 1;
 }
 
-.producto_3_popup {
-    background-color: #fff;
-    padding: 2.5vw;
-    visibility: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vw; /*SE PUEDE MODIFICAR*/
-    height: 38vw;
-    z-index: 5;
-    opacity: 0;
-    border: 5px solid #43241a;
-    display: flex;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.producto_3_popup.active {
+#producto_3_popup.active {
     visibility: visible;
     opacity: 1;
 }
 
-.producto_4_popup {
-    background-color: #fff;
-    padding: 2.5vw;
-    visibility: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vw; /*SE PUEDE MODIFICAR*/
-    height: 38vw;
-    z-index: 5;
-    opacity: 0;
-    border: 5px solid #43241a;
-    display: flex;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.producto_4_popup.active {
+#producto_4_popup.active {
     visibility: visible;
     opacity: 1;
 }
@@ -509,8 +458,8 @@ a:visited {
 }
 
 .elementos_popup_2 {
-    margin-left: 4vw;
-    width: 60%;
+    margin-left: 7vw;
+    width: 60%; /*CAMBIAR ANCHO ELEMENTOS*/
 }
 
 .quantity {
@@ -559,6 +508,7 @@ a:visited {
 .money {
     margin-top: 0;
     padding-top: 0.9vw;
+    font-size: 1.3vw;
 }
 
 .info {
@@ -610,6 +560,7 @@ h4 {
     height: 2vw;
     margin-left: 1vw;
     margin-top: 0.5vw;
+    width: 7vw;
 }
 
 .quantity_boton {
@@ -639,4 +590,23 @@ h4 {
     display: flex;
     justify-content: right;
     padding-bottom: 0.9vw;
+}
+
+.sudadera {
+    width: 10%;
+}
+
+.lavado_seco {
+    width: 7vw;
+    height: 1.5vw;
+}
+
+.cuidado_prenda {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -2.5%;
+}
+
+.h4_responsive {
+    font-size: 1.13vw;
 }
