@@ -28,6 +28,10 @@
     font-size: 1vw;
 }
 
+.icono_f:hover {
+    transform: scale(1.25);
+}
+
 .boton_send {
     display: flex;
     justify-content: center;

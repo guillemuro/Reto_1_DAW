@@ -31,6 +31,10 @@ a:visited {
     height: 2.2vw;
 }
 
+.icono_f:hover {
+    transform: scale(1.25);
+}
+
 .header_candado {
     height: 1.8vw;
     width: 2vw;

@@ -23,6 +23,9 @@
     align-items: center;
 }
 
+.icono_f:hover {
+    transform: scale(1.25);
+}
 
 .titulo {
     color: rgb(114, 40, 20);

@@ -1,3 +1,7 @@
+.icono_f:hover {
+    transform: scale(1.25);
+}
+
 /*ESTO ES EL FORMULARIO*/
 .formulario {
     width: 100%;

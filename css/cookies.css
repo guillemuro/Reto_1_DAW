@@ -1,3 +1,7 @@
+.icono_f:hover {
+    transform: scale(1.25);
+}
+
 .box {
     font-family: 'Inter', sans-serif;
 }
