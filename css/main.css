@@ -535,13 +535,3 @@ a:visited {
 	opacity: 1;
     top: 18vw;
 }
-
-.x_zona_privada {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 1vw;
-    width: 1vw;
-    cursor: pointer;
-    padding-right: 1vw;
-}
