@@ -398,12 +398,33 @@ a:visited {
     justify-content: center;
     align-items: center;
 }
+.producto_1 {
+    width: 100%;
+    padding-top: 1.6vw;
+    padding-bottom: 1.2vw;
+}
+
+.producto_3 {
+    width: 89%;
+    padding-top: 1.6vw;
+    padding-bottom: 1.2vw;
+    padding-left: 1.5vw;
+}
+
+.producto_4 {
+    width: 71%;
+    padding-top: 1.6vw;
+    padding-bottom: 1.2vw;
+    padding-left: 2.5vw;
+}
+
 
 .producto {
     border: 2px solid #43241a;
     cursor: pointer;
     height: 17vw;
     padding: 1.5vw;
+
 }
 
 .informacion_producto {
@@ -592,9 +613,21 @@ h4 {
     padding-bottom: 0.9vw;
 }
 
-.sudadera {
-    width: 10%;
+.pop_up_productos {
+    width: 140%;
+    
 }
+
+.pop_up_taza {
+    width: 120%;
+    margin: 68px -11px;
+}
+
+.marron {
+    color: rgb(114, 40, 20);
+    text-align: center;
+}
+
 
 .lavado_seco {
     width: 7vw;
