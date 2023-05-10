@@ -157,44 +157,56 @@ sumar_4.addEventListener('click', function(){
 
 
 /*PAGINA OUR COFFEES*/
+/*PRODUCTOS*/
+
 var abrirInfoJava = document.getElementById('java'),
-	abrirInfoPython = document.getElementById('python'),
-	abrirInfoPHP = document.getElementById('php'),
-	abrirInfoRuby = document.getElementById('ruby'),
+    abrirInfoPython = document.getElementById('python'),
+    abrirInfoPHP = document.getElementById('php'),
+    abrirInfoRuby = document.getElementById('ruby'),
     abrirInfoSwift = document.getElementById('swift'),
-    abrirInfoJS = document.getElementById('javascript'),
     abrirInfoKotlin = document.getElementById('kotlin'),
-    abrirInfoC = document.getElementById('c'),
-	java = document.getElementById('producto_1_popup'),
-	python = document.getElementById('producto_2_popup'),
-	php = document.getElementById('producto_3_popup'),
-	ruby = document.getElementById('producto_4_popup'),
-    swift = document.getElementById('producto_4_popup'),
-    javascript = document.getElementById('producto_4_popup'),
-    kotlin = document.getElementById('producto_4_popup'),
-    c = document.getElementById('producto_4_popup');
+    abrirInfoC = document.getElementById('c'), /*C#*/
+    abrirInfoJavaScript = document.getElementById('javascript'),
+    java = document.getElementById('java_popup'),
+    python = document.getElementById('python_popup'),
+    php = document.getElementById('php_popup'),
+    ruby = document.getElementById('ruby_popup'),
+    swift = document.getElementById('swift_popup'),
+    kotlin = document.getElementById('kotlin_popup'),
+    c = document.getElementById('c_popup'),
+    javascript = document.getElementById('js_popup');
+
 
 abrirInfoJava.addEventListener('click', function(){
-	java.classList.add('active');
+    java.classList.add('active');
 });
+
 abrirInfoPython.addEventListener('click', function(){
-	python.classList.add('active');
+    python.classList.add('active');
 });
+
 abrirInfoPHP.addEventListener('click', function(){
-	php.classList.add('active');
+    php.classList.add('active');
 });
+
 abrirInfoRuby.addEventListener('click', function(){
-	ruby.classList.add('active');
+    ruby.classList.add('active');
 });
+
 abrirInfoSwift.addEventListener('click', function(){
-	swift.classList.add('active');
+    swift.classList.add('active');
 });
-abrirInfoJS.addEventListener('click', function(){
-	javascript.classList.add('active');
+
+abrirInfoJavaScript.addEventListener('click', function(){
+    javascript.classList.add('active');
 });
+
 abrirInfoKotlin.addEventListener('click', function(){
-	kotlin.classList.add('active');
+    kotlin.classList.add('active');
 });
+
 abrirInfoC.addEventListener('click', function(){
-	c.classList.add('active');
+    c.classList.add('active');
 });
+
+

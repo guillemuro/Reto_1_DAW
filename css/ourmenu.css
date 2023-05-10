@@ -387,3 +387,95 @@ a:visited {
 	opacity: 1;
     top: 18vw;
 }
+
+.cuerpo_body {
+    margin: 5vw 9vw;
+}
+
+.contenedor_alimentos {
+    font-size: 1.1vw;
+    display: grid;
+    grid-template-columns: repeat(4, 18vw);
+    grid-column: 30vw;
+    grid-gap: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto_alimento {
+    border: 2px solid #43241a;
+    cursor: pointer;
+    height: 16vw;
+    padding: 1.5vw;
+}
+
+.informacion_producto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.h1_negro {
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.menu_img {
+    padding-top: 0.5vw;
+    display: block;
+    margin: 0 auto;
+}
+
+#zumo {
+    width: 30%;
+    padding-top: 1.6vw;
+    padding-bottom: 1.2vw;
+}
+
+#muffin {
+    width: 80%;
+    padding-top: 1vw;
+    padding-bottom: 0.9vw;
+}
+
+#croissant {
+    width: 65%;
+    padding-top: 2.5vw;
+    padding-bottom: 2vw;
+}
+
+#napolitana {
+    width: 93%;
+    padding-top: 2vw;
+    padding-bottom: 2.4vw;
+}
+
+#cookies {
+    width: 65%;
+    padding-top: 2vw;
+    padding-bottom: 2.4vw;
+}
+
+#bagel {
+    width: 85%;
+    padding-top: 3vw;
+    padding-bottom: 1.8vw;
+}
+
+#sandwich_1 {
+    width: 75%;
+    padding-top: 2.4vw;
+    padding-bottom: 2vw;
+}
+
+#tostadas {
+    width: 15vw;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+}
+
+#sandwich_2 {
+    width: 90%;
+    padding-top: 2.9vw;
+    padding-bottom: 2vw;
+    padding-right: 1.2vw;
+}
