@@ -187,7 +187,6 @@ a:visited {
     padding-right: 7vw;
 }
 
-
 .footer {
     background-color: #43241a;
     padding: 2vw;
@@ -265,7 +264,7 @@ a:visited {
 
 @media (max-width: 780px) {
     #menu {
-    font-size: 2vw;
+        font-size: 2vw;
     }
 
     #user_cart {
@@ -277,7 +276,7 @@ a:visited {
     .usuario{
         width: 2vw;
     }
-    
+
     .carrito{
         width: 2vw;
     }
