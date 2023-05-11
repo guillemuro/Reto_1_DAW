@@ -128,138 +128,145 @@ btnCerrarPopup_c.addEventListener('click', function(e){
 
 
 /*BOTON QUANTITY*/
-/*let i = 1;
-var restar = document.getElementById('resta'),
-    sumar = document.getElementById('suma'),
-    numActual = document.getElementById('numero');
-restar.addEventListener('click', function(){
-    if (i > 1) {
-        i--;
-        numActual.innerText = i;
-        console.log(i);
+let java_i = 1;
+var restar_java = document.getElementById('resta_j'),
+    sumar_java = document.getElementById('suma_j'),
+    numActual_java = document.getElementById('numero_j');
+restar_java.addEventListener('click', function(){
+    if (java_i > 1) {
+        java_i--;
+        numActual_java.innerText = java_i;
+        console.log(java_i);
     }
 });
-sumar.addEventListener('click', function(){
-    i++;
-    numActual.innerText = i;
-    console.log(i);
+sumar_java.addEventListener('click', function(){
+    java_i++;
+    numActual_java.innerText = java_i;
+    console.log(java_i);
 });
 
-let j = 1;
-var restar_p = document.getElementById('resta_py'),
-    sumar_p = document.getElementById('suma_py'),
-    numActual_p = document.getElementById('numero_py');
-restar_p.addEventListener('click', function(){
-    if (j > 1) {
-        j--;
-        numActual_p.innerText = j;
-        console.log(j);
+
+let python_i = 1;
+var restar_python = document.getElementById('resta_py'),
+    sumar_python = document.getElementById('suma_py'),
+    numActual_python = document.getElementById('numero_py');
+restar_python.addEventListener('click', function(){
+    if (python_i > 1) {
+        python_i--;
+        numActual_python.innerText = python_i;
+        console.log(python_i);
     }
 });
-sumar_p.addEventListener('click', function(){
-    j++;
-    numActual_p.innerText = j;
-    console.log(j);
+sumar_python.addEventListener('click', function(){
+    python_i++;
+    numActual_python.innerText = python_i;
+    console.log(python_i);
 });
 
-let a = 1;
+
+let php_i = 1;
 var restar_php = document.getElementById('resta_php'),
     sumar_php = document.getElementById('suma_php'),
     numActual_php = document.getElementById('numero_php');
 restar_php.addEventListener('click', function(){
-    if (a > 1) {
-        a--;
-        numActual_php.innerText = a;
-        console.log(a);
+    if (php_i > 1) {
+        php_i--;
+        numActual_php.innerText = php_i;
+        console.log(php_i);
     }
 });
 sumar_php.addEventListener('click', function(){
-    a++;
-    numActual_php.innerText = a;
-    console.log(a);
+    php_i++;
+    numActual_php.innerText = php_i;
+    console.log(php_i);
 });
 
-let e = 1;
-var restar_ruby = document.getElementById('resta_rub'),
-    sumar_ruby = document.getElementById('suma_rub'),
-    numActual_ruby = document.getElementById('numero_rub');
-restar_ruby.addEventListener('click', function(){
-    if (e > 1) {
-        e--;
-        numActual_ruby.innerText = e;
-        console.log(e);
+
+let ruby_i = 1;
+var restar_rub = document.getElementById('resta_rub'),
+    sumar_rub = document.getElementById('suma_rub'),
+    numActual_rub = document.getElementById('numero_rub');
+restar_rub.addEventListener('click', function(){
+    if (ruby_i > 1) {
+        ruby_i--;
+        numActual_rub.innerText = ruby_i;
+        console.log(ruby_i);
     }
 });
-sumar_ruby.addEventListener('click', function(){
-    e++;
-    numActual_ruby.innerText = e;
-    console.log(e);
+sumar_rub.addEventListener('click', function(){
+    ruby_i++;
+    numActual_rub.innerText = ruby_i;
+    console.log(ruby_i);
 });
 
-let b = 1;
+
+let swift_i = 1;
 var restar_sw = document.getElementById('resta_sw'),
     sumar_sw = document.getElementById('suma_sw'),
     numActual_sw = document.getElementById('numero_sw');
 restar_sw.addEventListener('click', function(){
-    if (b > 1) {
-        b--;
-        numActual_sw.innerText = b;
-        console.log(b);
+    if (swift_i > 1) {
+        swift_i--;
+        numActual_sw.innerText = swift_i;
+        console.log(swift_i);
     }
 });
 sumar_sw.addEventListener('click', function(){
-    b++;
-    numActual_sw.innerText = b;
-    console.log(b);
+    swift_i++;
+    numActual_sw.innerText = swift_i;
+    console.log(swift_i);
 });
 
-let c = 1;
+
+let javascript_i = 1;
 var restar_js = document.getElementById('resta_js'),
     sumar_js = document.getElementById('suma_js'),
     numActual_js = document.getElementById('numero_js');
 restar_js.addEventListener('click', function(){
-    if (c > 1) {
-        c--;
-        numActual_js.innerText = c;
-        console.log(c);
+    if (javascript_i > 1) {
+        javascript_i--;
+        numActual_js.innerText = javascript_i;
+        console.log(javascript_i);
     }
 });
 sumar_js.addEventListener('click', function(){
-    c++;
-    numActual_js.innerText = c;
-    console.log(c);
+    javascript_i++;
+    numActual_js.innerText = javascript_i;
+    console.log(javascript_i);
 });
 
-let d = 1;
+
+let kotlin_i = 1;
 var restar_k = document.getElementById('resta_k'),
     sumar_k = document.getElementById('suma_k'),
     numActual_k = document.getElementById('numero_k');
 restar_k.addEventListener('click', function(){
-    if (d > 1) {
-        d--;
-        numActual_k.innerText = d;
-        console.log(d);
+    if (kotlin_i > 1) {
+        kotlin_i--;
+        numActual_k.innerText = kotlin_i;
+        console.log(kotlin_i);
     }
 });
 sumar_k.addEventListener('click', function(){
-    d++;
-    numActual_k.innerText = d;
-    console.log(d);
+    kotlin_i++;
+    numActual_k.innerText = kotlin_i;
+    console.log(kotlin_i);
 });
 
-let f = 1;
+
+let c_i = 1;
 var restar_c = document.getElementById('resta_c'),
     sumar_c = document.getElementById('suma_c'),
     numActual_c = document.getElementById('numero_c');
 restar_c.addEventListener('click', function(){
-    if (f > 1) {
-        f--;
-        numActual_c.innerText = f;
-        console.log(f);
+    if (c_i > 1) {
+        c_i--;
+        numActual_c.innerText = c_i;
+        console.log(c_i);
     }
 });
 sumar_c.addEventListener('click', function(){
-    f++;
-    numActual_c.innerText = f;
-    console.log(f);
-});*/
+    c_i++;
+    numActual_c.innerText = c_i;
+    console.log(c_i);
+});

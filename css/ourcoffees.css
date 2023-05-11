@@ -396,7 +396,6 @@ a:visited {
     grid-template-columns: repeat(4, 19vw);
     grid-gap: 2vw;
     justify-content: center;
-    align-items: center;
 }
 
 .producto {
@@ -454,9 +453,6 @@ a:visited {
     justify-content: space-between;
     padding-top: 1vw;
 }
-
-
-
 
 .informacion_popup {
     line-height: 0.9vw;
@@ -536,9 +532,14 @@ a:visited {
     color: red;
 }
 
+#money {
+    color: #000;
+}
+
 .informacion_cafe {
     font-size: 0.85vw;
     text-align: justify;
+    margin-top: 0.1vw;
 }
 
 .product_description {
@@ -546,7 +547,7 @@ a:visited {
 }
 
 .intolerancias_1 {
-    width: 18%;
+    width: 20%;
     cursor: pointer;
 }
 
@@ -578,10 +579,6 @@ h4 {
     margin-bottom: 0.2vw;
 }
 
-#informacion_cafe {
-    margin-top: 0.1vw;
-}
-
 .datos {
     display: flex;
     justify-content: space-between;
@@ -602,23 +599,21 @@ h4 {
     width: 15vw;
 }
 
-
-
-
-
-
 .popup_menu {
     background-color: #fff;
     padding: 2.5vw;
     visibility: hidden;
     position: fixed;
-    top: 10%;
-    left: 20%;
-    right: 20%;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    transform: translate(-50%, -50%);
     z-index: 5;
     opacity: 0;
     border: 5px solid #43241a;
     display: flex;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
 }
 
 #java_popup.active {
@@ -659,4 +654,8 @@ h4 {
 #c_popup.active {
     visibility: visible;
     opacity: 1;
+}
+
+.affogato_img {
+    width: 17vw;
 }
