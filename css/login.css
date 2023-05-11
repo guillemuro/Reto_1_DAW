@@ -158,7 +158,6 @@ a:visited {
     text-align: center;
     background-color: #ffffff10;
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-radius: 50px;
 }
 

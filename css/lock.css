@@ -187,6 +187,11 @@ a:visited {
     padding-right: 7vw;
 }
 
+#boton_lock_3 {
+    top: 50%;
+    padding-right: 9.5vw;
+}
+
 .footer {
     background-color: #43241a;
     padding: 2vw;
