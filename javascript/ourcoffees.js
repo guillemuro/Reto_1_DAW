@@ -54,10 +54,12 @@ var abrirInfoJava = document.getElementById('java'),
     kotlin = document.getElementById('kotlin_popup'),
     c = document.getElementById('c_popup'),
     javascript = document.getElementById('javascript_popup');
+    overlay_j = document.getElementById('overlay_java');
 
 
 abrirInfoJava.addEventListener('click', function(){
     java.classList.add('active');
+    overlay_j.classList.add('active');
 });
 abrirInfoPython.addEventListener('click', function(){
     python.classList.add('active');
@@ -88,41 +90,49 @@ var btnCerrarPopup = document.getElementById('x_zona_privada_x');
 btnCerrarPopup.addEventListener('click', function(e){
 	e.preventDefault();
 	java.classList.remove('active');
+    overlay_j.classList.remove('active');
 });
 var btnCerrarPopup_p = document.getElementById('x_zona_privada_p');
 btnCerrarPopup_p.addEventListener('click', function(e){
 	e.preventDefault();
 	python.classList.remove('active');
+    overlay_j.classList.remove('active');
 });
 var btnCerrarPopup_php = document.getElementById('x_zona_privada_php');
 btnCerrarPopup_php.addEventListener('click', function(e){
 	e.preventDefault();
 	php.classList.remove('active');
+    overlay_j.classList.remove('active');
 });
 var btnCerrarPopup_ruby = document.getElementById('x_zona_privada_ruby');
 btnCerrarPopup_ruby.addEventListener('click', function(e){
 	e.preventDefault();
 	ruby.classList.remove('active');
+    overlay_j.classList.remove('active');
 });
 var btnCerrarPopup_swift = document.getElementById('x_zona_privada_swift');
 btnCerrarPopup_swift.addEventListener('click', function(e){
 	e.preventDefault();
 	swift.classList.remove('active');
+    overlay_j.classList.remove('active');
 });
 var btnCerrarPopup_js = document.getElementById('x_zona_privada_js');
 btnCerrarPopup_js.addEventListener('click', function(e){
 	e.preventDefault();
 	javascript.classList.remove('active');
+    overlay_j.classList.remove('active');
 });
 var btnCerrarPopup_k = document.getElementById('x_zona_privada_k');
 btnCerrarPopup_k.addEventListener('click', function(e){
 	e.preventDefault();
 	kotlin.classList.remove('active');
+    overlay_j.classList.remove('active');
 });
 var btnCerrarPopup_c = document.getElementById('x_zona_privada_c');
 btnCerrarPopup_c.addEventListener('click', function(e){
 	e.preventDefault();
 	c.classList.remove('active');
+    overlay_j.classList.remove('active');
 });
 
 

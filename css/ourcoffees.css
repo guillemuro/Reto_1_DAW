@@ -659,3 +659,24 @@ h4 {
 .affogato_img {
     width: 17vw;
 }
+
+.overlay_java {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+	z-index: 3;
+	backdrop-filter: blur(7px);
+    opacity: 0;
+	transition: background-color 0.9s ease;
+}
+
+.overlay_java.active {
+	visibility: visible;
+    opacity: 1; 
+}

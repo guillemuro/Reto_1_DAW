@@ -604,9 +604,6 @@ h4 {
     font-size: 1.3vw;
 }
 
-
-
-
 .popup_producto_menu {
     background-color: #fff;
     padding: 2.5vw;
@@ -614,15 +611,22 @@ h4 {
     position: fixed;
     top: 50%;
     left: 50%;
+    width: 50vw;
     transform: translate(-50%, -50%);
     z-index: 5;
     opacity: 0;
     border: 5px solid #43241a;
     display: flex;
+    align-items: center;
     transition: opacity 0.5s ease-in-out;
 }
 
 #oracle_popup.active {
     visibility: visible;
     opacity: 1;
+}
+
+.elementos_popup_2 {
+    margin-left: 4vw;
+    width: 60%;
 }
