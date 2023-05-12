@@ -35,6 +35,19 @@ btnCerrarPopup.addEventListener('click', function(e){
 });
 
 
+/*ZONA DEL USUARIO*/
+    /*lastName  = localStorage.Apellido*/
+var userform = document.getElementById('userform').value
+localStorage.setItem('Nombre', userform)
+
+
+/*SI TE DA LA VENADA SE HACE (ES PARA RECOGER EN LA PAGINA Y QUE SALGA EL NOMBRE)
+ES DECIR QUE SALGA EN LA PAGINA EL NOMBRE QUE HAS ESCRITO EN EL FORMULARIO*/
+
+/*localStorage.getItem('Nombre')
+let user = document.getElementById(userform);*/
+
+
 
 /*PAGINA MERCHANDISING*/
 var abrirInfoProducto1 = document.getElementById('producto_1'),
