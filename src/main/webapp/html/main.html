@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reto 1DAW"/>
+    <meta name="authors" content="Eva, Paula, Guillermo"/>
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../imagenes/favicon_ctrl.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../css/avisocookies.css">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MB7HJ8K');</script>
+</head>
+
+
+
+<body>
+    <div class="box">
+        <header class="header">
+            <div class="header_1">
+                <img class="header_candado" id="header_candado" src="../imagenes/candado_header.png">
+            </div>
+            <div id="user_cart">
+                <ul>
+                    <li><a href="user_pop.html"><img class="usuario" src="../imagenes/usuario.png"></a></li>
+                    <li><a href="#"><img class="carrito" src="../imagenes/carrito-de-compras.png"></a></li>
+                </ul>
+            </div>
+            <div class="header_2">
+                <a href="../html/main.html"><img class="logotipo" src="../imagenes/logotipo_blanco.png"></a>
+                <div id="menu">
+                    <ul>
+                        <li><a href="ourcoffees.html">Our coffees</a></li>
+                        <li><a href="ourmenu.html">Our menu</a></li>
+                        <li><a href="merchandising.html">Merchandising</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>      
+
+        <img onclick="topFunction()" id="boton_scroll" title="boton_scroll" src="../imagenes/scroll.png"/>
+
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <img class="x_zona_privada" id="x_zona_privada" src="../imagenes/x.png"/>
+                <img class="candado_zona_privada" src="../imagenes/candado_priv.png"/>
+                <h1 class="h1_black">Private zone</h1>
+                <div class="contenedor_correo">
+                    <input type="text" id="input" required="Comp">
+                    <label for="input" class="label">Enter your email address</label>
+                    <div class="underline"></div>
+                </div>
+                <a href="../html/lock.html"><button class="boton_zona_privada" type="submit"><strong>GO THERE!</strong></button></a>
+            </div>
+        </div>
+
+        <div class="contenedor_banner_principal">
+            <div class="texto_banner_principal">
+                <h1 class="tamanyo_h1">Life is too short <br>to drink <span class="cursiva"><em>bad <br>coffee</em></span></h1>
+                <br>
+                <a href="ourcoffe.html"><button class="boton_bad_coffee" type="submit"><strong>TASTE OUR COFFEE</strong></button></a>
+            </div>
+            <img class="banner" src="../imagenes/banner_recorte.png"/>
+        </div>
+
+        <div class="banner_tea">
+            <div class="info_banner_tea">
+                <h1 class="tamanyo_2"><span class="cursiva"><em>Tea lover?</em></span><br>Don't worry, we have <br>a wide variety of options <br>for you too</h1>
+                <br>
+                <a href="ourmenu.html"><button class="boton_tea" type="submit"><strong>TEA MENU</strong></button></a>
+            </div>
+            <img class="banner" src="../imagenes/imagen_tea.png" alt="Banner tea lover?"/>
+        </div>
+
+        <div class="cuadrados_body">
+            <div class="grid_body">
+                <h1 class="texto_grid_body"><span class="texto_grid_body_2"><em>The drink you've been waiting for:</em></span><br>new Python Coffee</h1>
+                <img class="imagen_grid" src="../imagenes/imagen_new.png"/>
+            </div>
+            <div class="grid_body">
+                <h1 class="texto_grid_body"><span class="texto_grid_body_2"><em>Croissants: the best way to start the day</em></span><br>2 × 1 only this month!</h1>
+                <img class="imagen_grid" src="../imagenes/imagen_croissants_c.png"/>
+            </div>
+            <div class="grid_body">
+                <h1 class="texto_grid_body"><span class="texto_grid_body_2"><em>The healthiest, delicious and eco-friendly sandwich</em></span><br>15% on all vegetarian <br>sandwiches</h1>
+                <img class="imagen_grid" src="../imagenes/imagen_sandwich.png"/>
+            </div>
+            <div class="grid_body">
+                <h1 class="texto_grid_body"><span class="texto_grid_body_2"><em>The most ordered coffee... for something it will be</em></span><br>Ruby Coffee</h1>
+                <img class="imagen_grid" src="../imagenes/imagen_vaso.png"/>
+            </div>
+        </div>
+
+        <div class="banner_tea">
+            <div class="info_banner_tea" id="banner_coffee_of_the_month">
+                <div class="flex_coffee_month">
+                    <img class="teclas" src="../imagenes/teclas.png"/>
+                    <h1 class="tamanyo_2">+ Coffee of the Month</h1>
+                </div>
+                <h1 class="texto_coffee_month"><em>JavaScript Coffee: The coolest way to stay awake</em></span></h1>
+                <a href="ourcoffees.html"><button class="boton_coffee_month" type="submit"><strong>DISCOVER IT</strong></button></a>
+            </div>
+            <img class="sello_coffee" src="../imagenes/sello_limited.png"/>
+            <img class="banner" src="../imagenes/imagen_cafe_especial.png"/>
+        </div>
+
+        <div class="cafeteria_ubicacion">
+            <div class="direccion_cafeteria">
+                <div class="titulo_cafeteria">
+                    <img class="ubi_cafeteria" src="../imagenes/icono_ubicacion.png"/>
+                    <h1 class="tamanyo_h1" id="tamanyo_h1_cafeteria">Find our coffee shop!</h1>
+                </div>
+                <p class="texto_cafeteria">Come visit us at <strong>7 Park Avenue (Manhattan, NYC), 3 Riverview Ave.
+                    Flushing, NY 11354 and 616 Fulton Dr.
+                    Elmont, NY 11003</strong> and discover our menu, which will give you the fuel you need to face anything that puts you in the way. <br>We are waiting for you with the cups up and the coffee beans ready to be grinded!</p>
+                <img class="granos_cafe" src="../imagenes/imagen_grano.png"/>
+            </div>
+            <img class="cafeteria" src="../imagenes/imagen_cafeteria.jpg"/>
+        </div>
+
+
+
+
+        <div class="aviso-cookies" id="aviso-cookies">
+            <img class="galleta" src="../imagenes/cookie.png" alt="Galleta">
+            <h3 class="titulo">Cookies</h3>
+            <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
+            <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+            <a class="enlace" href="cookies.html">Aviso de Cookies</a>
+        </div>
+        <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+    
+        <script src="../javascript/avisocookies.js"></script>
+
+
+        <footer class="footer">
+            <div class="contenedor_footer">
+                <div>
+                    <img class="logotipo_footer" src="../imagenes/logotipo_blanco.png"/>
+                    <h3>Payment options</h3>
+                    <div class="tarjetas_credito">
+                        <img id="icono_tarjeta" src="../imagenes/tarjeta_mastercard.png"/>
+                        <img id="icono_tarjeta" src="../imagenes/tarjeta_visa.png"/>
+                        <img id="icono_tarjeta" src="../imagenes/tarjeta_amex.png"/>
+                        <br>
+                        <img id="icono_tarjeta" src="../imagenes/tarjeta_paypal.png"/>
+                        <img id="icono_tarjeta" src="../imagenes/tarjeta_discover.png"/>
+                        <img id="icono_tarjeta" src="../imagenes/tarjeta_jcb.png"/>
+                    </div>
+                    <br>
+                </div>
+                <div class="about">
+                    <h3>About</h3>
+                    <p><a href="ourstory.html">Our Story</a></p>
+                    <p><a href="workUs.html">Work with us</a></p>
+                    <p><a href="alergias.html">Allergens</a></p>
+                </div>
+                <div class="site_terms">
+                    <h3>Site terms</h3>
+                    <p><a href="privacypolicy.html">Privacy Policy</a></p>
+                    <p><a href="termsofservice.html">Terms of Service</a></p>
+                    <p><a href="cookies.html">Cookie Policy</a></p>
+                </div>
+                <div class="customer_care">
+                    <h3>Customer care</h3>
+                    <p><a href="contact.html">Contact us</a></p>
+                    <p><a href="devoluciones.html">Shipping & Returns</a></p>
+                </div>
+                <div class="otra_columna">
+                    <h3>News, promotions and discounts: all in one place. <br>Suscribe now!</h3>
+                    <div class="newsletter">
+                        <form>
+                            <input type="text" name="newsletter" class="email_newsletter">
+                        </form>
+                        <button class="boton_newsletter" type="submit"><strong>JOIN</strong></button>
+                    </div>
+                    <input type="checkbox" name="terms" value="Acepta" class="checkbox_newsletter">  I have read and accept the <a href="privacypolicy.html"><u>Privacy Policy</u></a> and <a href="termsofservice.html"><u>Terms of Service</u></a>
+                    <br>
+                    <br>
+                    <h3>Connect with Us</h3>
+                    <div class="iconos_footer">
+                        <a href="https://www.facebook.com/profile.php?id=100092533330197&sk=about" target="_blank"><img class="icono_f" src="../imagenes/footer_facebook.png"/></a>
+                        <a href="https://twitter.com/?lang=es" target="_blank"><img class="icono_f" src="../imagenes/footer_twitter.png"/></a>
+                        <a href="http://www.instagram.com/" target="_blank"><img class="icono_f" src="../imagenes/footer_instagram.png"/></a>
+                        <a href="https://www.youtube.com/" target="_blank"><img class="icono_f" src="../imagenes/footer_youtube.png"/></a>
+                        <a href="https://www.pinterest.es/" target="_blank"><img class="icono_f" src="../imagenes/footer_pinterest.png"/></a>
+                        <a href="https://www.tiktok.com/es/" target="_blank"><img class="icono_f" src="../imagenes/footer_tiktok.png"/></a>
+                        </div>
+                </div>
+            </div>
+            <p class="copyright">© 2023 <strong>Ctlr Alt + Coffee</strong>. All rights reserved</p>
+        </footer>
+        <script src="../javascript/main.js"></script>
+    </div>
+</body>
+</html>
