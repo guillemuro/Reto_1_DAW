@@ -27,6 +27,5 @@ public class Controller extends HttpServlet {
                 new UserAction().execute(req, resp, splittedAction[1]);
                 break;
         }
-
     }
 }

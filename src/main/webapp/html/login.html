@@ -70,14 +70,66 @@
 
 
             <div class="contenedor_privacy_policy">
-                <h1 class="titulo_principal">Log in</h1>
                 <img class="banner" src="../imagenes/banner_login.png"/>
             </div>
 
-            <div class="contenedor_iniciar_sesion">
-                <p>Prueba</p>
+            <form id="myForm">
+                <div class="form-container">
+                    <p class="title">Login</p>
+                    <div class="input-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required><br><br>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required><br><br>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Password:</label>
+                        <input type="password" id="message"><br><br>
+                    </div>
+
+                    <button class="sign" input type="submit">Sign in</button>
+                </form>
             </div>
 
+
+            <script>
+                // Obtener el formulario por su ID
+                const form = document.getElementById('myForm');
+            
+                // Agregar un evento de escucha para el evento 'submit'
+                form.addEventListener('submit', function(e) {
+                  e.preventDefault(); // Prevenir el envío del formulario
+                  
+                  // Obtener los valores de los campos de entrada
+                  const name = document.getElementById('name').value;
+                  const email = document.getElementById('email').value;
+                  const message = document.getElementById('message').value;
+                  
+                  // Crear un objeto para almacenar los datos
+                  const data = {
+                    name: name,
+                    email: email,
+                    message: message
+                  };
+                  
+                  // Convertir el objeto en una cadena JSON
+                  const jsonData = JSON.stringify(data);
+                  
+                  // Guardar los datos en el localStorage
+                  localStorage.setItem('formData', jsonData);
+                  
+                  // Limpiar los campos de entrada del formulario
+                  form.reset();
+                  
+                  // Mostrar un mensaje de éxito
+                  alert('The data has been saved successfully');
+                  window.location.href = "../index.html"
+                });
+              </script>
             <footer class="footer">
                 <div class="contenedor_footer">
                     <div>
