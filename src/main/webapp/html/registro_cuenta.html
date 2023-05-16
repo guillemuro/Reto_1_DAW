@@ -7,7 +7,7 @@
         <meta name="description" content="Reto 1DAW"/>
         <meta name="authors" content="Eva, Paula, Guillermo"/>
         <title>Login</title>
-        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/registro_cuenta.css">
         <link rel="shortcut icon" href="../imagenes/favicon_ctrl.png"
             type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,45 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
             rel="stylesheet">
+        <script>
+            // Función para guardar los datos en el localStorage
+            function guardarDatos() {
+                var email = document.getElementById('email').value;
+                var contraseña = document.getElementById('contraseña').value;
+                var repetirContraseña = document.getElementById('repetirContraseña').value;
+        
+                // Verificar si las contraseñas coinciden
+                if (contraseña !== repetirContraseña) {
+                alert("The passwords do not match. Please try again");
+                return;
+                }
+                if (email === '' || contraseña === '' || repetirContraseña === '') {
+                    alert("Please complete all fields of the form.");
+                    return;
+                }
+        
+
+                // Verificar si el navegador admite localStorage
+                if (typeof(Storage) !== "undefined") {
+                // Guardar los datos en el localStorage
+                localStorage.setItem("email", email);
+                localStorage.setItem("contraseña", contraseña);
+                localStorage.setItem("repetirContraseña", repetirContraseña);
+        
+
+                if (nombre === '' || email === '' || contraseña === '' || repetirContraseña === '') {
+                    alert("Por favor, completa todos los campos del formulario");
+                    return;
+                }
+                alert("Welcome to the Ctlr Alt + Coffee family");
+                window.location.href = "../index.html"
+                } else {
+                    alert("You entered incorrect fields");
+                
+                }
+            }
+            
+        </script>
     </head>
 
     <body>
@@ -73,70 +112,35 @@
                 <img class="banner" src="../imagenes/banner_login.png"/>
             </div>
 
+            <!--CONTENIDO DEL FORMULARIO DE CUENTA NUEVA-->
+            <form class="form">
+                <h3 class="signup">Sign Up</h3>
+                <label for="email">Email:</label>
+                <input class="form--input" type="email" id="email" required><br><br>
+                <label for="contraseña">Password:</label>
+                <input class="form--input" type="password" id="contraseña"
+                    required><br><br>
 
-
-            <form id="myForm">
-                <div class="form-container">
-                    <p class="title">Login</p>
-                    <div class="input-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name"><br><br>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email"><br><br>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="message">Password:</label>
-                        <input type="password" id="message"><br><br>
-                    </div>
-
-                    <button class="sign" input type="submit">Sign in</button>
+                <label for="repetirContraseña">Repeat
+                    Password:</label>
+                <input class="form--input" type="password"
+                    id="repetirContraseña" required>
+                <div class="form--marketing">
+                    <input id="okayToEmail" type="checkbox">
+                    <label for="okayToEmail" class="checkbox">
+                        I want to join the newsletter
+                    </label>
                 </div>
 
+                <input class="form--submit" type="button" value="Join us"
+                    onclick="guardarDatos()">
             </form>
-            <a href="registro_cuenta.html"><button class="new"><b>Create new
-                        account</b></button></a>
 
 
 
 
-            <script>
-                // Obtener el formulario por su ID
-                const form = document.getElementById('myForm');
-            
-                // Agregar un evento de escucha para el evento 'submit'
-                form.addEventListener('submit', function(e) {
-                  e.preventDefault(); // Prevenir el envío del formulario
-                  
-                  // Obtener los valores de los campos de entrada
-                  const name = document.getElementById('name').value;
-                  const email = document.getElementById('email').value;
-                  const message = document.getElementById('message').value;
-                  
-                  // Crear un objeto para almacenar los datos
-                  const data = {
-                    name: name,
-                    email: email,
-                    message: message
-                  };
-                  
-                  // Convertir el objeto en una cadena JSON
-                  const jsonData = JSON.stringify(data);
-                  
-                  // Guardar los datos en el localStorage
-                  localStorage.setItem('formData', jsonData);
-                  
-                  // Limpiar los campos de entrada del formulario
-                  form.reset();
-                  
-                  // Mostrar un mensaje de éxito
-                  alert('The data has been saved successfully');
-                  window.location.href = "../index.html"
-                });
-              </script>
+
+            <!--FOOTER-->
             <footer class="footer">
                 <div class="contenedor_footer">
                     <div>
@@ -178,7 +182,8 @@
                         <p><a href="devoluciones.html">Shipping & Returns</a></p>
                     </div>
                     <div class="otra_columna">
-                        <h3>News, promotions and discounts: all in one place.
+                        <h3>News, promotions and discounts: all in one
+                            place.
                             <br>Suscribe now!</h3>
                         <div class="newsletter">
                             <form>
@@ -188,9 +193,11 @@
                             <button class="boton_newsletter" type="submit"><strong>JOIN</strong></button>
                         </div>
                         <input type="checkbox" name="terms" value="Acepta"
-                            class="checkbox_newsletter"> I have read and accept
+                            class="checkbox_newsletter"> I have read and
+                        accept
                         the <a href="privacypolicy.html"><u>Privacy Policy</u></a>
-                        and <a href="termsofservice.html"><u>Terms of Service</u></a>
+                        and <a href="termsofservice.html"><u>Terms of
+                                Service</u></a>
                         <br>
                         <br>
                         <h3>Connect with Us</h3>
@@ -202,13 +209,16 @@
                             <a href="https://twitter.com/?lang=es"
                                 target="_blank"><img class="icono_f"
                                     src="../imagenes/footer_twitter.png"/></a>
-                            <a href="http://www.instagram.com/" target="_blank"><img
+                            <a href="http://www.instagram.com/"
+                                target="_blank"><img
                                     class="icono_f"
                                     src="../imagenes/footer_instagram.png"/></a>
-                            <a href="https://www.youtube.com/" target="_blank"><img
+                            <a href="https://www.youtube.com/"
+                                target="_blank"><img
                                     class="icono_f"
                                     src="../imagenes/footer_youtube.png"/></a>
-                            <a href="https://www.pinterest.es/" target="_blank"><img
+                            <a href="https://www.pinterest.es/"
+                                target="_blank"><img
                                     class="icono_f"
                                     src="../imagenes/footer_pinterest.png"/></a>
                             <a href="https://www.tiktok.com/es/"
