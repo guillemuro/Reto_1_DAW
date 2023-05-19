@@ -41,16 +41,13 @@
                 localStorage.setItem("repetirContraseña", repetirContraseña);
         
 
-                if (nombre === '' || email === '' || contraseña === '' || repetirContraseña === '') {
-                    alert("Por favor, completa todos los campos del formulario");
-                    return;
-                }
                 alert("Welcome to the Ctlr Alt + Coffee family");
                 window.location.href = "../index.html"
                 } else {
                     alert("You entered incorrect fields");
                 
                 }
+                window.location.href = "../index.html"
             }
             
         </script>
@@ -130,7 +127,8 @@
                     </label>
                 </div>
 
-                <input class="form--submit" type="button" value="Join us"
+                <input class="form--submit"
+                    type="button" value="Join us"
                     onclick="guardarDatos()">
             </form>
 
