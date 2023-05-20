@@ -1,0 +1,113 @@
+CREATE TABLE PRODUCT(
+    PRODUCT_ID NUMBER(5),
+    PRODUCT_NAME VARCHAR2(30),
+    PRODUCT_TYPE NUMBER(1),
+    PRODUCT_PRICE NUMBER(5,2),
+    PRODUCT_DESC VARCHAR2(800),
+    PRODUCT_IMG VARCHAR2(400),
+    CONSTRAINT PK_PRODUCT PRIMARY KEY (PRODUCT_ID)
+);
+
+CREATE TABLE COFFEEUSER(
+    COFFEEUSER_ID NUMBER(5),
+    COFFEEUSER_NAME VARCHAR2(30),
+    COFFEEUSER_PASS VARCHAR2(30),
+    COFFEEUSER_EMAIL VARCHAR2(30),
+    CONSTRAINT PK_COFFEEUSER PRIMARY KEY (COFFEEUSER_ID)
+);
+CREATE TABLE SHOPPINGCART(
+    SHOPPINGCART_ID NUMBER(5),
+    COFFEEUSER_ID NUMBER(5),
+    PRODUCT_ID NUMBER(5),
+    QUANTITY NUMBER(2),
+    CONSTRAINT PK_SHOPPINGCART PRIMARY KEY (SHOPPINGCART_ID),
+    CONSTRAINT FK_COFFEEUSER FOREIGN KEY (COFFEEUSER_ID) REFERENCES COFFEEUSER(COFFEEUSER_ID),
+    CONSTRAINT FK_PRODUCT FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCT(PRODUCT_ID),
+    CONSTRAINT UQ_SHOPPINGCART UNIQUE (COFFEEUSER_ID, PRODUCT_ID)
+);
+
+
+
+CONSULTAS UTILIZADAS PARA RECOGER LAS SENTENCIAS
+-- QUERY PARA METER producto
+
+
+                        --------PARTE DE LOS CAFES-------
+
+INSERT INTO PRODUCT VALUES (1, 'Java Coffee', 1, 4.50, 'Ginger macchiato with nutmeg The Java programming language: where errors are common like morning coffee, but thanks to coffee, no need to jump out the window. A macchiato to soothe code stress? Jamaican ginger syrup adds spice, while Grenadian nutmeg adds sweetness to our espresso coffee.', '../imagenes/cafe.png' );
+
+INSERT INTO PRODUCT VALUES (2, 'Python Coffee', 1, 6.90, 'White chocolate latte with almond Python: a language that won't bite you, but will conquer you. And our Python coffee, with its delicious blend of white chocolate, along with a smooth blend of almond and foamed milk, it will be the perfect accompanying to forget the code errors and enjoy every afternoon.', '../imagenes/cafe_latte.png' );
+
+INSERT INTO PRODUCT VALUES (3, 'Php Coffee', 1, 5.90, 'Coconut vanilla cappuccino Program with PHP while enjoying a coconut and vanilla cappuccino, because life is too short to learn C++ and too long not to enjoy good flavors. The exquisite vanilla extract adds a sweet and smooth dab, while Indonesian coconut milk gives it a creamy and refreshing texture.', '../imagenes/cafe_cappuccino.png' );
+
+INSERT INTO PRODUCT VALUES (4, 'Ruby Coffee', 1, 6.90, 'Hazelnut affogato The Ruby programming language is like a gem, but our coffee is a treasure. Our Ruby Coffee Our Ruby Coffee is a perfect combination of intense espresso and creamy vanilla ice cream, complemented by the sweet, hazelnut dab of our handmade hazelnut syrup. It will give you the impulse you need to shine like a diamond while you code.', '../imagenes/cafe_affogato.png' );
+
+INSERT INTO PRODUCT VALUES (5, 'Swift Coffee', 1, 6.90, 'Moca with tree chili and cinnamon The Swift programming language: faster than morning coffee! Our Moca with grated tree pepper and cinnamon will make you feel so alive that you will become a code magician. Mexican tree chili, Vietnamese cinnamon and dark chocolate form a perfect combination of heat and flavor.', '../imagenes/cafe_moca.png' );
+
+INSERT INTO PRODUCT VALUES (6, 'JavaScript Coffee', 1, 7.90, 'Apple frappe with honey and banana JavaScript: Like apple frappe with honey and banana, it makes you question whether you’ll ever find a semicolon that loves you back. Its fresh fruit and the exquisite taste of our local honey, along with our special espresso coffee, will leave you always wanting more.', '../imagenes/cafe_frappe.png' );
+
+INSERT INTO PRODUCT VALUES (7, 'Kotlin Coffee', 1, 6.90, 'Mint Irish Coffee If you love Java, let it free. Kotlin is better for you anyway, just like Kotlin Coffee. Its exquisite Irish whisky and mint syrup form a refreshing and minty coffee with whipped cream, which will help you write high-quality code and discover the best option to forget all your Java programming problems.', '../imagenes/cafe_irlandes.png');
+
+INSERT INTO PRODUCT VALUES (8, 'C# Coffee', 1, 5.90, 'Caramel flat white C# is like a superhero in the programming world, always coming in to save the day! Just like a delicious caramel flat white, which always satisfies your coding whims. With caramel syrup, steamed milk and espresso coffee, this C# Coffee is perfect to writing your code like a real superhero.', '../imagenes/cafe_flatwhite.png');
+
+
+
+                        --------PARTE DEL MENU---------
+
+--------TIPOS DE TE--------
+
+INSERT INTO PRODUCT VALUES (9, 'ORACLE TEA', 2, 4.90, 'Yellow tea with honey, Oracle: the yellow tea with honey from databases, providing a sweet taste of information while making you ponder if you really need another cup or you are just looking for an excuse to give up.', '../imagenes/te_1.png');
+
+INSERT INTO PRODUCT VALUES (10, 'MYSQL TEA', 2, 5.90, 'Lavender tea Looking for a stable relationship? Try MySQL, where tables are always faithful! Like lavender tea, that gives you calm and relaxation with every sip, MySQL gives you the peace of mind of a reliable, robust and headache-free database (and with antioxidant properties, in addition).', '../imagenes/te_2.png');
+
+INSERT INTO PRODUCT VALUES (11, 'MONGODB TEA', 2, 4.90, 'Turmeric tea with lemon While MongoDB takes care of simplifying your database relationships, our turmeric tea with lemon gives you a perfect blend of flavors and properties that awaken your palate. Enjoy the simplicity in your database and the refreshing harmony in every sip of tea!', '../imagenes/te_3.png');
+
+INSERT INTO PRODUCT VALUES (12, 'POSTGRESQL TEA', 2, 5.90, 'PostgreSQL: the hibiscus mint tea databases, where security and fun are combined in a refreshing sip. Your data is protected like a fort, while you enjoy programming with a smile on your face.', '../imagenes/te_4.png');
+
+
+--------TIPOS DE JUICES-----------
+
+INSERT INTO PRODUCT VALUES (13, 'LARAVEL JUICE', 3, 2.50, 'Orange juice, Laravel: because programming does not have to be boring, and together with our orange juice you will also get, in addition, your daily doses of vitamin C and happiness in one sip. Get ready for a web development experience so refreshing and satisfying that it will make every line of code a real pleasure.', '../imagenes/zumo_1.png');
+
+INSERT INTO PRODUCT VALUES (14, 'REACT JUICE', 3, 2.50, 'Strawberry banana juice React: The tool that turns the chaos of JavaScript into an elegant and orderly dance. And with our strawberry banana juice, you will get such a harmonious flavor that your taste buds will dance to the rhythm of fruity sweetness. Each sip will be like a refreshing outburst that will fill you with energy and make you flow in perfect synchrony with your code.', '../imagenes/zumo_2.png');
+
+INSERT INTO PRODUCT VALUES (15, 'ANGULAR JUICE', 3, 3.90, 'Pineapple juice Angular: the framework that makes you feel like you're in a component amusement park. And with pineapple juice, you can delight in the perfect combination of technology and tropical freshness. Enjoy the program's roller coaster and the flavor of pineapple at every moment!', '../imagenes/zumo_3.png');
+
+INSERT INTO PRODUCT VALUES (16, 'SYMFONY JUICE', 3, 3.90, 'Red currant juice Symfony: where mistakes are just opportunities to discover new creative ways to solve problems. And with our red currant juice, you'll turn every challenge into a refreshing sip full of antioxidants, inspiration and creativity, ready to face any obstacle on your way to success.', '../imagenes/zumo_4.png');
+
+
+-------TIPOS DE SWEET----------
+
+INSERT INTO PRODUCT VALUES (17, 'DEBIAN SWEET', 4, 2.90, 'Debian: free software that frees you from stress and gives you endless hours of fun. Like a freshly baked croissant, enjoying Debian is an irresistible experience that makes you forget all your problems and immerse yourself in a world of warm flavors and code.', '../imagenes/croissant.png');
+
+INSERT INTO PRODUCT VALUES (18, 'FEDORA SWEET', 4, 4.90, 'Cookies Do you want a flavorful operating system? Choose Fedora, where the performance is as rewarding as the taste of your favorite freshly baked cookies. Get ready to taste success with Fedora and enjoy a delicious computer journey!', '../imagenes/cookies_2.jpg');
+
+INSERT INTO PRODUCT VALUES (19, 'LINUX SWEET', 4, 2.90, 'Chocolate muffin Linux: the only operating system where mistakes become learning opportunities… or excuses for a fresh chocolate muffin, the perfect antidote for those days of ‘you can’t program without chocolate’. Sweeten your day and your code.', '../imagenes/muffin.png');
+
+INSERT INTO PRODUCT VALUES (20, 'UBUNTU SWEET', 4, 2.90, 'Chocolate croissant Do you want a stylish operating system? Choose Ubuntu, because even our version names sound cooler than others. Our chocolate croissant is like the sweetest version of Ubuntu: a perfect combination that transports you to a world of technological pleasure.', '../imagenes/napolitana.png');
+
+
+---------SALTY------------
+
+INSERT INTO PRODUCT VALUES (21, 'NETBEANS SALTY', 5, 5.90, 'NetBeans: the perfect programming companion for those who love keyboard shortcuts, just like a salmon bagel is the perfect breakfast for those who love to swim in a sea of exquisite flavors. Immerse yourself in the world of programming and let yourself be carried away by creativity and taste!', '../imagenes/bagel.png');
+
+INSERT INTO PRODUCT VALUES (22, 'ECLIPSE SALTY', 5, 5.86, 'Eclipse: because even the sun needs a break, but your delicious vegetable sandwich with feta cheese is always ready to satisfy your whims. Whether in the program or in the food, you find the perfect balance between renewed enery and exquisite flavors.', '../imagenes/sandwich_1.png');
+
+INSERT INTO PRODUCT VALUES (23, 'VISUAL SALTY', 5, 5.90, 'Visual Studio Code: where Ctrl+C and Ctrl+V are like music for your fingers, just like our vegetable toast, which will make you dance with taste with every bite. As well as copy and paste lines of code, try our vegetable toast, where we combine fresh and tasty ingredients to create a flavors festival.', '../imagenes/tostadas.png');
+
+INSERT INTO PRODUCT VALUES (24, 'INTELLIJ SALTY', 5, 5.86, 'IntelliJ IDEA: the perfect accomplice to your code antics, just like our delicious vegetable sandwich, where we combine fresh ingredients to create an explosion of flavors in every bite.', '../imagenes/sandwich_2.png');
+
+
+
+                    --------------MERCHANDANCING--------------
+
+INSERT INTO PRODUCT VALUES (25, 'T-SHIRT', 6, 8.50, 'This shirt is the perfect suit for coffee lovers and good company. Made in soft cotton, it will give you comfort and style in any occasion. The design stands out by the logo of our coffee shop, which combines a newly made coffee with an elegant text in dark tones.', '../imagenes/camiseta.png');
+
+INSERT INTO PRODUCT VALUES (26, 'HOODIE', 6, 13.90, 'This sweater is ideal for keeping you comfortable and stylish on the coolest days. Made of soft and breathable cotton, this garment brings you comfort and warmth. The design stands out by the logo of our coffee shop, which combines a newly made coffee with an elegant text in dark tones and is brown on the chest. The sweater has a cap and cord to adjust it to your size.', '../imagenes/sudadera.png');
+
+INSERT INTO PRODUCT VALUES (27, 'BAG', 6, 5.99, 'This bag is the ideal accessory for any coffee lover who wants to take his passion everywhere. Made of high-quality, durable cotton, this bag features the logo of our coffee shop brown on the front in dark tones. In addition, it has a large main compartment and sturdy wings so that you can carry your personal items or your purchases comfortably and safely. ', '../imagenes/bolsa.png');
+
+INSERT INTO PRODUCT VALUES (28, 'CUP', 6, 11.90, 'This cup is the perfect companion to enjoy your favorite coffee. Made of high-quality, durable ceramics, this cup has the logo of our coffee shop in clear tones. In addition, its design is elegant and timeless, so it fits perfectly into any style of decoration.', '../imagenes/cup.png');
+
+
+

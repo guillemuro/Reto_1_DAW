@@ -3,18 +3,18 @@ package dao;
 import java.util.ArrayList;
 
 import interfaces.IDAO;
-import model.User;
+import model.ShoppingCart;
 
-public class UserDAO implements IDAO<User> {
+public class ShoppingCartDAO implements IDAO<ShoppingCart> {
 
     @Override
-    public int add(User bean) {
+    public int add(ShoppingCart bean) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'add'");
     }
 
     @Override
-    public ArrayList find(User bean) {
+    public ArrayList<ShoppingCart> find(ShoppingCart bean) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'find'");
     }
@@ -32,7 +32,7 @@ public class UserDAO implements IDAO<User> {
     }
 
     @Override
-    public ArrayList findAll() {
+    public ArrayList<ShoppingCart> findAll() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'findAll'");
     }

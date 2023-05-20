@@ -1,6 +1,9 @@
 package motor;
 
 import java.sql.Statement;
+
+import interfaces.IMotor;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

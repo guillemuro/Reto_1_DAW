@@ -1,8 +1,11 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
-import action.UserAction;
+import action.CoffeeUserAction;
+import action.ProductAction;
+import action.ShoppingCartAction;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,14 +21,23 @@ public class Controller extends HttpServlet {
         resp.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
         resp.setContentType("application/json");
         String action = req.getParameter("ACTION");
+        PrintWriter pw = resp.getWriter();
         System.out.println(action);
         String[] splittedAction = action.split("\\.");
+        String json = "";
 
         switch (splittedAction[0]) {
             case "USER":
-                System.out.println("user");
-                new UserAction().execute(req, resp, splittedAction[1]);
+                json = new CoffeeUserAction().execute(req, splittedAction[1]);
+                break;
+            case "SHOPPINGCART":
+                json = new ShoppingCartAction().execute(req, splittedAction[1]);
+                break;
+            case "PRODUCT":
+                json = new ProductAction().execute(req, splittedAction[1]);
                 break;
         }
+
+        pw.print(json);
     }
 }

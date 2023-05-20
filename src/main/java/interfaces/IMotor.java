@@ -1,4 +1,4 @@
-package motor;
+package interfaces;
 
 import java.sql.ResultSet;
 
