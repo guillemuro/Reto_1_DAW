@@ -89,13 +89,13 @@ INSERT INTO PRODUCT VALUES (20, 'UBUNTU SWEET', 4, 2.90, 'Chocolate croissant Do
 
 ---------SALTY------------
 
-INSERT INTO PRODUCT VALUES (21, 'NETBEANS SALTY', 5, 5.90, 'NetBeans: the perfect programming companion for those who love keyboard shortcuts, just like a salmon bagel is the perfect breakfast for those who love to swim in a sea of exquisite flavors. Immerse yourself in the world of programming and let yourself be carried away by creativity and taste!', '../imagenes/bagel.png');
+INSERT INTO PRODUCT VALUES (21, 'NETBEANS SALTY', 5, 5.90, 'Bagel, NetBeans: the perfect programming companion for those who love keyboard shortcuts, just like a salmon bagel is the perfect breakfast for those who love to swim in a sea of exquisite flavors. Immerse yourself in the world of programming and let yourself be carried away by creativity and taste!', '../imagenes/bagel.png');
 
-INSERT INTO PRODUCT VALUES (22, 'ECLIPSE SALTY', 5, 5.86, 'Eclipse: because even the sun needs a break, but your delicious vegetable sandwich with feta cheese is always ready to satisfy your whims. Whether in the program or in the food, you find the perfect balance between renewed enery and exquisite flavors.', '../imagenes/sandwich_1.png');
+INSERT INTO PRODUCT VALUES (22, 'ECLIPSE SALTY', 5, 5.86, 'Vegetable sandwich, Eclipse: because even the sun needs a break, but your delicious vegetable sandwich with feta cheese is always ready to satisfy your whims. Whether in the program or in the food, you find the perfect balance between renewed enery and exquisite flavors.', '../imagenes/sandwich_1.png');
 
-INSERT INTO PRODUCT VALUES (23, 'VISUAL SALTY', 5, 5.90, 'Visual Studio Code: where Ctrl+C and Ctrl+V are like music for your fingers, just like our vegetable toast, which will make you dance with taste with every bite. As well as copy and paste lines of code, try our vegetable toast, where we combine fresh and tasty ingredients to create a flavors festival.', '../imagenes/tostadas.png');
+INSERT INTO PRODUCT VALUES (23, 'VISUAL SALTY', 5, 5.90, 'Vegetable toast, Visual Studio Code: where Ctrl+C and Ctrl+V are like music for your fingers, just like our vegetable toast, which will make you dance with taste with every bite. As well as copy and paste lines of code, try our vegetable toast, where we combine fresh and tasty ingredients to create a flavors festival.', '../imagenes/tostadas.png');
 
-INSERT INTO PRODUCT VALUES (24, 'INTELLIJ SALTY', 5, 5.86, 'IntelliJ IDEA: the perfect accomplice to your code antics, just like our delicious vegetable sandwich, where we combine fresh ingredients to create an explosion of flavors in every bite.', '../imagenes/sandwich_2.png');
+INSERT INTO PRODUCT VALUES (24, 'INTELLIJ SALTY', 5, 5.86, 'Vegetable sandwich, IntelliJ IDEA: the perfect accomplice to your code antics, just like our delicious vegetable sandwich, where we combine fresh ingredients to create an explosion of flavors in every bite.', '../imagenes/sandwich_2.png');
 
 
 
