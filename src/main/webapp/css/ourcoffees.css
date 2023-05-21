@@ -19,7 +19,6 @@ a:visited {
     color: #fff;
 }
 
-
 .tamanyo_h1 {
     font-size: 3.2vw;
     color: #fff;
@@ -116,15 +115,14 @@ a:visited {
     text-decoration: none;
 }
 
-.usuario {
+.usuario{
     width: 1.4vw;
     padding-right: 1.2vw;
 }
 
-.carrito {
+.carrito{
     width: 1.4vw;
 }
-
 
 .banner {
     width: 100%;
@@ -152,7 +150,6 @@ a:visited {
     background-color: #43241a;
     padding: 0.8vw;
 }
-
 
 .footer {
     background-color: #43241a;
@@ -201,7 +198,6 @@ a:visited {
     height: 1.9vw;
 }
 
-
 .newsletter {
     display: flex;
     padding-bottom: 1vw;
@@ -232,7 +228,7 @@ a:visited {
 
 @media (max-width: 780px) {
     #menu {
-        font-size: 2vw;
+    font-size: 2vw;
     }
 
     #user_cart {
@@ -241,11 +237,11 @@ a:visited {
         top: 45%;
     }
 
-    .usuario {
+    .usuario{
         width: 2vw;
     }
 
-    .carrito {
+    .carrito{
         width: 2vw;
     }
 
@@ -254,7 +250,6 @@ a:visited {
         width: 2.2vw;
     }
 }
-
 
 #boton_scroll {
     display: none;
@@ -267,10 +262,6 @@ a:visited {
     border-radius: 100%;
     padding: 0.8vw;
     margin-bottom: 2vw;
-}
-
-#boton_scroll:hover {
-    background-color: red;
 }
 
 .contenedor_correo {
@@ -298,8 +289,8 @@ a:visited {
     transition: all 0.3s ease;
 }
 
-.contenedor_correo input[type="text"]:focus~.label,
-.contenedor_correo input[type="text"]:valid~.label {
+.contenedor_correo input[type="text"]:focus ~ .label,
+.contenedor_correo input[type="text"]:valid ~ .label {
     top: -1.5vw;
     font-size: 0.9vw;
     color: #43241a;
@@ -320,8 +311,8 @@ a:visited {
     transition: all 0.3s ease;
 }
 
-.contenedor_correo input[type="text"]:focus~.underline,
-.contenedor_correo input[type="text"]:valid~.underline {
+.contenedor_correo input[type="text"]:focus ~ .underline,
+.contenedor_correo input[type="text"]:valid ~ .underline {
     transform: scaleX(1);
 }
 
@@ -354,24 +345,24 @@ a:visited {
 }
 
 .overlay {
-    background-color: rgba(1, 1, 1, 0);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    visibility: hidden;
-    z-index: 3;
-    backdrop-filter: blur(7px);
+	background-color: rgba(1, 1, 1, 0);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+	z-index: 3;
+	backdrop-filter: blur(7px);
     opacity: 0;
-    transition: background-color 0.9s ease;
+	transition: background-color 0.9s ease;
 }
 
 .overlay.active {
-    visibility: visible;
+	visibility: visible;
     opacity: 1;
     background-color: rgba(1, 1, 1, 0.5);
 }
@@ -382,301 +373,122 @@ a:visited {
 }
 
 .popup {
-    background: #fff;
-    padding: 4vw;
-    text-align: center;
-    opacity: 1;
+	background: #fff;
+	padding: 4vw;
+	text-align: center;
+	opacity: 1;
     top: 18vw;
 }
 
+/*MENU DE LOS CAFES*/
 .cuerpo_menu {
     margin: 5vw 9vw;
     font-size: 1.1vw;
     display: grid;
-    grid-template-columns: repeat(4, 19vw);
+    grid-template-columns: repeat(4, 19.5vw);
     grid-gap: 2vw;
     justify-content: center;
 }
 
-.producto {
+.producto_cafe {
     border: 2px solid #43241a;
-    padding-top: 1.5vw;
+    height: 18.5vw;
+    text-align: center;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
-    padding-bottom: 0.2vw;
     cursor: pointer;
-    height: 18vw;
+    overflow: hidden;
 }
 
-.etiqueta {
-    position: absolute;
-    background-color: #43241a;
+.enlace_producto:link {
+    color: #43241a;
+}
+
+.informacion_prod_vend_texto {
     font-size: 0.8vw;
-    color: #fff;
-    margin-left: 4.5%;
-    margin-top: -2.8vw;
-    padding-left: 0.9vw;
-    padding-right: 0.9vw;
+    text-align: justify;
 }
 
-#etiqueta_2 {
-    margin-left: 11.8%;
-    background-color: #dfddb6;
-    color: #43241a;
+.informacion_producto_vendido {
+    display: none;
+    opacity: 0;
 }
 
-.dimensiones_imagen {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-    padding-top: 1.5vw;
-}
-
-#dim_img_p {
-    width: 52%;
-    padding-bottom: 0.1vw;
-}
-
-#taza {
-    width: 64%;
-    padding-top: 3.3vw;
-    padding-bottom: 2vw;
-}
-
-#dim_img_k {
-    width: 53%;
-    padding-bottom: 0.1vw;
-}
-
-.descripcion_imagen {
+.info_nombre_precio {
     display: flex;
     justify-content: space-between;
-    padding-top: 1vw;
+    margin-top: 0.5vw;
 }
 
-.informacion_popup {
-    line-height: 0.9vw;
+.producto_cafe:hover .informacion_producto_vendido {
+    display: block;
+    opacity: 1;
+    overflow: hidden;
 }
 
-.h3_marron {
-    color: #43241a;
+.producto_cafe:hover {
+    background-color: #dfddb6;
 }
 
-.h1_negro {
-    font-size: 2.75vw;
+.producto_cafe:hover .elemento_ocultado_posteriormente {
+    display: none;
 }
 
-.boton_popup {
-    width: 9.6vw;
-    font-family: 'Inter', sans-serif;
+.cafe_menu {
+    margin-top: 2vw;
+    width: 8vw;
+    height: 11.5vw;
+}
+
+.cafe_menu_1 {
+    margin-top: 2vw;
+    width: 11.5vw;
+    height: 11.5vw;
+}
+
+.botones_info {
     background-color: #43241a;
     color: #fff;
-    border: 0;
-    padding: 0.8vw;
-    font-size: 0.9vw;
-    cursor: pointer;
-    text-align: center;
-}
-
-.elementos_popup_2 {
-    margin-left: 4vw;
-    width: 60%;
-}
-
-.quantity {
-    display: flex;
-    font-size: 0.9vw;
-}
-
-.quantity_boton {
-    margin-top: 0.4vw;
-    margin-left: 0.8vw;
-    width: 6vw;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    border: 1px solid #c2c2c2;
-    height: 2vw;
-}
-
-.quantity_boton span {
-    width: 100%;
-    text-align: center;
-}
-
-.resta {
-    border-right: 1px solid #c2c2c2;
+    padding: 0.5vw;
+    border-radius: 20px;
     cursor: pointer;
 }
 
-.suma {
-    border-left: 1px solid #c2c2c2;
-    cursor: pointer;
-}
-
-.numero {
-    font-weight: 700;
-}
-
-.quantity_money {
-    margin-top: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.money {
-    margin-top: 0;
-    padding-top: 0.5vw;
-    color: red;
-}
-
-#money {
-    color: #000;
-}
-
-.informacion_cafe {
-    font-size: 0.85vw;
-    text-align: justify;
-    margin-top: 0.1vw;
-}
-
-.product_description {
-    margin-bottom: 0;
-}
-
-.intolerancias_1 {
-    width: 20%;
-    cursor: pointer;
-}
-
-.alergenos_boton {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.7vw;
-    padding-bottom: 0.8vw;
-}
-
-.sello_coffe_month {
-    width: 15%;
-    position: absolute;
-    margin-left: 10vw;
-}
-
-.descuento {
-    font-size: 0.9vw;
-    text-decoration: line-through;
-    padding-left: 0.9vw;
-    color: #000;
-}
-
-hr {
-    border: 0.5px solid rgb(232, 232, 232);
-}
-
-h4 {
-    margin-bottom: 0.2vw;
-}
-
-.datos {
-    display: flex;
-    justify-content: space-between;
-}
-
-.tabla {
-    border: 2px solid #ededed;
-    width: 100%;
-}
-
-.img_popup {
-    padding-top: 3.5vw;
-    width: 17vw;
-}
-
-.img_popup_py {
-    padding-top: 3.5vw;
-    width: 15vw;
-}
-
-.popup_menu {
+.botones_info:hover {
     background-color: #fff;
-    padding: 2.5vw;
-    visibility: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 50vw;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    opacity: 0;
-    border: 5px solid #43241a;
+    color: #43241a;
+}
+
+.informacion_producto_vendido_flex {
     display: flex;
-    align-items: center;
-    transition: opacity 0.5s ease-in-out;
+    justify-content: space-between;
+    font-size: 0.6vw;
+    text-align: center;
 }
 
-#java_popup.active {
-    visibility: visible;
-    opacity: 1;
+.boton_ver_info {
+    background-color: #43241a;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    height: 2vw;
+    cursor: pointer;
+    font-size: 0.7vw;
 }
 
-#python_popup.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-#php_popup.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-#ruby_popup.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-#swift_popup.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-#javascript_popup.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-#kotlin_popup.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-#c_popup.active {
-    visibility: visible;
-    opacity: 1;
-}
-
-.affogato_img {
-    width: 17vw;
-}
-
-.overlay_java {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    align-items: center;
+.boton_carrito {
+    cursor: pointer;
+    background-color: #43241a;
+    width: 19.5vw;
+    font-family: "Inter", sans-serif;
+    height: 2.7vw;
+    display: flex;
     justify-content: center;
-    display: flex;
-    visibility: hidden;
-    z-index: 3;
-    backdrop-filter: blur(7px);
-    opacity: 0;
-    transition: background-color 0.9s ease;
+    align-items: center;
+    border: 0;
 }
 
-.overlay_java.active {
-    visibility: visible;
-    opacity: 1;
+.carrito_boton {
+    color: #fff;
+    width: 2vw;
+    height: 1.4vw;
 }
