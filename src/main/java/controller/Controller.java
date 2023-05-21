@@ -22,7 +22,6 @@ public class Controller extends HttpServlet {
         resp.setContentType("application/json");
         String action = req.getParameter("ACTION");
         PrintWriter pw = resp.getWriter();
-        System.out.println(action);
         String[] splittedAction = action.split("\\.");
         String json = "";
 

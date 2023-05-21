@@ -1,163 +1,43 @@
-/*BOTON SCROLL*/
-let mybutton = document.getElementById("boton_scroll");
+window.onload = function () {
+    fetch('http://localhost:8081/src/Controller?ACTION=PRODUCT.FIND&TYPE=1').then(function (response) {
+        response.json().then(function (json) {
+            let cuerpoMenu = document.getElementById("classMenu")
+            cuerpoMenu.innerHTML = ""
+            json.forEach(element => {
+                let div = document.createElement('div')
+                div.innerHTML = `
+                <div class="producto_cafe">
+                <div class="informacion_producto_vendido">
+                    <p class="informacion_prod_vend_texto">
+                        ${element.productDesc}
+                    </p>
+                    <div class="informacion_producto_vendido_flex">
+                        <a class="enlace_producto" href="#"><p class="botones_info">Allergens</p></a>
+                        <a class="enlace_producto" href="../otros/Nutritional_tables_CtrlAlt_Coffee.pdf" title="Nutritional tables" target="blank"><p class="botones_info">Nutritional tables</p></a>
+                    </div>
+                </div>
+                <div class="elemento_ocultado_posteriormente">
+                    <img class="cafe_menu" src="${element.productImg}"/>
+                    <div class="info_nombre_precio">
+                        <p><strong>${element.productName}</strong></p>
+                        <p>$ ${element.productPrice}</p>
+                    </div>
+                </div>
+            </div>
+            <button class="boton_carrito" onclick="addProduct(${element.productId})">
+                <svg viewBox="0 0 16 16" class="carrito_boton" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg>
+            </button>
 
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
+                `
+                cuerpoMenu.appendChild(div);
+            });
+        });
+    })
+        .catch(function (error) {
+            console.log('Hubo un problema con la petición Fetch:' + error.message);
+        });
 }
 
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-
-/*ZONA PRIVADA*/
-var btnAbrirPopup = document.getElementById('header_candado'),
-    overlay = document.getElementById('overlay'),
-    popup = document.getElementById('popup'),
-    btnCerrarPopup = document.getElementById('x_zona_privada');
-
-btnAbrirPopup.addEventListener('click', function () {
-    overlay.classList.add('active');
-    popup.classList.add('active');
-});
-
-btnCerrarPopup.addEventListener('click', function (e) {
-    e.preventDefault();
-    overlay.classList.remove('active');
-    popup.classList.remove('active');
-});
-
-
-/*PAGINA MERCHANDISING*/
-/*
-var abrirInfoProducto1 = document.getElementById('producto_1'),
-    abrirInfoProducto2 = document.getElementById('producto_2'),
-    abrirInfoProducto3 = document.getElementById('producto_3'),
-    abrirInfoProducto4 = document.getElementById('producto_4'),
-    producto1 = document.getElementById('producto_1_popup'),
-    producto2 = document.getElementById('producto_2_popup'),
-    producto3 = document.getElementById('producto_3_popup'),
-    producto4 = document.getElementById('producto_4_popup');
-
-abrirInfoProducto1.addEventListener('click', function () {
-    producto1.classList.add('active');
-});
-abrirInfoProducto2.addEventListener('click', function () {
-    producto2.classList.add('active');
-});
-abrirInfoProducto3.addEventListener('click', function () {
-    producto3.classList.add('active');
-});
-abrirInfoProducto4.addEventListener('click', function () {
-    producto4.classList.add('active');
-});
-
-
-var btnCerrarPopup = document.getElementById('x_zona_privada_1');
-btnCerrarPopup.addEventListener('click', function (e) {
-    e.preventDefault();
-    producto1.classList.remove('active');
-});
-var btnCerrarPopup1 = document.getElementById('x_zona_privada_2');
-btnCerrarPopup1.addEventListener('click', function (e) {
-    e.preventDefault();
-    producto2.classList.remove('active');
-});
-var btnCerrarPopup2 = document.getElementById('x_zona_privada_3');
-btnCerrarPopup2.addEventListener('click', function (e) {
-    e.preventDefault();
-    producto3.classList.remove('active');
-});
-var btnCerrarPopup3 = document.getElementById('x_zona_privada_4');
-btnCerrarPopup3.addEventListener('click', function (e) {
-    e.preventDefault();
-    producto4.classList.remove('active');
-});
-
-
-let i = 1;
-var restar = document.getElementById('resta'),
-    sumar = document.getElementById('suma'),
-    numActual = document.getElementById('numero');
-restar.addEventListener('click', function () {
-    if (i > 1) {
-        i--;
-        numActual.innerText = i;
-        console.log(i);
-    }
-});
-sumar.addEventListener('click', function () {
-    i++;
-    numActual.innerText = i;
-    console.log(i);
-});
-
-
-
-var restar_2 = document.getElementById('resta_2'),
-    sumar_2 = document.getElementById('suma_2'),
-    numActual_2 = document.getElementById('numero_2');
-restar_2.addEventListener('click', function () {
-    if (i > 1) {
-        i--;
-        numActual_2.innerText = i;
-        console.log(i);
-    }
-});
-sumar_2.addEventListener('click', function () {
-    i++;
-    numActual_2.innerText = i;
-    console.log(i);
-});
-
-
-
-var restar_3 = document.getElementById('resta_3'),
-    sumar_3 = document.getElementById('suma_3'),
-    numActual_3 = document.getElementById('numero_3');
-restar_3.addEventListener('click', function () {
-    if (i > 1) {
-        i--;
-        numActual_3.innerText = i;
-        console.log(i);
-    }
-});
-sumar_3.addEventListener('click', function () {
-    i++;
-    numActual_3.innerText = i;
-    console.log(i);
-});
-
-
-
-var restar_4 = document.getElementById('resta_4'),
-    sumar_4 = document.getElementById('suma_4'),
-    numActual_4 = document.getElementById('numero_4');
-restar_4.addEventListener('click', function () {
-    if (i > 1) {
-        i--;
-        numActual_4.innerText = i;
-        console.log(i);
-    }
-});
-sumar_4.addEventListener('click', function () {
-    i++;
-    numActual_4.innerText = i;
-    console.log(i);
-});
-
-*/
-
-
-/*PAGINA OUR COFFEES*/
-/*PRODUCTOS*/
 
 
 

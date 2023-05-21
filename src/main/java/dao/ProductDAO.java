@@ -30,6 +30,7 @@ public class ProductDAO implements IDAO<Product> {
                 product.setProductName(rs.getString("PRODUCT_NAME"));
                 product.setProductType(rs.getInt("PRODUCT_TYPE"));
                 product.setProductPrice(rs.getDouble("PRODUCT_PRICE"));
+                product.setProductImg(rs.getString("PRODUCT_TITLE"));
                 product.setProductDesc(rs.getString("PRODUCT_DESC"));
                 product.setProductImg(rs.getString("PRODUCT_IMG"));
                 lstProduct.add(product);

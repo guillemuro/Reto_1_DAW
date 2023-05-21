@@ -1,7 +1,61 @@
+window.onload = function () {
+
+  fetch('http://localhost:8081/src/Controller?ACTION=PRODUCT.FIND&TYPE=2').then(function (response) {
+    response.json().then(function (json) {
+      let cuerpoMenu = document.getElementById("te")
+      cuerpoMenu.innerHTML = ""
+      json.forEach(element => {
+        let div = document.createElement('div')
+        div.innerHTML = `
+              <div class="producto_cafe">
+                          <div class="informacion_producto_vendido">
+                              <p class="informacion_prod_vend_texto">
+                              ${element.productDesc}
+                              </p>
+                              <div class="informacion_producto_vendido_flex">
+                                  <a class="enlace_producto" href="#"><p
+                                          class="botones_info">Allergens</p></a>
+                                  <a class="enlace_producto"
+                                      href="../otros/Nutritional_tables_CtrlAlt_Coffee.pdf"
+                                      title="Nutritional tables"
+                                      target="blank"><p class="botones_info">Nutritional
+                                          tables</p></a>
+                              </div>
+                          </div>
+                          <div class="elemento_ocultado_posteriormente">
+                              <img class="cafe_menu"
+                                  src="${element.productImg}"/>
+                              <div class="info_nombre_precio">
+                                  <p><strong>${element.productName}</strong></p>
+                                  <p>$ ${element.productPrice}</p>
+                              </div>
+                          </div>
+                      </div>
+                      <button class="boton_carrito" onclick="addProduct(${element.productId})">
+                          <svg viewBox="0 0 16 16" class="carrito_boton"
+                              fill="currentColor"
+                              xmlns="http://www.w3.org/2000/svg"><path
+                                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg>
+                      </button>
+
+              `
+        cuerpoMenu.appendChild(div);
+      });
+    });
+  })
+    .catch(function (error) {
+      console.log('Hubo un problema con la petición Fetch:' + error.message);
+    });
+}
+
+
+
+
+
 /*BOTON SCROLL*/
 let mybutton = document.getElementById("boton_scroll");
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -12,7 +66,7 @@ function scrollFunction() {
 }
 
 function topFunction() {
-  document.body.scrollTop = 0; 
+  document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
@@ -20,59 +74,18 @@ function topFunction() {
 
 /*ZONA PRIVADA*/
 var btnAbrirPopup = document.getElementById('header_candado'),
-	overlay = document.getElementById('overlay'),
-	popup = document.getElementById('popup'),
-	btnCerrarPopup = document.getElementById('x_zona_privada');
+  overlay = document.getElementById('overlay'),
+  popup = document.getElementById('popup'),
+  btnCerrarPopup = document.getElementById('x_zona_privada');
 
-btnAbrirPopup.addEventListener('click', function(){
-	overlay.classList.add('active');
-	popup.classList.add('active');
+btnAbrirPopup.addEventListener('click', function () {
+  overlay.classList.add('active');
+  popup.classList.add('active');
 });
 
-btnCerrarPopup.addEventListener('click', function(e){
-	e.preventDefault();
-	overlay.classList.remove('active');
-	popup.classList.remove('active');
+btnCerrarPopup.addEventListener('click', function (e) {
+  e.preventDefault();
+  overlay.classList.remove('active');
+  popup.classList.remove('active');
 });
 
-
-
-/*POP UPS PRODUCTOS*/
-var abrirInfoOracle = document.getElementById('oracle'),
-    abrirInfoMysql = document.getElementById('mysql'),
-    abrirInfoMongo = document.getElementById('mongo'),
-    abrirInfoPostgre = document.getElementById('postgre'),
-    abrirInfoLaravel = document.getElementById('laravel'),
-    abrirInfoReact = document.getElementById('react'),
-    abrirInfoAngular = document.getElementById('angular'),
-    abrirInfoSymfony = document.getElementById('symfony'),
-    abrirInfoDebian = document.getElementById('debian'),
-    abrirInfoFedora = document.getElementById('fedora'),
-    abrirInfoLinux = document.getElementById('linux'),
-    abrirInfoUbuntu = document.getElementById('ubuntu'),
-    abrirInfoNetbeans = document.getElementById('netbeans'),
-    abrirInfoEclipse = document.getElementById('eclipse'),
-    abrirInfoVisual = document.getElementById('visual'),
-    abrirInfoIntellij = document.getElementById('intellij'),
-    oracle = document.getElementById('oracle_popup'),
-    mysql = document.getElementById('mysql_popup'),
-    mongo = document.getElementById('mongo_popup'),
-    postgre = document.getElementById('postgre_popup'),
-    laravel = document.getElementById('laravel_popup'),
-    react = document.getElementById('react_popup'),
-    angular = document.getElementById('angular_popup'),
-    symfony = document.getElementById('symfony_popup'),
-    debian = document.getElementById('debian_popup'),
-    fedora = document.getElementById('fedora_popup'),
-    linux = document.getElementById('linux_popup'),
-    ubuntu = document.getElementById('ubuntu_popup'),
-    netbeans = document.getElementById('netbeans_popup'),
-    eclipse = document.getElementById('eclipse_popup'),
-    visual = document.getElementById('visual_popup'),
-    intellij = document.getElementById('intellij_popup');
-
-
-
-abrirInfoOracle.addEventListener('click', function(){
-    oracle.classList.add('active');
-});
