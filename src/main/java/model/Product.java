@@ -8,13 +8,15 @@ public class Product {
     private double productPrice;
     private String productDesc;
     private String productImg;
+    private String productTitle;
 
     // CONSTRUCTOR
     public Product(int productType) {
         this.productType = productType;
     }
 
-    public Product(int productId, String productName, int productType, double productPrice, String productDesc,
+    public Product(int productId, String productName, int productType, double productPrice, String productTitle,
+            String productDesc,
             String productImg) {
         this.productId = productId;
         this.productName = productName;
@@ -22,6 +24,7 @@ public class Product {
         this.productPrice = productPrice;
         this.productDesc = productDesc;
         this.productImg = productImg;
+        this.productTitle = productTitle;
     }
 
     public Product() {
@@ -74,6 +77,14 @@ public class Product {
 
     public void setProductImg(String productImg) {
         this.productImg = productImg;
+    }
+
+    public String getProductTitle() {
+        return productTitle;
+    }
+
+    public void setProductTitle(String productTitle) {
+        this.productTitle = productTitle;
     }
 
 }

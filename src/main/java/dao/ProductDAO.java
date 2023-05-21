@@ -26,13 +26,15 @@ public class ProductDAO implements IDAO<Product> {
             ResultSet rs = motorOracle.executeQuery(sql);
             while (rs.next()) {
                 Product product = new Product();
+
                 product.setProductId(rs.getInt("PRODUCT_ID"));
                 product.setProductName(rs.getString("PRODUCT_NAME"));
                 product.setProductType(rs.getInt("PRODUCT_TYPE"));
                 product.setProductPrice(rs.getDouble("PRODUCT_PRICE"));
-                product.setProductImg(rs.getString("PRODUCT_TITLE"));
-                product.setProductDesc(rs.getString("PRODUCT_DESC"));
                 product.setProductImg(rs.getString("PRODUCT_IMG"));
+                product.setProductDesc(rs.getString("PRODUCT_DESC"));
+                product.setProductTitle(rs.getString("PRODUCT_TITLE"));
+
                 lstProduct.add(product);
             }
             motorOracle.disconnect();

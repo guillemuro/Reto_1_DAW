@@ -83,7 +83,7 @@ INSERT INTO PRODUCT VALUES (17, 'DEBIAN SWEET', 4, 2.90, 'Croissant', 'Debian: f
 
 INSERT INTO PRODUCT VALUES (18, 'FEDORA SWEET', 4, 4.90, 'Cookies', 'Do you want a flavorful operating system? Choose Fedora, where the performance is as rewarding as the taste of your favorite freshly baked cookies. Get ready to taste success with Fedora and enjoy a delicious computer journey!', '../imagenes/cookies_2.jpg');
 
-INSERT INTO PRODUCT VALUES (19, 'LINUX SWEET', 4, 2.90, '', 'Chocolate muffin Linux: the only operating system where mistakes become learning opportunities… or excuses for a fresh chocolate muffin, the perfect antidote for those days of ‘you can’t program without chocolate’. Sweeten your day and your code.', '../imagenes/muffin.png');
+INSERT INTO PRODUCT VALUES (19, 'LINUX SWEET', 4, 2.90, 'Chocolate muffin ', 'Linux: the only operating system where mistakes become learning opportunities… or excuses for a fresh chocolate muffin, the perfect antidote for those days of ‘you can’t program without chocolate’. Sweeten your day and your code.', '../imagenes/muffin.png');
 
 INSERT INTO PRODUCT VALUES (20, 'UBUNTU SWEET', 4, 2.90, 'Chocolate croissant', 'Do you want a stylish operating system? Choose Ubuntu, because even our version names sound cooler than others. Our chocolate croissant is like the sweetest version of Ubuntu: a perfect combination that transports you to a world of technological pleasure.', '../imagenes/napolitana.png');
 
