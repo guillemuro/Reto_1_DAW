@@ -8,9 +8,9 @@ window.onload = function () {
                 div.innerHTML = `
                 <div class="producto_cafe">
                         <div class="informacion_producto_vendido">
-                            <h4>${element.productTitle}</h4>
+                            <h4>${element.productDesc}</h4>
                             <p class="informacion_prod_vend_texto">
-                            ${element.productDesc}
+                            ${element.productTitle}
                             </p>
                             <div class="informacion_producto_vendido_flex">
                                 <a class="enlace_producto" href="#"><p
@@ -27,7 +27,7 @@ window.onload = function () {
                                 <p><strong>${element.productName}</strong></p>
                                 <p>$ ${element.productPrice}0</p>
                             </div>
-                        </div>
+                        </div>                    
                     </div>
                     <button class="boton_carrito" onclick="addProduct(${element.productId})">
                         <svg viewBox="0 0 16 16" class="carrito_boton"
