@@ -64,12 +64,6 @@ window.onload = function () {
                             <p class="informacion_prod_vend_texto">
                             ${element.productTitle}
                             </p>
-                            <div class="informacion_producto_vendido_flex">
-                                <a class="enlace_producto"
-                                    href="../imagenes/tshirt_medidas.jpg"
-                                    target="blank" alt="t-shirt"><p
-                                        class="botones_info">Size</p></a>
-                            </div>
                         </div>
                         <div class="elemento_ocultado_posteriormente">
                             <img class="cafe_menu"
