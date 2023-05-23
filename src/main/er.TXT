@@ -32,6 +32,8 @@ CREATE TABLE SHOPPINGCART(
 CONSULTAS UTILIZADAS PARA RECOGER LAS SENTENCIAS
 -- QUERY PARA METER producto
 
+-------------------------------------------------PARTE DE LOS PRODUCTOS-------------------------------------------
+
 
                         --------PARTE DE LOS CAFES-------
 
@@ -110,5 +112,8 @@ INSERT INTO PRODUCT VALUES (27, 'BAG', 6, 5.99, 'Bag', 'This bag is the ideal ac
 
 INSERT INTO PRODUCT VALUES (28, 'CUP', 6, 11.90, 'Cup', 'This cup is the perfect companion to enjoy your favorite coffee. Made of high-quality, durable ceramics, this cup has the logo of our coffee shop in clear tones. In addition, its design is elegant and timeless, so it fits perfectly into any style of decoration.', '../imagenes/merch_cup.png');
 
+
+
+-----------------------------------------------------PARTE DEL CARRITO DE LA COMPRA-------------------------------------
 
 
