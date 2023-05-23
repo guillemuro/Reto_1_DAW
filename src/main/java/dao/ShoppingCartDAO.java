@@ -1,22 +1,44 @@
 package dao;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import interfaces.IDAO;
 import model.ShoppingCart;
+import motor.MotorOracle;
 
 public class ShoppingCartDAO implements IDAO<ShoppingCart> {
+    MotorOracle motorOracle = new MotorOracle();
 
     @Override
     public int add(ShoppingCart bean) {
-        // TODO Auto-generated method stub
+
         throw new UnsupportedOperationException("Unimplemented method 'add'");
     }
 
     @Override
     public ArrayList<ShoppingCart> find(ShoppingCart bean) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'find'");
+
+        try {
+            ArrayList<ShoppingCart> listShopping = new ArrayList<>();
+            String sql = "SELECT * FROM SHOPPINGCART WHERE USER_ID =" + bean.getUserId();
+            ResultSet rs = motorOracle.executeQuery(sql);
+            while (rs.next()) {
+                ShoppingCart shoppingCart = new ShoppingCart();
+                shoppingCart.setUserId(rs.getInt("SHOPINGCART_ID"));
+                shoppingCart.setProductId(rs.getInt("PRODUCT_ID"));
+                shoppingCart.setQuantity(rs.getInt("QUANTITY"));
+                shoppingCart.setShoppingCartId(rs.getInt("SHOPPINGCART_ID"));
+                listShopping.add(shoppingCart);
+
+            }
+            motorOracle.disconnect();
+            return listShopping;
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
+
     }
 
     @Override
