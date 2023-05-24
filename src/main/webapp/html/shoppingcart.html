@@ -1,264 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reto 1DAW"/>
-    <meta name="authors" content="Paula, Guillermo"/>
-    <title>Shopping cart</title>
-    <link rel="stylesheet" href="../css/shoppingcart.css">
-    <link rel="shortcut icon" href="../imagenes/favicon_ctrl.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Reto 1DAW" />
+        <meta name="authors" content="Paula, Guillermo" />
+        <title>Shopping cart</title>
+        <link rel="stylesheet" href="../css/shoppingcart.css">
+        <link rel="shortcut icon" href="../imagenes/favicon_ctrl.png"
+            type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+    </head>
 
-<body>
-    <div class="box">
-        <header class="header">
-            <div class="header_1">
-                <img class="header_candado" id="header_candado" src="../imagenes/candado_header.png">
-            </div>
-            <div class="usuario_carrito">
-                <a href="#"><img class="usuario" src="../imagenes/usuario_nv.png"></a>
-                <div class="carrito_contador">
-                    <a href="shoppingcart.html"><img class="carrito" src="../imagenes/carro.png"></a>
-                    <span class="contador_productos">0</span>
+    <body>
+        <div class="box">
+            <header class="header">
+                <div class="header_1">
+                    <img class="header_candado" id="header_candado"
+                        src="../imagenes/candado_header.png">
+                </div>
+                <div class="usuario_carrito">
+                    <a href><img class="usuario"
+                            src="../imagenes/usuario_nv.png"></a>
+                    <div class="carrito_contador">
+                        <a href="./shoppingcart.html"><img class="carrito"
+                                src="../imagenes/carro.png"></a>
+                        <span class="contador_productos">0</span>
+                    </div>
+                </div>
+                <div class="header_2">
+                    <a href="../html/main.html"><img class="logotipo"
+                            src="../imagenes/logotipo_blanco.png"></a>
+                    <div id="menu">
+                        <ul>
+                            <li><a href="./ourcoffees.html">Our coffees</a></li>
+                            <li><a href="./ourmenu.html">Our menu</a></li>
+                            <li><a href="./merchandising.html">Merchandising</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <img onclick="topFunction()" id="boton_scroll" title="boton_scroll"
+                src="../imagenes/scroll.png" />
+
+            <div class="overlay" id="overlay">
+                <div class="popup" id="popup">
+                    <img class="x_zona_privada" id="x_zona_privada"
+                        src="../imagenes/x.png" />
+                    <img class="candado_zona_privada"
+                        src="../imagenes/candado_priv.png" />
+                    <h1 class="h1_black">Private zone</h1>
+                    <div class="contenedor_correo">
+                        <input type="text" id="input" required="Comp">
+                        <label for="input" class="label">Enter your email
+                            address</label>
+                        <div class="underline"></div>
+                    </div>
+                    <a href="./lock.html"><button
+                            class="boton_zona_privada" type="submit"><strong>GO
+                                THERE!</strong></button></a>
                 </div>
             </div>
-            <div class="header_2">
-                <a href="../html/main.html"><img class="logotipo" src="../imagenes/logotipo_blanco.png"></a>
-                <div id="menu">
-                    <ul>
-                        <li><a href="#">Our coffees</a></li>
-                        <li><a href="#">Our menu</a></li>
-                        <li><a href="merchandising.html">Merchandising</a></li>
-                    </ul>
-                </div>
+
+            <div class="contenedor_privacy_policy">
+                <h1 class="titulo_principal">Shopping cart<br><span
+                        class="subtitulos"><em>Click, receive and smile!</em></span></h1>
+                <img class="banner" src="../imagenes/privacy_3.png" />
             </div>
-        </header>
-            
-        <img onclick="topFunction()" id="boton_scroll" title="boton_scroll" src="../imagenes/scroll.png"/>
 
-        <div class="overlay" id="overlay">
-            <div class="popup" id="popup">
-                <img class="x_zona_privada" id="x_zona_privada" src="../imagenes/x.png"/>
-                <img class="candado_zona_privada" src="../imagenes/candado_priv.png"/>
-                <h1 class="h1_black">Private zone</h1>
-                <div class="contenedor_correo">
-                    <input type="text" id="input" required="Comp">
-                    <label for="input" class="label">Enter your email address</label>
-                    <div class="underline"></div>
-                </div> 
-                <a href="../html/lock.html"><button class="boton_zona_privada" type="submit"><strong>GO THERE!</strong></button></a>       
-            </div>
-        </div>
-
-        <div class="contenedor_privacy_policy">
-            <h1 class="titulo_principal">Shopping cart<br><span class="subtitulos"><em>Click, receive and smile!</em></span></h1>
-            <img class="banner" src="../imagenes/privacy_3.png"/>
-        </div>
-
-        <div class="cuerpo_mensaje">
-            <div class="sumario_productos">
-                <h1>Shopping cart</h1>
-                <!-- INSERTAR PRODUCTO -->
-                <div class="producto_agregado_carrito">
-                    <img class="img_carrito" src="../imagenes/imagen_prueba.png" alt="carrito"/>
-                    <img class="basura" src="../imagenes/basura.png" alt="basura"/>
-                    <div class="informacion_producto_carrito">
-                        <h2>Java Coffee</h2>
-                        <p>Ginger macchiato with nutmeg</p>
-                        <div class="flex">
-                            <div class="quantity">
-                                <p>Quantity: </p>
-                                <div class="quantity_boton">
-                                    <span class="resta"><strong>-</strong></span>
-                                    <span class="numero"><strong>1</strong></span>
-                                    <span class="suma"><strong>+</strong></span>
+            <div class="cuerpo_mensaje">
+                <div class="sumario_productos">
+                    <h1>Shopping cart</h1>
+                    <!-- INSERTAR PRODUCTO -->
+                    <div class="producto_agregado_carrito">
+                        <img class="img_carrito"
+                            src="../imagenes/imagen_prueba.png" alt="carrito" />
+                        <img class="basura" src="../imagenes/basura.png"
+                            alt="basura" />
+                        <div class="informacion_producto_carrito">
+                            <h2>Java Coffee</h2>
+                            <p>Ginger macchiato with nutmeg</p>
+                            <div class="flex">
+                                <div class="quantity">
+                                    <p>Quantity: </p>
+                                    <div class="quantity_boton">
+                                        <span class="resta"><strong>-</strong></span>
+                                        <span class="numero"><strong>1</strong></span>
+                                        <span class="suma"><strong>+</strong></span>
+                                    </div>
                                 </div>
+                                <h3>$ 10.00</h3>
                             </div>
-                            <h3>$ 10.00</h3>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="detalles_pago">
-                <div class="checkout">
-                    <div class="subtitulo_checkout">
-                        <img class="ubicacion" src="../imagenes/lapiz_2.png" alt="lapiz"/>
-                        <h3>Order summary</h3>
-                    </div>
-                    <div class="subtitulo_espacio">
-                        <p>Subtotal</p>
-                        <p>$ 8.98</p>
-                    </div>
-                    <div class="subtitulo_espacio">
-                        <p>Shipping costs</p>
-                        <p>$ 2.50</p>
-                    </div>
-                    <hr class="linea_2">
-                    <div class="subtitulo_espacio">
-                        <p><strong>Total</strong></p>
-                        <p><strong>$ 11.48</strong></p>
-                    </div>
-                    <p class="vat"><em>*VAT included</em></p>
-                </div>
-                <br>
-                <div class="checkout">
-                    <div class="subtitulo_checkout">
-                        <img class="enviado" src="../imagenes/enviado.png" alt="envio"/>
-                        <h3>Delivery</h3>
-                    </div>
-                    <form>
-                        <input type="text" name="nombre_tarjeta" class="hueco_checkout" placeholder="Full name">
-                        <input type="text" name="nombre_tarjeta" class="hueco_checkout" placeholder="Address">
-                        <div class="cvv_expiry">
-                            <input type="number" name="nombre_tarjeta" class="hueco_checkout" id="hueco_checkout_tamanyo" placeholder="Postal code">   
-                            <input type="number" name="cvv" class="hueco_checkout" id="hueco_checkout_tamanyo" placeholder="City: New York" readonly>   
-                        </div>
-                        <div class="cvv_expiry">
-                            <input type="text" name="nombre_tarjeta" class="hueco_checkout" id="hueco_checkout_tamanyo" placeholder="Mail">   
-                            <input type="number" name="cvv" class="hueco_checkout" id="hueco_checkout_tamanyo" placeholder="Phone">  
-                        </div>
-                        <br>
-                        <div class="separador">
-                            <hr class="linea">
-                            <p>or</p>
-                            <hr class="linea">
-                        </div>
+                <div class="detalles_pago">
+                    <div class="checkout">
                         <div class="subtitulo_checkout">
-                            <img class="ubicacion" src="../imagenes/ubicacion.png" alt="ubicacion"/>
-                            <h3>In-store pickup</h3>
+                            <img class="ubicacion" src="../imagenes/lapiz_2.png"
+                                alt="lapiz" />
+                            <h3>Order summary</h3>
                         </div>
-                        <div class="eleccion_tienda">
-                                <div class="opcion_tienda" onclick="toggleHoverColor(this)">
-                                    <img class="estatua_libertad" src="../imagenes/manhattan.png" alt="nueva york 1"/>
+                        <div class="subtitulo_espacio">
+                            <p>Subtotal</p>
+                            <p>$ 8.98</p>
+                        </div>
+                        <div class="subtitulo_espacio">
+                            <p>Shipping costs</p>
+                            <p>$ 2.50</p>
+                        </div>
+                        <hr class="linea_2">
+                        <div class="subtitulo_espacio">
+                            <p><strong>Total</strong></p>
+                            <p><strong>$ 11.48</strong></p>
+                        </div>
+                        <p class="vat"><em>*VAT included</em></p>
+                    </div>
+                    <br>
+                    <div class="checkout">
+                        <div class="subtitulo_checkout">
+                            <img class="enviado" src="../imagenes/enviado.png"
+                                alt="envio" />
+                            <h3>Delivery</h3>
+                        </div>
+                        <form>
+                            <input type="text" name="nombre_tarjeta"
+                                class="hueco_checkout" placeholder="Full name">
+                            <input type="text" name="nombre_tarjeta"
+                                class="hueco_checkout" placeholder="Address">
+                            <div class="cvv_expiry">
+                                <input type="number" name="nombre_tarjeta"
+                                    class="hueco_checkout"
+                                    id="hueco_checkout_tamanyo"
+                                    placeholder="Postal code">
+                                <input type="number" name="cvv"
+                                    class="hueco_checkout"
+                                    id="hueco_checkout_tamanyo"
+                                    placeholder="City: New York" readonly>
+                            </div>
+                            <div class="cvv_expiry">
+                                <input type="text" name="nombre_tarjeta"
+                                    class="hueco_checkout"
+                                    id="hueco_checkout_tamanyo"
+                                    placeholder="Mail">
+                                <input type="number" name="cvv"
+                                    class="hueco_checkout"
+                                    id="hueco_checkout_tamanyo"
+                                    placeholder="Phone">
+                            </div>
+                            <br>
+                            <div class="separador">
+                                <hr class="linea">
+                                <p>or</p>
+                                <hr class="linea">
+                            </div>
+                            <div class="subtitulo_checkout">
+                                <img class="ubicacion"
+                                    src="../imagenes/ubicacion.png"
+                                    alt="ubicacion" />
+                                <h3>In-store pickup</h3>
+                            </div>
+                            <div class="eleccion_tienda">
+                                <div class="opcion_tienda"
+                                    onclick="toggleHoverColor(this)">
+                                    <img class="estatua_libertad"
+                                        src="../imagenes/manhattan.png"
+                                        alt="nueva york 1" />
                                     <p>7 Park Avenue, NY 10016</p>
                                 </div>
-                                <div class="opcion_tienda" onclick="toggleHoverColor(this)">
-                                    <img class="estatua_libertad" src="../imagenes/edificio-empire-state.png" alt="nueva york 2"/>
+                                <div class="opcion_tienda"
+                                    onclick="toggleHoverColor(this)">
+                                    <img class="estatua_libertad"
+                                        src="../imagenes/edificio-empire-state.png"
+                                        alt="nueva york 2" />
                                     <p>3 Riverview Ave. Flushing, NY 11354</p>
                                 </div>
-                                <div class="opcion_tienda" onclick="toggleHoverColor(this)">
-                                    <img class="estatua_libertad" src="../imagenes/estatua-de-la-libertad.png" alt="nueva york 3"/>
+                                <div class="opcion_tienda"
+                                    onclick="toggleHoverColor(this)">
+                                    <img class="estatua_libertad"
+                                        src="../imagenes/estatua-de-la-libertad.png"
+                                        alt="nueva york 3" />
                                     <p>616 Fulton Dr. Elmont, NY 11003</p>
                                 </div>
-                        </div>
-                        <div class="horario_recoger_pedido">
-                            <label for="horario"><strong>What time do you want to pick it up?*</strong></label>
-                            <input type="text" name="nombre_tarjeta" class="hueco_checkout" id="hueco_checkout_tamanyo2" placeholder="08:00 am"> 
-                        </div> 
-                        <p class="texto_reclamacion"><em>*The order will have a minimum preparation time of 20 min. 
-                            If the customer doesn't pick up the maximum order in 1h, only the delivery will be refunded.
-                            For more information, visit the <strong>Shipping & Returns</strong> page or <a class="link_2" href="contact.html"><strong>contact us</strong></a>.</em>
-                        </p>
-                        <div class="horario_cafeteria">
-                                <img class="reloj" src="../imagenes/reloj.png" alt="horario"/>
-                                <p><strong>OUR SCHEDULE</strong><br>SUNDAY to THURSDAY: 6:00 am to 7:00 pm.<br>FRIDAY to SATURDAY: 6:00 am to 5:00 pm.</p>
-                        </div>
-                    </form>
-                </div>
-                <br>
-                <div class="checkout">
-                    <div class="subtitulo_checkout">
-                        <img class="tarjeta" src="../imagenes/tarjeta.png" alt="tarjeta"/>
-                        <h3>Payment</h3>
-                    </div>
-                    <label for="password">Card holder full name</label>
-                    <br>
-                    <input type="text" name="nombre_tarjeta" class="hueco_checkout" placeholder="Enter your full name">   
-                    <br>
-                    <br>
-                    <label for="card_number">Card number/ Expiry date/ CVV</label>
-                    <div class="cvv_expiry_2">
-                        <input type="text" name="nombre_tarjeta" class="hueco_checkout" placeholder="0000 0000 0000 0000">
-                        <input type="text" name="nombre_tarjeta" class="hueco_checkout" placeholder="00/00"> 
-                        <input type="password" name="nombre_tarjeta" class="hueco_checkout" placeholder="CVV">  
-                    </div>
-                </div>
-                <br>
-                <button class="boton_pagar"><strong>PAY</strong></button>
-            </div>
-        </div>
-
-        <!-- POP UP COMPRA REALIZADA -->
-        <div class="popup_pedidorealizado">
-            <div class="elemento"></div>
-            <svg version="1.1" class="tick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
-                <path class="circ path" style="fill:none;stroke:#fff;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
-                M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"/>
-                <polyline class="tick path" style="fill:none;stroke:#fff;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
-                11.6,20 15.9,24.2 26.4,13.8 "/>
-            </svg>
-            <h2 class="h2_popup">Order placed!</h2>
-            <p class="boxContainer_titulo"> You will receive more details about your order shortly</p>
-            <br>
-            <button class="cerrar_popup"><strong>CLOSE</strong></button>         
-        </div>
-
-        <footer class="footer">
-            <div class="contenedor_footer">
-                <div>
-                    <img class="logotipo_footer" src="../imagenes/logotipo_blanco.png" alt="logotipo"/>
-                    <h3>Payment options</h3>
-                    <div class="tarjetas_credito">
-                        <img id="icono_tarjeta" src="../imagenes/tarjeta_mastercard.png" alt="mastercard"/>
-                        <img id="icono_tarjeta" src="../imagenes/tarjeta_visa.png" alt="visa"/>
-                        <img id="icono_tarjeta" src="../imagenes/tarjeta_amex.png" alt="amex"/>
-                        <br>
-                        <img id="icono_tarjeta" src="../imagenes/tarjeta_paypal.png" alt="paypal"/>
-                        <img id="icono_tarjeta" src="../imagenes/tarjeta_discover.png" alt="discover"/>
-                        <img id="icono_tarjeta" src="../imagenes/tarjeta_jcb.png" alt="jcb"/>
-                    </div>
-                    <br>
-                </div>
-                <div class="about">
-                    <h3>About</h3>
-                    <p><a href="ourstory.html">Our Story</a></p>
-                    <p><a href="workUs.html">Work with us</a></p>
-                    <p><a href="alergias.html">Allergens</a></p>
-                </div>
-                <div class="site_terms">
-                    <h3>Site terms</h3>
-                    <p><a href="privacypolicy.html">Privacy Policy</a></p>
-                    <p><a href="termsofservice.html">Terms of Service</a></p>
-                    <p><a href="cookies.html">Cookie Policy</a></p>
-                </div>
-                <div class="customer_care">
-                    <h3>Customer care</h3>
-                    <p><a href="contact.html">Contact us</a></p>
-                    <p><a href="devoluciones.html">Shipping & Returns</a></p>
-                </div>
-                <div class="otra_columna">
-                    <h3>News, promotions and discounts: all in one place. <br>Suscribe now!</h3>
-                    <div class="newsletter">
-                        <form>
-                            <input type="text" name="newsletter" class="email_newsletter">
+                            </div>
+                            <div class="horario_recoger_pedido">
+                                <label for="horario"><strong>What time do you
+                                        want to pick it up?*</strong></label>
+                                <input type="text" name="nombre_tarjeta"
+                                    class="hueco_checkout"
+                                    id="hueco_checkout_tamanyo2"
+                                    placeholder="08:00 am">
+                            </div>
+                            <p class="texto_reclamacion"><em>*The order will
+                                    have a minimum preparation time of 20 min.
+                                    If the customer doesn't pick up the maximum
+                                    order in 1h, only the delivery will be
+                                    refunded.
+                                    For more information, visit the <strong>Shipping
+                                        & Returns</strong> page or <a
+                                        class="link_2" href="./contact.html"><strong>contact
+                                            us</strong></a>.</em>
+                            </p>
+                            <div class="horario_cafeteria">
+                                <img class="reloj" src="../imagenes/reloj.png"
+                                    alt="horario" />
+                                <p><strong>OUR SCHEDULE</strong><br>SUNDAY to
+                                    THURSDAY: 6:00 am to 7:00 pm.<br>FRIDAY to
+                                    SATURDAY: 6:00 am to 5:00 pm.</p>
+                            </div>
                         </form>
-                        <button class="boton_newsletter" type="submit"><strong>JOIN</strong></button>
                     </div>
-                    <input type="checkbox" name="terms" value="Acepta" class="checkbox_newsletter">  I have read and accept the <a href="privacypolicy.html"><u>Privacy Policy</u></a> and <a href="termsofservice.html"><u>Terms of Service</u></a>
                     <br>
-                    <br>
-                    <h3>Connect with Us</h3>
-                    <div class="iconos_footer">
-                    <a href="https://www.facebook.com/profile.php?id=100092533330197&sk=about" target="_blank"><img class="icono_f" src="../imagenes/footer_facebook.png" alt="facebook"/></a>
-                    <a href="https://twitter.com/?lang=es" target="_blank"><img class="icono_f" src="../imagenes/footer_twitter.png" alt="twitter"/></a>
-                    <a href="http://www.instagram.com/" target="_blank"><img class="icono_f" src="../imagenes/footer_instagram.png" alt="instagram"/></a>
-                    <a href="https://www.youtube.com/" target="_blank"><img class="icono_f" src="../imagenes/footer_youtube.png" alt="youtube"/></a>
-                    <a href="https://www.pinterest.es/" target="_blank"><img class="icono_f" src="../imagenes/footer_pinterest.png" alt="pinterest"/></a>
-                    <a href="https://www.tiktok.com/es/" target="_blank"><img class="icono_f" src="../imagenes/footer_tiktok.png" alt="tiktok"/></a>
+                    <div class="checkout">
+                        <div class="subtitulo_checkout">
+                            <img class="tarjeta" src="../imagenes/tarjeta.png"
+                                alt="tarjeta" />
+                            <h3>Payment</h3>
+                        </div>
+                        <label for="password">Card holder full name</label>
+                        <br>
+                        <input type="text" name="nombre_tarjeta"
+                            class="hueco_checkout"
+                            placeholder="Enter your full name">
+                        <br>
+                        <br>
+                        <label for="card_number">Card number/ Expiry date/ CVV</label>
+                        <div class="cvv_expiry_2">
+                            <input type="text" name="nombre_tarjeta"
+                                class="hueco_checkout"
+                                placeholder="0000 0000 0000 0000">
+                            <input type="text" name="nombre_tarjeta"
+                                class="hueco_checkout" placeholder="00/00">
+                            <input type="password" name="nombre_tarjeta"
+                                class="hueco_checkout" placeholder="CVV">
+                        </div>
                     </div>
+                    <br>
+                    <button class="boton_pagar"><strong>PAY</strong></button>
                 </div>
             </div>
-            <p class="copyright">© 2023 <strong>Ctlr Alt + Coffee</strong>. All rights reserved</p>
-        </footer>
-        <script src="../javascript/scroll_pZone.js"></script>
-        <script src="../javascript/shoppingcart.js"></script>
-    </div>
-</body>
+
+            <!-- POP UP COMPRA REALIZADA -->
+            <div class="popup_pedidorealizado">
+                <div class="elemento"></div>
+                <svg version="1.1" class="tick"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
+                    xml:space="preserve">
+                    <path class="circ path"
+                        style="fill:none;stroke:#fff;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
+                        d="
+                M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z" />
+                    <polyline class="tick path"
+                        style="fill:none;stroke:#fff;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
+                        points="
+                11.6,20 15.9,24.2 26.4,13.8 " />
+                </svg>
+                <h2 class="h2_popup">Order placed!</h2>
+                <p class="boxContainer_titulo"> You will receive more details
+                    about your order shortly</p>
+                <br>
+                <button class="cerrar_popup"><strong>CLOSE</strong></button>
+            </div>
+
+            <footer class="footer">
+                <div class="contenedor_footer">
+                    <div>
+                        <img class="logotipo_footer"
+                            src="../imagenes/logotipo_blanco.png" alt="logotipo" />
+                        <h3>Payment options</h3>
+                        <div class="tarjetas_credito">
+                            <img id="icono_tarjeta"
+                                src="../imagenes/tarjeta_mastercard.png"
+                                alt="mastercard" />
+                            <img id="icono_tarjeta"
+                                src="../imagenes/tarjeta_visa.png" alt="visa" />
+                            <img id="icono_tarjeta"
+                                src="../imagenes/tarjeta_amex.png" alt="amex" />
+                            <br>
+                            <img id="icono_tarjeta"
+                                src="../imagenes/tarjeta_paypal.png"
+                                alt="paypal" />
+                            <img id="icono_tarjeta"
+                                src="../imagenes/tarjeta_discover.png"
+                                alt="discover" />
+                            <img id="icono_tarjeta"
+                                src="../imagenes/tarjeta_jcb.png" alt="jcb" />
+                        </div>
+                        <br>
+                    </div>
+                    <div class="about">
+                        <h3>About</h3>
+                        <p><a href="./ourstory.html">Our Story</a></p>
+                        <p><a href="./workUs.html">Work with us</a></p>
+                        <p><a href="./alergias.html">Allergens</a></p>
+                    </div>
+                    <div class="site_terms">
+                        <h3>Site terms</h3>
+                        <p><a href="./privacypolicy.html">Privacy Policy</a></p>
+                        <p><a href="./termsofservice.html">Terms of Service</a></p>
+                        <p><a href="./cookies.html">Cookie Policy</a></p>
+                    </div>
+                    <div class="customer_care">
+                        <h3>Customer care</h3>
+                        <p><a href="./contact.html">Contact us</a></p>
+                        <p><a href="./devoluciones.html">Shipping & Returns</a></p>
+                    </div>
+                    <div class="otra_columna">
+                        <h3>News, promotions and discounts: all in one place.
+                            <br>Suscribe now!</h3>
+                        <div class="newsletter">
+                            <form>
+                                <input type="text" name="newsletter"
+                                    class="email_newsletter">
+                            </form>
+                            <button class="boton_newsletter" type="submit"><strong>JOIN</strong></button>
+                        </div>
+                        <input type="checkbox" name="terms" value="Acepta"
+                            class="checkbox_newsletter"> I have read and accept
+                        the <a href="./privacypolicy.html"><u>Privacy Policy</u></a>
+                        and <a href="./termsofservice.html"><u>Terms of Service</u></a>
+                        <br>
+                        <br>
+                        <h3>Connect with Us</h3>
+                        <div class="iconos_footer">
+                            <a
+                                href="https://www.facebook.com/profile.php?id=100092533330197&sk=about"
+                                target="_blank"><img class="icono_f"
+                                    src="../imagenes/footer_facebook.png"
+                                    alt="facebook" /></a>
+                            <a href="https://twitter.com/?lang=es"
+                                target="_blank"><img class="icono_f"
+                                    src="../imagenes/footer_twitter.png"
+                                    alt="twitter" /></a>
+                            <a href="http://www.instagram.com/" target="_blank"><img
+                                    class="icono_f"
+                                    src="../imagenes/footer_instagram.png"
+                                    alt="instagram" /></a>
+                            <a href="https://www.youtube.com/" target="_blank"><img
+                                    class="icono_f"
+                                    src="../imagenes/footer_youtube.png"
+                                    alt="youtube" /></a>
+                            <a href="https://www.pinterest.es/" target="_blank"><img
+                                    class="icono_f"
+                                    src="../imagenes/footer_pinterest.png"
+                                    alt="pinterest" /></a>
+                            <a href="https://www.tiktok.com/es/" target="_blank"><img
+                                    class="icono_f"
+                                    src="../imagenes/footer_tiktok.png"
+                                    alt="tiktok" /></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="copyright">© 2023 <strong>Ctlr Alt + Coffee</strong>.
+                    All rights reserved</p>
+            </footer>
+            <script src="../javascript/scroll_pZone.js"></script>
+            <script src="../javascript/shoppingcart.js"></script>
+        </div>
+    </body>
 </html>
