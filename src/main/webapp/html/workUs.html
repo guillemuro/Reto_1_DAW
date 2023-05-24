@@ -20,11 +20,12 @@
                 <div class="header_1">
                     <img class="header_candado" id="header_candado" src="../imagenes/candado_header.png">
                 </div>
-                <div id="user_cart">
-                    <ul>
-                        <li><a href="../html/login.html"><img class="usuario" src="../imagenes/usuario.png"></a></li>
-                        <li><a href="../html/shoppingcart.html"><img class="carrito" src="../imagenes/carrito-de-compras.png"></a></li>            
-                    </ul>
+                <div class="usuario_carrito">
+                    <a href="#"><img class="usuario" src="../imagenes/usuario_nv.png"></a>
+                    <div class="carrito_contador">
+                        <a href="shoppingcart.html"><img class="carrito" src="../imagenes/carro.png"></a>
+                        <span class="contador_productos">0</span>
+                    </div>
                 </div>
                 <div class="header_2">
                     <a href="../index.html"><img class="logotipo" src="../imagenes/logotipo_blanco.png"></a>
@@ -60,44 +61,84 @@
                 <img class="banner" src="../imagenes/workUs.png"/>
             </div>
 
-
-            <!--A PARTIR DE AQUI HACEMOS EL BODY DE WORK WITH US-->
             <div class="bodie">
-                <div class="titulo">
-                    <h1>Web Applications Development</h1>
-                </div>
-                <div class="fecha">
-                    <p> <b>5</b> days ago</p>
-                    <p>People interested: <b>2</b></p>
-                </div>
-                <hr>
-                <div class="titulo_texto">
-                    <h2>About employment / Employment</h2>
-                </div>
-                <br>
-                <div class="texto_work">
-                    <h3>Minimum requirements</h3>
-                    <div class="lista">
-                        <ul>
-                            <li>Knowledge of HTML, CSS, JavaScript and some web development framework (React, Angular, etc.).</li>
-                            <li>Experience with version control systems (Git, SVN, etc.).</li>
-                            <li>Experience in the design and development of relational databases (MySQL, PostgreSQL, etc.).</li>
-                        </ul>
-                        <p>Aspects to be considered and taken into consideration:</p>
-                        <ul>
-                            <li>Experience in the development of mobile applications.</li>
-                            <li>Knowledge of a back-end programming language (PHP, Python, Ruby, etc.).</li>
-                            <li>Experience in the use of testing automation tools (Jest, Selenium, etc.).</li>
-                        </ul>
+                <h1>Vacancies</h1>
+                <div class="oferta_trabajo">
+                    <div class="flex">
+                        <div class="flex_oferta_trabajo">
+                            <img class="icon_anuncio" src="../imagenes/portafolio.png" alt="portafolio"/>
+                            <h4>Web applications developer</h4>
+                        </div>
+                        <p class="fecha_anuncio"><b>5</b> days ago</p>
                     </div>
-                    <p>If you are a person passionate about the development of web applications and you meet the minimum requirements and aspects to be valued, do not hesitate to send us your CV! We offer a pleasant working environment, interesting projects and a competitive salary. We hope to meet you soon!</p>
                 </div>
-            </div>
-                <div class="boton_send">
-                    <button class="boton_send_it" type="submit"><a href="mailto:ctrlaltcoffe@gmail.com? Subject=Mandanos%20tu%20curriculum Subject=Manda%20tu%20curriculum"><strong>Send us your CV</strong></a></button></a>
+
+                <div class="oferta_trabajo_popup">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono_cerrar"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                    <h1 class="h1_texto">Web applications developer</h1>
+                    <div class="fecha">
+                        <p> <b>5</b> days ago</p>
+                        <p>People interested: <b>2</b></p>
+                    </div>
+                    <hr>
+                    <h2>About employment</h2>
+                    <p>Join our team as a web applications developer in our coffee shop! If you’re passionate about technology, 
+                        you love programming and design, and you’re looking for an opportunity to combine your skills with the 
+                        exciting world of gastronomy, this position is perfect for you!
+                    </p>
+                    <p>Responsibilities and functions:</p>
+                    <ul>
+                        <li>Design and develop interactive and functional websites, ensuring excellent user experience.</li>
+                        <li>Create and maintain databases for the storage and management of information in the website.</li>
+                        <li>Optimize website performance, including loading speed, SEO optimization, cache management, 
+                            file compression and optimization of database queries.</li>
+                        <li>Solve problems and make improvements to the existing website, including the identification and 
+                            resolution of errors or malfunctions.</li>
+                        <li>Document code and development processes for easy maintenance, and future updates.</li>
+                        <li>Implement integrations with external systems, such as payment gateways, third parties or APIs.</li>
+                        <li>Perform usability testing and UI adjustments to improve the user experience.</li>
+                        <li>Implement security and data protection strategies, such as authentication, encryption and attack prevention.</li>
+                    </ul>
+                    <p>In this position, it’s critical to have strong communication skills and ability to work in a team, collaborating efficiently with multidisciplinary teams, transmitting the project requirements and participating in discussions with designers, managers of products and other stakeholders. In addition, since the field of web development evolves rapidly, it’s essential to stay up to date with the latest trends, technologies and best practices, demonstrating an attitude of continuous and adaptive learning.
+                        We will positively value the presentation of a portfolio or examples of previous projects to assess your skills and experience in web development.
+                    </p>
+                    <br>
+                    <h2>Requirements</h2>
+                    <p><strong>Minimum studies</strong><br>Intermediate level Educational Degree, Higher level Educational Degree</p>
+                    <p><strong>Minimum experience</strong><br>At least 2 years</p>
+                    <p><strong>Required languages</strong><br>Spanish – Intermediate level</p>
+                    <p><strong>Knowledge</strong></p>
+                    <ul>
+                        <li>Knowledge of HTML, CSS, JavaScript and some web development framework (React, Angular, etc.).</li>
+                        <li>Experience with version control systems (Git, SVN, etc.).</li>
+                        <li>Experience in the design and development of relational databases (MySQL, PostgreSQL, etc.).</li>
+                    </ul>
+                    <p>Aspects to be considered and taken into consideration:</p>
+                    <ul>
+                        <li>Experience in the development of mobile applications.</li>
+                        <li>Knowledge of a back-end programming language (PHP, Python, Ruby, etc.).</li>
+                        <li>Experience in the use of testing automation tools (Jest, Selenium, etc.).</li>
+                        <li>Problem-solving and debugging skills: emphasize the ability to identify and troubleshoot issues, debug code, and find efficient solutions to technical challenges that may arise during the development process.</li>
+                    </ul>
+                    <p>If you are a person passionate about the development of web applications and you meet the minimum requirements and aspects to be valued, don't hesitate to send us your CV! We offer a pleasant working environment, interesting projects and a competitive salary. We hope to meet you soon!</p>
+                    <br>
+                    <div class="boton_send">
+                        <button class="boton_send_it" type="submit"><a href="mailto:ctrlaltcoffe@gmail.com? Subject=Mandanos%20tu%20curriculum Subject=Manda%20tu%20curriculum"><strong>SEND US YOUR CV</strong></a></button></a>
+                    </div>
                 </div>
                 <br>
-            </div>
+                <h3>Description of the election process</h3>
+                <ul>
+                    <li>Analysis of job requirements: A thorough review of the needs and requirements of the vacant position is performed, including technical skills, competencies, previous experience, academic background and other relevant aspects.</li>
+                    <li>Publication of the job offer: The job offer is disseminated through various channels, such as employment websites, professional networks and other relevant means, to attract a wide pool of potential candidates.</li>
+                    <li>Review of applications: The applications received are evaluated and preselection of candidates who meet the mínimum requirements established in the job offer is made.</li>
+                    <li>Preliminary interviews: Preliminary interviews are conducted to assess the suitability of shortlisted candidates. At this stage, aspects such as work experience, technical knowledge, key competencies and motivation for the position are explored.</li>
+                    <li>Assessment of skills and competences: Tests and evaluations of technical skills and specific competencies necessary for successful performance in the position are performed. This can include written tests, practical exercises, psychometric evaluations, among others.</li>
+                    <li>Final interviews: Candidates who pass the previous stages are invited to final interviews with the selection team. These interviews focus on more detailed aspects for the candidate’s profile, such as their ability to work in a team, their adaptability, their leadership, their values, their organization, etc.</li>
+                    <li>References: Job references are requested and a background check is conducted to corroborate the information provided by the candidates.</li>
+                </ul>
+                <p>For any questions about the selection process, don't hesitate to contact us.</p>
+            </div>   
 
             <footer class="footer">
                 <div class="contenedor_footer">
@@ -156,7 +197,8 @@
                 </div>
                 <p class="copyright">© 2023 <strong>Ctlr Alt + Coffee</strong>. All rights reserved</p>
             </footer>
-            <script src="../javascript/main.js"></script>
+            <script src="../javascript/scroll_pZone.js"></script>
+            <script src="../javascript/shoppingcart.js"></script>
         </div>
     </body>
     </html>

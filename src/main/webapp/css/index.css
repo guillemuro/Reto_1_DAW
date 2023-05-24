@@ -553,3 +553,48 @@ a:visited {
     opacity: 1;
     top: 18vw;
 }
+
+/*CARRITO*/
+.usuario_carrito {
+    position: absolute;
+    right: 0;
+    padding-right: 4.4vw;
+    display: flex;
+    align-items: center;
+    top: 7vw;
+}
+
+.usuario{
+    width: 1.7vw;
+    padding-right: 1.6vw;
+    height: 1.8vw;
+    cursor: pointer;
+}
+
+.carrito{
+    width: 1.4vw;
+    cursor: pointer;
+    position: relative;
+}
+
+.contador_productos {
+    font-size: 0.8vw;
+    color: #fff;
+    background-color: #43241a;
+    border-radius: 50%;
+    padding: 0.2vw;
+    width: 0.9vw;
+    height: 0.9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 1.1vw;
+    margin-left: 0.6vw;
+    cursor: pointer;
+}
+
+.carrito_contador {
+    display: flex;
+    position: relative;
+}

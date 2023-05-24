@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Reto 1DAW"/>
         <meta name="authors" content="Paula, Guillermo"/>
-        <title>Risks Assessment</title>
+        <title>Occupational risk assessment</title>
         <link rel="stylesheet" href="../css/riesgos.css">
         <link rel="shortcut icon" href="../imagenes/favicon_ctrl.png"
             type="image/x-icon">
@@ -24,13 +24,12 @@
                     <img class="header_candado" id="header_candado"
                         src="../imagenes/candado_header.png">
                 </div>
-                <div id="user_cart">
-                    <ul>
-                        <li><a href="./login.html"><img class="usuario"
-                                    src="../imagenes/usuario.png"></a></li>
-                        <li><a href="./shoppingcart.html"><img class="carrito"
-                                    src="../imagenes/carrito-de-compras.png"></a></li>
-                    </ul>
+                <div class="usuario_carrito">
+                    <a href="#"><img class="usuario" src="../imagenes/usuario_nv.png"></a>
+                    <div class="carrito_contador">
+                        <a href="shoppingcart.html"><img class="carrito" src="../imagenes/carro.png"></a>
+                        <span class="contador_productos">0</span>
+                    </div>
                 </div>
                 <div class="header_2">
                     <a href="../index.html"><img class="logotipo"
@@ -68,121 +67,351 @@
             </div>
 
             <div class="contenedor_privacy_policy">
-                <h1 class="titulo_principal">Risks Assessment<br><span
+                <h1 class="titulo_principal">Occupational risk assessment<br><span
                         class="subtitulos"><em>Hot coffee, constant precaution</em></span></h1>
                 <img class="banner" src="../imagenes/risk_banner.png"/>
             </div>
 
-            <div class="bodie">
-                <!--El logo lo ponemos para esto o no?-->
-                <div class="titulo">
-                    <h1>Assessment of risks</h1>
+            <div class="cuerpo_body">
+                <div class="apartado">
+                    <div class="img_cuerpo">
+                        <img class="img_ev" src="../imagenes/r_daw.png"/>
+                        <h1 class="h1_cuerpo">Web Applications Developer</h1>
+                    </div>
+                    <div class="numero">
+                        <p class="p_cuerpo"><strong>1</strong></p>
+                    </div>
                 </div>
-                <div class="lista">
-                    <ol>
-                        <li>
-                            <div class="encuadre">
-                                <b>Identification of risks:</b>
-                            </div>
-                            <ul>
-                                <li>Risk of falls and scratches on wet or
-                                    dirty surfaces.</li>
-                                <li>Risk of burns in the handling of
-                                    machinery, such as the coffee machine or
-                                    the oven.</li>
-                                <li>Risk of muscle injury due to lifting
-                                    heavy objects, such as supplies boxes or
-                                    garbage bags.</li>
-                                <li>Risk of cuts when handling knives and
-                                    other sharp utensils.</li>
-                                <li>Risk of burns from spills of hot
-                                    liquids, such as coffee or tea.</li>
-                            </ul>
-                        </li>
-                        <br>
-
-                        <li>
-                            <div class="encuadre">
-                                <b>Assessment of risks:</b>
-                            </div>
-                            <ul>
-                                <li>Risk of falls and scratches: Clean and
-                                    slipproof floors should be provided.
-                                    Precautionary signs should be placed in
-                                    wet or wet areas. Suitable shoes should
-                                    be provided and regular cleaning of the
-                                    coffee shop should be promoted.</li>
-                                <li>Risk of burns: Heat-resistant gloves
-                                    should be provided and employees should
-                                    be trained in the proper use of kitchen
-                                    machinery and utensils. Caution warnings
-                                    should be provided in the work areas and
-                                    employees should be encouraged to be
-                                    aware of the risks of burns.</li>
-                                <li>Muscle injury risk: Suitable cars and
-                                    equipment must be provided for the
-                                    transport of supplies and garbage.
-                                    Employees should be trained in
-                                    appropriate lifting techniques and
-                                    frequent breaks and rotation of tasks
-                                    should be promoted to reduce muscle
-                                    tension.</li>
-                                <li>Risk of cuts: sharp and secure knives
-                                    should be provided, and employees should
-                                    be trained in proper use of them.
-                                    Suitable cutting boards should be
-                                    provided and employees should be
-                                    encouraged to be aware of the risks of
-                                    cuts</li>
-                                <li>Risk of spill burns: Precautionary
-                                    warnings should be provided in the work
-                                    areas and employees should be encouraged
-                                    to be aware of the risks of spilling hot
-                                    liquids. Cleaning tools should be
-                                    provided and regular cleaning should be
-                                    promoted to reduce risks.</li>
-                            </ul>
-                        </li>
-                        <br>
-
-                        <li>
-                            <div class="encuadre">
-                                <b>Action Plan for Risk Management:</b>
-                            </div>
-
-                            <ul>
-                                <li>The necessary safety equipment, such as
-                                    heat-resistant gloves and secure, sharp
-                                    knives, should be provided.</li>
-                                <li>Employees should be trained in safety
-                                    techniques and in risk identification
-                                    and management.</li>
-                                <li>Preventive measures such as regular
-                                    cleaning and the elimination of risks of
-                                    falls and scratches should be
-                                    implemented.</li>
-                                <li>Procedures should be established for the
-                                    safe disposal of waste and the handling
-                                    of heavy objects.</li>
-                                <li>Periodic risk assessments and reviews of
-                                    policies and procedures should be
-                                    carried out to ensure that all relevant
-                                    risks are addressed.</li>
-                            </ul>
-                        </li>
-                    </ol>
+                <table>
+                    <tr class="tr_1">
+                        <td rowspan="2"><strong>Identified risks</strong></td>
+                        <td colspan="3"><strong>Probability</strong></td>
+                        <td colspan="3"><strong>Gravity</strong></td>
+                        <td rowspan="2"><strong>Assessment</strong></td>
+                        <td rowspan="2"><strong>Action required</strong></td>
+                    </tr>
+                    <tr class="tr_1"> 
+                        <td><strong>L</strong></td>
+                        <td><strong>M</strong></td>
+                        <td><strong>H</strong></td>
+                        <td><strong>SH</strong></td>
+                        <td><strong>H</strong></td>
+                        <td><strong>EH</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Forced postures and repetitive movements</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Important</td>
+                        <td>Ergonomic chairs and adjustable and adequate desks should be provided to avoid awkward postures when 
+                            sitting for long periods of time. In addition, peripheral devices, such as keyboard or mouse, must also be 
+                            ergonomic and suitable for prolonged use. In this way, we will avoid causing injuries due to repetitive 
+                            efforts and back, neck pain, etc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Eye strain and eye problems</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Important</td>
+                        <td>The employee should take regular breaks to relieve eye strain and reduce eye strain. The monitor provided 
+                            by the company must have an optimal setting so that the employee can adapt the brightness, the contrast 
+                            and color temperature to their needs at all times. In addition, the monitor must be placed at a safe 
+                            distance and comfortable for the employee's view, it has to have a screen filter that reduces eye strain.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Falls to the same level</td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Tolerable</td>
+                        <td>Cables in the working environment must be organized and secured to prevent accidents and falls. 
+                            In general, workspaces should be kept clean and organized.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fire due to overheating of equipment and accidents with electrical cables</td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td>Moderate</td>
+                        <td>Fire safety regulations must be followed and extinguishers must be available, in addition to being 
+                            careful regarding the overloading of plugs (to avoid short circuits and electrical accidents) and 
+                            the use of damaged cables. It is important to keep equipment well ventilated and not block air vents.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Stress and workload</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Moderate</td>
+                        <td>Reasonable time limits should be set and work-life balance encouraged. It's also recommended that work 
+                            vary to avoid monotony and boredom (as well as provide employees with learning opportunities).</td>
+                    </tr>
+                    <tr>
+                        <td>Electromagnetic radiation</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td>Important</td>
+                        <td>Devices should be handled from an appropriate distance from the body and devices with low radiation 
+                            certification should be used. As far as possible, the use of electronic devices during rest time 
+                            should be avoided and screen protectors and covers that are specifically designed to reduce exposure 
+                            to this radiation should be used.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <div class="apartado">
+                    <div class="img_cuerpo">
+                        <img class="img_ev" src="../imagenes/r_camarero.png"/>
+                        <h1 class="h1_cuerpo">Server</h1>
+                    </div>
+                    <div class="numero">
+                        <p class="p_cuerpo"><strong>2</strong></p>
+                    </div>
                 </div>
+                <table>
+                    <tr class="tr_1">
+                        <td rowspan="2"><strong>Identified risks</strong></td>
+                        <td colspan="3"><strong>Probability</strong></td>
+                        <td colspan="3"><strong>Gravity</strong></td>
+                        <td rowspan="2"><strong>Assessment</strong></td>
+                        <td rowspan="2"><strong>Action required</strong></td>
+                    </tr>
+                    <tr class="tr_1"> 
+                        <td><strong>L</strong></td>
+                        <td><strong>M</strong></td>
+                        <td><strong>H</strong></td>
+                        <td><strong>SH</strong></td>
+                        <td><strong>H</strong></td>
+                        <td><strong>EH</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Falls to the same level</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Important</td>
+                        <td>Work areas should be kept clean and tidy to reduce the risk of slips and falls, so special attention 
+                            should be paid to any spillages or objects on the floor, in addition to using non-slip mats in areas
+                            prone to getting wet. The use of non-slip shoes is recommended.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Burns, cuts and wounds</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Moderate</td>
+                        <td>Gloves and thermal mitts should be worn when handling hot containers, be careful when pouring hot liquids
+                            and know their temperature, use appropriate cooking utensils to prevent possible burns and take special 
+                            care when opening ovens or microwaves.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Overexertion</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Moderate</td>
+                        <td>Appropriate hoisting techniques (to avoid back problems), try to ask for help in lifting or transporting 
+                            heavy objects, organise and distribute the weight correctly when loading, use appropriate tools and 
+                            equipment provided by the company (tray with wheels, etc. ), maintain an ergonomic posture, take regular 
+                            breaks (to prevent muscle fatigue and the risk of injury) and perform strengthening and stretching 
+                            exercises that focus on muscles used during the working day.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Stress and workload</td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td>Trivial</td>
+                        <td>Regular breaks should be taken to deal with difficult clients and maintain a steady pace at work. It's also 
+                            advisable to plan tasks efficiently to meet all deadlines and learn stress management techniques.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Exposure to noise</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Moderate</td>
+                        <td>The employee must wear hearing protectors to protect himself from exposure to noise and hearing in 
+                            the event of an environment that is too noisy.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Forced postures and repetitive movements</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Moderate</td>
+                        <td>Correct postures should be used to perform the tasks, trying to avoid any forced and repetitive movements. 
+                            It's also recommended, as well as to avoid overexertion, to perform specific exercises and stretches for 
+                            the muscles and joints that are most damaged at work.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <div class="apartado">
+                    <div class="img_cuerpo">
+                        <img class="img_ev" src="../imagenes/r_cocinero.png"/>
+                        <h1 class="h1_cuerpo">Cook</h1>
+                    </div>
+                    <div class="numero">
+                        <p class="p_cuerpo"><strong>3</strong></p>
+                    </div>
+                </div>
+                <table>
+                    <tr class="tr_1">
+                        <td rowspan="2"><strong>Identified risks</strong></td>
+                        <td colspan="3"><strong>Probability</strong></td>
+                        <td colspan="3"><strong>Gravity</strong></td>
+                        <td rowspan="2"><strong>Assessment</strong></td>
+                        <td rowspan="2"><strong>Action required</strong></td>
+                    </tr>
+                    <tr class="tr_1"> 
+                        <td><strong>L</strong></td>
+                        <td><strong>M</strong></td>
+                        <td><strong>H</strong></td>
+                        <td><strong>SH</strong></td>
+                        <td><strong>H</strong></td>
+                        <td><strong>EH</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Thermal contact and high temperatures</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Important</td>
+                        <td>The employee should drink enough water to maintain good hydration during the working day, wear suitable 
+                            and breathable clothing to maintain comfort and take regular breaks in cool and ventilated areas 
+                            (to maintain the health of the worker and prevent heatstrokes or exhaustion).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Burns, cuts and wounds</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Important</td>
+                        <td>Suitable gloves and utensils should be used to handle food and hot containers (for example, knives should 
+                            be well maintained and sharp to reduce the pressure exerted during cutting), as well as a designated area 
+                            for placing hot containers away from work areas and another clean and organised area to prevent accidents 
+                            with sharp objects. It's also recommended to use frying equipment with thermostat and temperature control 
+                            to prevent the oil from overheating, use splash protectors, etc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Chemical exposure</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Important</td>
+                        <td>The kitchen should be well ventilated to minimize exposure to chemical vapours (using extraction hoods and fans, 
+                            also avoiding breathing directly over hot pots), personal protective equipment should be used if necessary.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Falls to the same level</td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Tolerable</td>
+                        <td>The floor should be kept clean and dry at all times, it's recommended to use non-slip mats in areas where 
+                            water or grease may accumulate and generally keep the workspace organized to prevent falls.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Forced postures and repetitive movements</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Moderate</td>
+                        <td>Appropriate hoisting techniques should be used when handling heavy objects and performing stretching and 
+                            strengthening exercises to maintain optimal physical condition.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Exposure to noise</td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td></td>
+                        <td>X</td>
+                        <td></td>
+                        <td>Moderate</td>
+                        <td>Regular maintenance of the equipment should be done, to ensure smooth operation and reduce unnecessary noise. 
+                            You can also use quieter kitchen equipment, isolate noisy areas with sound absorption panels or install ventilation systems that generate less noise.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+            </div>
 
-                <div class="dudas">
-                    <b><p>For any questions you may have when reading the
-                            risk assessment of Ctrl Alt + Coffe, please let
-                            us know.</p></b>
-                </div>
-                <div class="boton_send">
-                    <a href="mailto:ctlaltcoffee@gmail.com"><button
-                            class="boton_send_it" type="submit"><strong>SEND
-                                IT</strong></button></a>
-                </div>
+            <div class="contenedor_privacy_policy">
+                <h1 class="titulo_principal">Video summary</h1>
+                <img class="banner" src="../imagenes/video.png"/>
             </div>
 
             <footer class="footer">
@@ -268,7 +497,8 @@
                 <p class="copyright">© 2023 <strong>Ctlr Alt + Coffee</strong>.
                     All rights reserved</p>
             </footer>
-            <script src="../javascript/main.js"></script>
+            <script src="../javascript/scroll_pZone.js"></script>
+            <script src="../javascript/shoppingcart.js"></script>
         </div>
     </body>
 </html>

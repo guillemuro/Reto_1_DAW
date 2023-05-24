@@ -34,3 +34,18 @@ btnCerrarPopup.addEventListener('click', function (e) {
     overlay.classList.remove('active');
     popup.classList.remove('active');
 });
+
+
+//PAGINA WORK WITH US
+let btnAbrirAnuncio = document.querySelector('.oferta_trabajo'),
+	btnCerrarAnuncio = document.querySelector('.icono_cerrar'),
+	AnuncioDesplegable = document.querySelector('.oferta_trabajo_popup');
+
+btnAbrirAnuncio.addEventListener('click', function(){
+	AnuncioDesplegable.classList.add('active');
+});
+
+btnCerrarAnuncio.addEventListener('click', function(e) {
+	e.preventDefault();
+	AnuncioDesplegable.classList.remove('active');
+});

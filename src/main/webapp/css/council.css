@@ -162,12 +162,12 @@ a:visited {
 }
 
 .cuerpo_mensaje {
-    margin: 5vw 10vw;
+    margin: 5vw 9vw;
     text-align: justify;
     justify-content: center;
     align-items: center;
     font-size: 1.1vw;
-    padding-left: 5%;
+    /* padding-left: 5%; */
 }
 
 .footer {
@@ -413,4 +413,131 @@ a:visited {
     width: 1vw;
     cursor: pointer;
     padding-right: 1vw;
+}
+
+
+/*TARJETAS*/
+.cartas_img {
+    display: flex;
+    width: 100%;
+    column-gap: 2vw;
+    justify-content: center;
+}
+
+.flip-card {
+    width: 14vw;
+    height: 17vw;
+    perspective: 1000px;
+}
+
+.nombre_puesto {
+    padding-top: 10vw;
+}
+
+.flip-card-front {
+    color: #fff;
+}
+    
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    background-image: url('../imagenes/8.png');
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    background-image: url('../imagenes/8.png');
+    background-size: 100% 100%;
+}
+
+.flip-card-back {
+    background: #fff;
+    color: #000;
+    transform: rotateY(180deg);
+    font-size: 0.9vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 14vw;
+    height: 17vw;
+    box-sizing: border-box;
+}
+
+#ricardo {
+    background-image: url('../imagenes/6.png');
+}
+
+#emily {
+    background-image: url('../imagenes/7.png');
+}
+
+#mike {
+    background-image: url('../imagenes/5.png');
+}
+
+#carlos {
+    background-image: url('../imagenes/4.png');
+}
+
+/*CARRITO*/
+.usuario_carrito {
+    position: absolute;
+    right: 0;
+    padding-right: 4.4vw;
+    display: flex;
+    align-items: center;
+    top: 7vw;
+}
+
+.usuario{
+    width: 1.7vw;
+    padding-right: 1.6vw;
+    height: 1.8vw;
+    cursor: pointer;
+}
+
+.carrito{
+    width: 1.4vw;
+    cursor: pointer;
+    position: relative;
+}
+
+.contador_productos {
+    font-size: 0.8vw;
+    color: #fff;
+    background-color: #43241a;
+    border-radius: 50%;
+    padding: 0.2vw;
+    width: 0.9vw;
+    height: 0.9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 1.1vw;
+    margin-left: 0.6vw;
+    cursor: pointer;
+}
+
+.carrito_contador {
+    display: flex;
+    position: relative;
 }

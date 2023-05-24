@@ -24,13 +24,12 @@
                     <img class="header_candado" id="header_candado"
                         src="../imagenes/candado_header.png">
                 </div>
-                <div id="user_cart">
-                    <ul>
-                        <li><a href="./login.html"><img class="usuario"
-                                    src="../imagenes/usuario.png"></a></li>
-                        <li><a href="./shoppingcart.html"><img class="carrito"
-                                    src="../imagenes/carrito-de-compras.png"></a></li>
-                    </ul>
+                <div class="usuario_carrito">
+                    <a href="#"><img class="usuario" src="../imagenes/usuario_nv.png"></a>
+                    <div class="carrito_contador">
+                        <a href="shoppingcart.html"><img class="carrito" src="../imagenes/carro.png"></a>
+                        <span class="contador_productos">0</span>
+                    </div>
                 </div>
                 <div class="header_2">
                     <a href="../index.html"><img class="logotipo"
@@ -69,7 +68,6 @@
 
             <div class="contenedor_privacy_policy">
                 <h1 class="titulo_principal">Personal Area<br></h1>
-                <!-- ESTOS SON LOS DOS BOTONES -->
                 <button class="boton_lock_1" type="submit"><strong>RISKS
                         ASSESSMENT</strong>
                     <a href="./riesgos.html">
@@ -111,6 +109,22 @@
                         </div>
                     </a>
                 </button>
+                <button class="boton_lock_1" id="boton_lock_4" type="submit"><strong>FINAL PRESENTATION</strong>
+                    <a href="../otros/FOL_FinalPresentation_CtrlAlt+Coffee.pdf" target="_blank">
+                        <div class="flecha">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0
+                                24 24" width="24" height="24"><path fill="none"
+                                    d="M0 0h24v24H0z"></path><path
+                                    fill="currentColor" d="M16.172
+                                    11l-5.364-5.364 1.414-1.414L20 12l-7.778
+                                    7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+                        </div>
+                    </a>
+                </button>
+                
+
+
                 <!-- Y AQUI FINALIZA EL CODIGO -->
                 <img class="banner" src="../imagenes/lock.png"/>
             </div>
@@ -199,6 +213,7 @@
                     All rights reserved</p>
             </footer>
             <script src="../javascript/main.js"></script>
+            <script src="../javascript/shoppingcart.js"></script>
         </div>
     </body>
 </html>
