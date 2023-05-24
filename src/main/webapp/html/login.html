@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Reto 1DAW" />
         <meta name="authors" content="Paula, Guillermo" />
-        <title>Login</title>
+        <title>Registrer</title>
         <link rel="stylesheet" href="../css/login.css">
         <link rel="shortcut icon" href="../imagenes/favicon_ctrl.png"
             type="image/x-icon">
@@ -74,7 +74,7 @@
 
             <form id="myForm">
                 <div class="form-container">
-                    <p class="title">Login</p>
+                    <p class="title">Registrer</p>
                     <div class="input-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name"><br><br>
@@ -90,47 +90,13 @@
                         <input type="password" id="message"><br><br>
                     </div>
 
-                    <button class="sign" input type="submit">Sign in</button>
+                    <button class="sign" input type="submit"
+                        onclick="registrar()">Sign in</button>
                 </div>
 
             </form>
-            <a href="./registro_cuenta.html"><button class="new"><b>Create new
-                        account</b></button></a>
+            <a href="./registro_cuenta.html"><button class="new"><b>Log in</b></button></a>
 
-            <script>
-                // Obtener el formulario por su ID
-                const form = document.getElementById('myForm');
-            
-                // Agregar un evento de escucha para el evento 'submit'
-                form.addEventListener('submit', function(e) {
-                  e.preventDefault(); // Prevenir el envío del formulario
-                  
-                  // Obtener los valores de los campos de entrada
-                  const name = document.getElementById('name').value;
-                  const email = document.getElementById('email').value;
-                  const message = document.getElementById('message').value;
-                  
-                  // Crear un objeto para almacenar los datos
-                  const data = {
-                    name: name,
-                    email: email,
-                    message: message
-                  };
-                  
-                  // Convertir el objeto en una cadena JSON
-                  const jsonData = JSON.stringify(data);
-                  
-                  // Guardar los datos en el localStorage
-                  localStorage.setItem('formData', jsonData);
-                  
-                  // Limpiar los campos de entrada del formulario
-                  form.reset();
-                  
-                  // Mostrar un mensaje de éxito
-                  alert('The data has been saved successfully');
-                  window.location.href = "../index.html"
-                });
-              </script>
             <footer class="footer">
                 <div class="contenedor_footer">
                     <div>
@@ -216,6 +182,8 @@
             </footer>
             <script src="../javascript/scroll_pZone.js"></script>
             <script src="../javascript/shoppingcart.js"></script>
+            <script src="../javascript/Registro.js"></script>
+
         </div>
     </body>
 </html>

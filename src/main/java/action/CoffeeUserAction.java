@@ -68,8 +68,14 @@ public class CoffeeUserAction implements IAction {
 
     @Override
     public String add(HttpServletRequest req) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+        String email = req.getParameter("EMAIL");
+        String pass = req.getParameter("PASS");
+        String username = req.getParameter("USERNAME");
+        User user = new User(username, pass, email);
+        int filasModificadas = new UserDAO().add(user);
+        String json = gson.toJson(filasModificadas);
+        return json;
+
     }
 
 }

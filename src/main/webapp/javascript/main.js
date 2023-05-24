@@ -90,6 +90,10 @@ window.onload = function () {
         });
 }
 
+function addProduct(id) {
+
+}
+
 
 
 

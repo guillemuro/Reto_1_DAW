@@ -12,8 +12,7 @@ public class ShoppingCartDAO implements IDAO<ShoppingCart> {
 
     @Override
     public int add(ShoppingCart bean) {
-
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+        return 0;
     }
 
     @Override
