@@ -279,15 +279,11 @@ footer {
   margin-left: 1vw;
 }
 
-#register_2 {
+#button_close {
   background-color: red;
 }
 
 #label_espacio {
-  margin-left: 2vw;
-}
-
-#label_espacio_2 {
   margin-left: 2vw;
 }
 
@@ -296,10 +292,6 @@ footer {
   font-family: 'Inter', sans-serif;
 }
 
-#formulario_2 {
-  font-size: 1vw;
-  font-family: 'Inter', sans-serif;
-}
 
 .grid_productos {
   display: grid;

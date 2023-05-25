@@ -12,9 +12,36 @@ public class ProductDAO implements IDAO<Product> {
 
     @Override
     public int add(Product bean) {
-        // TODO Auto-generated method stub
+        try {
+            motorOracle.connect();
+            String sql = "SELECT MAX(COFFEEUSER_ID) FROM COFFEEUSER";
+            ResultSet rs = motorOracle.executeQuery(sql);
+            int maxId = 0;
+            if (rs.next()) {
+                maxId = rs.getInt(1);
+                maxId++;
+            }
+            String quString = String.format(
+                    "INSERT INTO PRODUCT (PRODUCT_ID, PRODUCT_NAME, PRODUCT_DESCRIPTION, PRODUCT_PRICE, PRODUCT_IMG, PRODUCT_TITLE, PRODUCT_TYPE) VALUES (%s, %s, %s, %s, %s, %s, %s)",
+                    maxId,
+                    bean.getProductName(), bean.getProductDesc(), bean.getProductPrice(), bean.getProductImg(),
+                    bean.getProductTitle(), bean.getProductType());
 
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+            motorOracle.executeQuery(quString);
+            sql = "SELECT PRODUCT_ID FROM PRODUCT P WHERE P.PRODUCT_NAME = " + bean.getProductName();
+            rs = motorOracle.executeQuery(sql);
+            int productId = 0;
+            if (rs.next()) {
+                productId = rs.getInt(1);
+            }
+            return productId;
+
+        } catch (Exception e) {
+            System.out.println(e);
+            motorOracle.disconnect();
+            return 0;
+        }
+
     }
 
     @Override

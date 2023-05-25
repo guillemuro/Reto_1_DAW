@@ -68,8 +68,23 @@ public class ProductAction implements IAction {
 
     @Override
     public String add(HttpServletRequest req) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+
+        // coger cada paremetro en la url del frontend
+        // 'http://localhost:8081/src/Controller?ACTION=PRODUCT.ADD&NAME=' + nombre +
+        // '&DESC=' + descripcion + '&PRECIO=' + precio + '&IMG=' + imagen +
+        // '&CATEGORIA=' + categoria)
+
+        String productName = req.getParameter("NAME");
+        String productDesc = req.getParameter("DESC");
+        double productPrice = Double.parseDouble(req.getParameter("PRECIO"));
+        String productImg = req.getParameter("IMG");
+        int productType = Integer.parseInt(req.getParameter("CATEGORIA"));
+        String productTitle = req.getParameter("TITLE");
+
+        Product product = new Product(0, productName, productType, productPrice, productTitle, productDesc, productImg);
+        int lstProduct = new ProductDAO().add(product);
+        String json = gson.toJson(lstProduct);
+        return json;
     }
 
 }

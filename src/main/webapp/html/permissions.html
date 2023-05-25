@@ -61,45 +61,45 @@
                     <form>
                         <label for="username" class="label"><strong>Name</strong></label>
                         <br>
-                        <input class="input_tamanyo" type="text" id="username"
+                        <input class="input_tamanyo" type="text" id="input_name"
                             name="username" required class="input">
                         <br>
                         <br>
                         <label for="username" class="label"><strong>Title</strong></label>
                         <br>
-                        <input class="input_tamanyo" type="text" id="username"
+                        <input class="input_tamanyo" type="text"
+                            id="input_title"
                             name="username" required class="input">
                         <br>
                         <br>
                         <label for="username" class="label"><strong>Description</strong></label>
                         <br>
-                        <textarea class="textarea"></textarea>
+                        <textarea class="textarea" id="input_description"></textarea>
                         <br>
                         <br>
                         <label for="username" class="label"><strong>Price</strong></label>
-                        <input class="input_precio" type="number" name="price"
+                        <input class="input_precio" id="input_price"
+                            type="number" name="price"
                             min="0" max="100" step="0.01">
                         <label for="username" class="label" id="label_espacio"><strong>Type</strong></label>
-                        <select name="category" id="formulario_1">
-                            <option value="coffee">Coffee</option>
-                            <option value="juice">Juice</option>
-                            <option value="salty">Salty</option>
-                            <option value="sweet">Sweet</option>
-                            <option value="tea">Tea</option>
+                        <select name="category" id="select_categoria">
+                            <option value="1">Coffee</option>
+                            <option value="2">Tea</option>
+                            <option value="3">Juice</option>
+                            <option value="4">Sweet</option>
+                            <option value="5">Salty</option>
+                            <option value="6">Merchan</option>
                         </select>
-                        <label for="username" class="label" id="label_espacio"><strong>ID</strong></label>
-                        <input class="input_precio" type="number" name="id"
-                            min="0" max="100" disabled>
                         <br>
                         <br>
-                        <label for="image" class="label" id="label"><strong>Image</strong></label>
-                        <input type="file" name="imagen" id="imagen"
+                        <label for="image" class="label"><strong>Image</strong></label>
+                        <input type="file" name="imagen" id="input_img"
                             title="Choose an image" accept="image/*">
                     </form>
                     <br>
                     <div class="botones">
-                        <button class="register" type="submit">REGISTER</button>
-                        <button class="register" id="register_2" type="submit">REJECT</button>
+                        <button class="register" id="button_add" type="submit">ADD</button>
+                        <button class="register" id="button_close" type="submit">CLOSE</button>
                     </div>
                 </div>
 
