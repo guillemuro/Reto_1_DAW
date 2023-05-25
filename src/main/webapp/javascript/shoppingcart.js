@@ -1,7 +1,7 @@
 //ESTO ES EL CONTADOR DEL ICONO
 //DEFINIR VARIABLES
 
-/*
+
 let contadorIcono = document.querySelector('.contador_productos');
 let menuMerchandising = document.querySelector('.cuerpo_menu');
 let contador = sessionStorage.getItem('contador') || 0;
@@ -17,8 +17,8 @@ menuMerchandising.addEventListener('click', function (event) {
 
 contadorIcono.textContent = contador.toString();
 
-//
-*/
+
+
 
 
 
