@@ -2,6 +2,7 @@ let creacionProducto = document.querySelector('.prod_crear');
 let botonCrearProducto = document.querySelector('.button');
 let botonReject = document.getElementById("register_2");
 let productosCuerpoMenu = document.querySelector('.cuerpo_mensaje');
+let edicionProducto = document.getElementById("producto_actual_edicion"); //POP UP EDICION
 // .productos_cuerpo_mensaje
 
 
@@ -18,30 +19,42 @@ botonReject.addEventListener('click', function (e) {
 
 window.onload = function () {
 
+    let peticiones = [];
     /*LOS CAFES SON RECOGIDOS EN LA BBDD*/
-    fetch('http://localhost:8081/src/Controller?ACTION=PRODUCT.FIND&TYPE=1').then(function (response) {
-        response.json().then(function (json) {
-            let cuerpoMenu = document.getElementById("prod")
-            cuerpoMenu.innerHTML = ""
-            json.forEach(element => {
-                let div = document.createElement('div')
-                div.innerHTML = `
-                    <div class="prod" id="prod">
-                        <div class="producto_zona_privada"
-                            id="prod_zona_privada">
-                            <img class="imagen_prueba"
-                                src="${element.productImg}" alt="imagen" />
-                            <h3><strong>${element.productName}</strong></h3>
+    for (let i = 0; i < 6; i++) {
+        peticiones.push(fetch('http://localhost:8081/src/Controller?ACTION=PRODUCT.FIND&TYPE=' + (i + 1)))
+    }
+
+    Promise.all(peticiones).then(function (rs) {
+        Promise.all(rs.map(x => x.json())).then((tipos) =>
+
+            tipos.forEach(function (item) {
+                let cuerpoMenu = document.getElementById("prod")
+                //cuerpoMenu.innerHTML = ""
+                item.forEach(element => {
+                    let div = document.createElement('div')
+                    div.addEventListener("click", function () {
+                        edicionProducto.classList.add('active');
+                    });
+                    div.innerHTML = `
+                        <div class="prod" id="prod">
+                            <div class="producto_zona_privada"
+                                id="prod_zona_privada">
+                                <img class="imagen_prueba"
+                                    src="${element.productImg}" alt="imagen" />
+                                <h3><strong>${element.productName}</strong></h3>
+                            </div>
                         </div>
-                    </div>
-                `
-                cuerpoMenu.appendChild(div);
-            });
-        });
+                    `
+                    cuerpoMenu.appendChild(div);
+                });
+            }));
     })
         .catch(function (error) {
-            console.log('Hubo un problema con la petición Fetch:' + error.message);
+            console.log('Error try again' + error.message);
         });
+
+
 
 
 
@@ -50,12 +63,7 @@ window.onload = function () {
 //ABRIR POPUP DE LOS PRODUCTOS YA EXISTENTES + CERRAR (X)
 // let producto = document.querySelector('.prod'); //PRODUCTO
 let producto = document.getElementById("prod");
-let edicionProducto = document.getElementById("producto_actual_edicion"); //POP UP EDICION
 let x_cerrar = document.querySelector('.icono_cerrar');
-
-producto.addEventListener('click', function () {
-    edicionProducto.classList.add('active');
-});
 
 x_cerrar.addEventListener('click', function (e) {
     e.preventDefault();
