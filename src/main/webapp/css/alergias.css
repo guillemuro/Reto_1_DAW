@@ -166,12 +166,22 @@ a:visited {
 }
 
 .cuerpo_mensaje {
-    margin: 5vw 10vw;
+    margin: 5vw 9vw;
     text-align: justify;
     justify-content: center;
     align-items: center;
     font-size: 1.1vw;
-    padding-left: 5%;
+}
+
+.alergenos_2 {
+    width: 60vw;
+}
+
+.imagen_alergenos {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 
 .footer {
