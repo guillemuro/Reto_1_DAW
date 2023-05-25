@@ -4,24 +4,27 @@
 
 /*ESTO ES EL FORMULARIO*/
 .formulario {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+    /* width: 100%; */
+    /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 17vw;
+    padding-left: 4.5vw;
+    width: 30vw;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 350px;
-    background-color: #fff;
+    /* max-width: 350px; */
+    background-color: #43241a;
     padding: 20px;
     border-radius: 10px;
-    position: relative;
+    /* position: relative; */
 }
 
 .message {
