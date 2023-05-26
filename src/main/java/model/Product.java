@@ -1,23 +1,22 @@
 package model;
 
 public class Product {
-    // ATRIBUTO
-    private int productId;
-    private String productName;
-    private int productType;
-    private double productPrice;
-    private String productDesc;
-    private String productImg;
-    private String productTitle;
+    // ATRIBUTOS
+    private int productId; // ID del producto
+    private String productName; // Nombre del producto
+    private int productType; // Tipo de producto
+    private double productPrice; // Precio del producto
+    private String productDesc; // Descripción del producto
+    private String productImg; // Imagen del producto
+    private String productTitle; // Título del producto
 
-    // CONSTRUCTOR
+    // CONSTRUCTORES
     public Product(int productType) {
         this.productType = productType;
     }
 
     public Product(int productId, String productName, int productType, double productPrice, String productTitle,
-            String productDesc,
-            String productImg) {
+            String productDesc, String productImg) {
         this.productId = productId;
         this.productName = productName;
         this.productType = productType;
@@ -30,7 +29,7 @@ public class Product {
     public Product() {
     }
 
-    // METODO
+    // MÉTODOS DE ACCESO (GETTERS Y SETTERS)
     public int getProductId() {
         return productId;
     }
@@ -87,6 +86,7 @@ public class Product {
         this.productTitle = productTitle;
     }
 
+    // MÉTODO TOSTRING
     @Override
     public String toString() {
         return "Product [productId=" + productId + ", productName=" + productName + ", productType=" + productType

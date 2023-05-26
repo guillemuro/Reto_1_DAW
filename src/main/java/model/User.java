@@ -1,11 +1,11 @@
 package model;
 
 public class User {
-    // ATRIBUTO
-    private int userId;
-    private String name;
-    private String pass;
-    private String email;
+    // ATRIBUTOS
+    private int userId; // ID del usuario
+    private String name; // Nombre del usuario
+    private String pass; // Contraseña del usuario
+    private String email; // Email del usuario
 
     // CONSTRUCTOR
     public User(String name, String pass, String email) {
@@ -14,7 +14,7 @@ public class User {
         this.email = email;
     }
 
-    // METODOS
+    // MÉTODOS DE ACCESO (GETTERS Y SETTERS)
     public int getUserId() {
         return userId;
     }
@@ -46,5 +46,4 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
 }

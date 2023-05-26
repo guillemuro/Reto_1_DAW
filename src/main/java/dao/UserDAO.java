@@ -21,10 +21,14 @@ public class UserDAO implements IDAO<User> {
                 maxId = rs.getInt(1);
                 maxId++;
             }
+
+            // Construye la consulta SQL para insertar un nuevo usuario en la base de datos
             sql = "INSERT INTO COFFEEUSER VALUES (" + maxId + ",'" + bean.getName() + "', '" + bean.getPass()
                     + "', '" + bean.getEmail() + "')";
             motorOracle.executeUpdate(sql);
             motorOracle.disconnect();
+
+            // Obtiene el ID del usuario recién insertado
             sql = "SELECT COFFEEUSER_ID FROM COFFEEUSER CU WHERE CU.COFFEEUSER_EMAIL = " + bean.getEmail();
             rs = motorOracle.executeQuery(sql);
             int userId = 0;

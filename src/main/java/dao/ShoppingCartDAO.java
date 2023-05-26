@@ -12,24 +12,29 @@ public class ShoppingCartDAO implements IDAO<ShoppingCart> {
 
     @Override
     public int add(ShoppingCart bean) {
+        // TODO Auto-generated method stub
         return 0;
     }
 
     @Override
     public ArrayList<ShoppingCart> find(ShoppingCart bean) {
-
         try {
             ArrayList<ShoppingCart> listShopping = new ArrayList<>();
+            motorOracle.connect();
+
+            // Construye la consulta SQL para buscar carritos de compras por ID de usuario
             String sql = "SELECT * FROM SHOPPINGCART WHERE USER_ID =" + bean.getUserId();
             ResultSet rs = motorOracle.executeQuery(sql);
             while (rs.next()) {
                 ShoppingCart shoppingCart = new ShoppingCart();
+
+                // Establece los atributos del carrito de compras a partir de los datos
+                // obtenidos de la consulta
                 shoppingCart.setUserId(rs.getInt("SHOPINGCART_ID"));
                 shoppingCart.setProductId(rs.getInt("PRODUCT_ID"));
                 shoppingCart.setQuantity(rs.getInt("QUANTITY"));
                 shoppingCart.setShoppingCartId(rs.getInt("SHOPPINGCART_ID"));
                 listShopping.add(shoppingCart);
-
             }
             motorOracle.disconnect();
             return listShopping;
@@ -37,7 +42,6 @@ public class ShoppingCartDAO implements IDAO<ShoppingCart> {
             System.out.println(e);
             return null;
         }
-
     }
 
     @Override
@@ -63,5 +67,4 @@ public class ShoppingCartDAO implements IDAO<ShoppingCart> {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'findById'");
     }
-
 }

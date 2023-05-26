@@ -8,26 +8,29 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class MotorOracle implements IMotor {
-    // ATRIBUTO
-    private Connection connection;
-    private Statement statement;
-    private PreparedStatement preparedStatement;
-    private ResultSet resultSet;
-    private final String DRIVER = "oracle.jdbc.driver.OracleDriver";
-    private final String URL = "jdbc:oracle:thin:@//";
-    private final String PORT = "localhost:1521/";
-    private final String DB_NAME = "XE";
-    private final String USER = "COFFEE";
-    private final String PASSWORD = "123";
-    // METODO
+    // ATRIBUTOS
+    private Connection connection; // Conexión a la base de datos
+    private Statement statement; // Objeto de sentencia para consultas SQL
+    private PreparedStatement preparedStatement; // Objeto de sentencia precompilada para consultas SQL
+    private ResultSet resultSet; // Resultado de una consulta SQL
+    private final String DRIVER = "oracle.jdbc.driver.OracleDriver"; // Controlador de la base de datos Oracle
+    private final String URL = "jdbc:oracle:thin:@//"; // URL de conexión a la base de datos
+    private final String PORT = "localhost:1521/"; // Puerto de la base de datos
+    private final String DB_NAME = "XE"; // Nombre de la base de datos
+    private final String USER = "COFFEE"; // Usuario de la base de datos
+    private final String PASSWORD = "123"; // Contraseña del usuario
+
+    // MÉTODOS
 
     @Override
     public void connect() {
         try {
-            Class.forName(DRIVER);
-            this.connection = DriverManager.getConnection(URL + PORT + DB_NAME, USER, PASSWORD);
+            Class.forName(DRIVER); // Cargar el controlador de la base de datos
+            this.connection = DriverManager.getConnection(URL + PORT + DB_NAME, USER, PASSWORD); // Establecer la
+                                                                                                 // conexión
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -36,8 +39,8 @@ public class MotorOracle implements IMotor {
     @Override
     public ResultSet executeQuery(String sql) {
         try {
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery(sql);
+            statement = connection.createStatement(); // Crear un objeto de sentencia
+            resultSet = statement.executeQuery(sql); // Ejecutar la consulta SQL y obtener el resultado
             return resultSet;
         } catch (Exception e) {
             System.out.println(e);
@@ -48,11 +51,21 @@ public class MotorOracle implements IMotor {
     @Override
     public int executeUpdate(String sql) {
         try {
-            preparedStatement = connection.prepareStatement(sql);
-            return preparedStatement.executeUpdate();
+            preparedStatement = connection.prepareStatement(sql); // Crear un objeto de sentencia precompilada
+            return preparedStatement.executeUpdate(); // Ejecutar la consulta de actualización y obtener el número de
+                                                      // filas afectadas
         } catch (Exception e) {
             System.out.println(e);
             return 0;
+        }
+    }
+
+    public void commit() {
+        try {
+            connection.commit();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
     }
 
@@ -60,20 +73,19 @@ public class MotorOracle implements IMotor {
     public void disconnect() {
         try {
             if (connection != null) {
-                connection.close();
+                connection.close(); // Cerrar la conexión a la base de datos
             }
             if (statement != null) {
-                statement.close();
+                statement.close(); // Cerrar el objeto de sentencia
             }
             if (preparedStatement != null) {
-                preparedStatement.close();
+                preparedStatement.close(); // Cerrar el objeto de sentencia precompilada
             }
             if (resultSet != null) {
-                resultSet.close();
+                resultSet.close(); // Cerrar el resultado de la consulta
             }
         } catch (Exception e) {
             System.out.println(e);
         }
     }
-
 }

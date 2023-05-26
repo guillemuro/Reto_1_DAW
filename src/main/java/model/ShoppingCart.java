@@ -1,13 +1,13 @@
 package model;
 
 public class ShoppingCart {
-    // ATRIBUTO
-    private int shoppingCartId;
-    private int userId;
-    private int productId;
-    private int quantity;
+    // ATRIBUTOS
+    private int shoppingCartId; // ID del carrito de compras
+    private int userId; // ID del usuario
+    private int productId; // ID del producto
+    private int quantity; // Cantidad del producto en el carrito
 
-    // CONSTRUCTOR
+    // CONSTRUCTORES
     public ShoppingCart(int userId) {
         this.userId = userId;
     }
@@ -17,13 +17,12 @@ public class ShoppingCart {
         this.productId = productId;
         this.quantity = quantity;
         this.shoppingCartId = shoppingCartId;
-
     }
 
     public ShoppingCart() {
     }
 
-    // METODO
+    // MÉTODOS DE ACCESO (GETTERS Y SETTERS)
     public int getShoppingCartId() {
         return shoppingCartId;
     }

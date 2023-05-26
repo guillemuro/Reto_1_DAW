@@ -59,7 +59,7 @@ button_add.addEventListener('click', function () {
     let nombre = document.getElementById("input_name").value;
     let descripcion = document.getElementById("input_description").value;
     let precio = document.getElementById("input_price").value;
-    let imagen = document.getElementById("input_img").value;
+    let imagen = encodeURI(document.getElementById("input_img").value);
     let categoria = document.getElementById("select_categoria").value;
     let titulo = document.getElementById("input_title").value;
 
