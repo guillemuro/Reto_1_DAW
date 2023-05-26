@@ -14,7 +14,7 @@ public class ProductDAO implements IDAO<Product> {
     public int add(Product bean) {
         try {
             motorOracle.connect();
-            String sql = "SELECT MAX(COFFEEUSER_ID) FROM COFFEEUSER";
+            String sql = "SELECT MAX(PRODUCT_ID) FROM PRODUCT";
             ResultSet rs = motorOracle.executeQuery(sql);
             int maxId = 0;
             if (rs.next()) {
@@ -22,26 +22,25 @@ public class ProductDAO implements IDAO<Product> {
                 maxId++;
             }
             String quString = String.format(
-                    "INSERT INTO PRODUCT (PRODUCT_ID, PRODUCT_NAME, PRODUCT_DESCRIPTION, PRODUCT_PRICE, PRODUCT_IMG, PRODUCT_TITLE, PRODUCT_TYPE) VALUES (%s, %s, %s, %s, %s, %s, %s)",
+                    "INSERT INTO PRODUCT (PRODUCT_ID, PRODUCT_NAME, PRODUCT_DESCRIPTION, PRODUCT_PRICE, PRODUCT_IMG, PRODUCT_TITLE, PRODUCT_TYPE) VALUES (%s, '%s', '%s', %s, '%s', '%s', %s)",
                     maxId,
                     bean.getProductName(), bean.getProductDesc(), bean.getProductPrice(), bean.getProductImg(),
                     bean.getProductTitle(), bean.getProductType());
 
             motorOracle.executeQuery(quString);
-            sql = "SELECT PRODUCT_ID FROM PRODUCT P WHERE P.PRODUCT_NAME = " + bean.getProductName();
+
+            sql = "SELECT PRODUCT_ID FROM PRODUCT WHERE PRODUCT_NAME = '" + bean.getProductName() + "'";
             rs = motorOracle.executeQuery(sql);
             int productId = 0;
             if (rs.next()) {
                 productId = rs.getInt(1);
             }
             return productId;
-
         } catch (Exception e) {
             System.out.println(e);
             motorOracle.disconnect();
             return 0;
         }
-
     }
 
     @Override
@@ -89,6 +88,12 @@ public class ProductDAO implements IDAO<Product> {
     public ArrayList<Product> findAll() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+    }
+
+    @Override
+    public Product findById(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findById'");
     }
 
 }

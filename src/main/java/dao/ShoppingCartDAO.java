@@ -58,4 +58,10 @@ public class ShoppingCartDAO implements IDAO<ShoppingCart> {
         throw new UnsupportedOperationException("Unimplemented method 'findAll'");
     }
 
+    @Override
+    public ShoppingCart findById(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findById'");
+    }
+
 }

@@ -61,19 +61,7 @@ public class ProductAction implements IAction {
     }
 
     @Override
-    public String delete(HttpServletRequest req) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
-    }
-
-    @Override
     public String add(HttpServletRequest req) {
-
-        // coger cada paremetro en la url del frontend
-        // 'http://localhost:8081/src/Controller?ACTION=PRODUCT.ADD&NAME=' + nombre +
-        // '&DESC=' + descripcion + '&PRECIO=' + precio + '&IMG=' + imagen +
-        // '&CATEGORIA=' + categoria)
-
         String productName = req.getParameter("NAME");
         String productDesc = req.getParameter("DESC");
         double productPrice = Double.parseDouble(req.getParameter("PRECIO"));
@@ -82,9 +70,23 @@ public class ProductAction implements IAction {
         String productTitle = req.getParameter("TITLE");
 
         Product product = new Product(0, productName, productType, productPrice, productTitle, productDesc, productImg);
-        int lstProduct = new ProductDAO().add(product);
-        String json = gson.toJson(lstProduct);
+
+        ProductDAO productDAO = new ProductDAO(); // Instancia del ProductDAO
+
+        int productId = productDAO.add(product); // Inserta el producto en la base de datos y obtén el ID del producto
+                                                 // creado
+
+        // Recupera el producto recién insertado
+        Product addProduct = productDAO.findById(productId);
+
+        String json = gson.toJson(addProduct);
         return json;
+    }
+
+    @Override
+    public String delete(HttpServletRequest req) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
 
 }

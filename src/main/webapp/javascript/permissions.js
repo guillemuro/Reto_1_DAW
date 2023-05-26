@@ -64,7 +64,10 @@ button_add.addEventListener('click', function () {
     let titulo = document.getElementById("input_title").value;
 
     fetch('http://localhost:8081/src/Controller?ACTION=PRODUCT.ADD&NAME=' + nombre + '&DESC=' + descripcion + '&PRECIO=' + precio + '&IMG=' + imagen + '&CATEGORIA=' + categoria + '&TITLE=' + titulo).then(function (response) {
-        console.log(response);
+        console.log(response.status);
+        console.log(response.statusText);
+        console.log(response.text());
+
         response.json().then(function (json) {
             if (json == '1') {
                 alert("The data has been saved succesfully")

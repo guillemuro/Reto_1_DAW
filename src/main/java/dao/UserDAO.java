@@ -64,4 +64,10 @@ public class UserDAO implements IDAO<User> {
         throw new UnsupportedOperationException("Unimplemented method 'findAll'");
     }
 
+    @Override
+    public User findById(int id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findById'");
+    }
+
 }

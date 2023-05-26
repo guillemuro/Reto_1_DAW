@@ -3,7 +3,6 @@ package action;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
-
 import dao.UserDAO;
 import interfaces.IAction;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,6 +13,8 @@ public class CoffeeUserAction implements IAction {
     Gson gson = new Gson();
 
     // METODOS
+
+    // Implementación del método execute() de la interfaz IAction
     @Override
     public String execute(HttpServletRequest req, String action) {
         String json = "";
@@ -37,6 +38,7 @@ public class CoffeeUserAction implements IAction {
         return json;
     }
 
+    // Implementación del método find() de la interfaz IAction
     @Override
     public String find(HttpServletRequest req) {
         String username = req.getParameter("NAME");
@@ -48,24 +50,28 @@ public class CoffeeUserAction implements IAction {
         return json;
     }
 
+    // Implementación del método findAll() de la interfaz IAction
     @Override
     public String findAll(HttpServletRequest req) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'findAll'");
     }
 
+    // Implementación del método update() de la interfaz IAction
     @Override
     public String update(HttpServletRequest req) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'update'");
     }
 
+    // Implementación del método delete() de la interfaz IAction
     @Override
     public String delete(HttpServletRequest req) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
 
+    // Implementación del método add() de la interfaz IAction
     @Override
     public String add(HttpServletRequest req) {
         String email = req.getParameter("EMAIL");
@@ -75,7 +81,5 @@ public class CoffeeUserAction implements IAction {
         int filasModificadas = new UserDAO().add(user);
         String json = gson.toJson(filasModificadas);
         return json;
-
     }
-
 }

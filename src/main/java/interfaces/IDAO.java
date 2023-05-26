@@ -12,4 +12,6 @@ public interface IDAO<E> {
     public int update(Integer i);
 
     public ArrayList<E> findAll();
+
+    E findById(int id);
 }
