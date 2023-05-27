@@ -1,15 +1,28 @@
 #!/bin/bash
 
-# Comandos para eliminar la base de datos existente
-echo "DROP DATABASE COFFE;" | sqlplus sys/123 as sysdba
+#!/bin/bash
 
-# Comandos para crear la base de datos nuevamente
-echo "CREATE DATABASE COFFE;" | sqlplus sys/123 as sysdba
+# Crear una copia de seguridad de la tabla PRODUCT y la secuencia PRODUCT_SEQ
+echo "CREATE TABLE PRODUCT_BACKUP AS SELECT * FROM PRODUCT;" > backup.sql
+echo "CREATE SEQUENCE PRODUCT_SEQ_BACKUP START WITH 1 INCREMENT BY 1 CACHE 20;" >> backup.sql
 
-# Comandos para crear las tablas y objetos
-echo "CREATE TABLE PRODUCT(...);" | sqlplus COFFEE/123@COFFE
-echo "CREATE TABLE COFFEEUSER(...);" | sqlplus COFFEE/123@COFFEE
-echo "CREATE TABLE SHOPPINGCART(...);" | sqlplus COFFEE/123@COFFEE
+# Crear una copia de seguridad de la tabla COFFEEUSER
+echo "CREATE TABLE COFFEEUSER_BACKUP AS SELECT * FROM COFFEEUSER;" >> backup.sql
+
+# Crear una copia de seguridad de la tabla SHOPPINGCART
+echo "CREATE TABLE SHOPPINGCART_BACKUP AS SELECT * FROM SHOPPINGCART;" >> backup.sql
+
+# Crear una copia de seguridad de la tabla BILL
+echo "CREATE TABLE BILL_BACKUP AS SELECT * FROM BILL;" >> backup.sql
+
+# Crear una copia de seguridad de la tabla ADMIN_PANEL
+echo "CREATE TABLE ADMIN_PANEL_BACKUP AS SELECT * FROM ADMIN_PANEL;" >> backup.sql
+
+# Crear una copia de seguridad de la tabla EMPLOYEE
+echo "CREATE TABLE EMPLOYEE_BACKUP AS SELECT * FROM EMPLOYEE;" >> backup.sql
+
+echo "Copia de seguridad creada en backup.sql"
+
 
 # Resto de las consultas SQL necesarias para recrear la estructura de la base de datos
 #PARTE DE LOS CAFES

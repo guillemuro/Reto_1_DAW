@@ -15,7 +15,7 @@ window.onload = function () {
                                     ${element.productTitle}
                                 </p>
                                 <div class="informacion_producto_vendido_flex">
-                                    <a href="alergias.html" class="enlace_producto">
+                                    <a href="./alergias.html" class="enlace_producto">
                                         <p class="botones_info">Allergens</p>
                                     </a>
                                     <a class="enlace_producto" href="../otros/Nutritional_tables_CtrlAlt_Coffee.pdf" title="Nutritional tables" target="blank">

@@ -67,7 +67,7 @@ window.onload = function () {
                     ${element.productTitle}
                     </p>
                     <div class="informacion_producto_vendido_flex">
-                        <a class="enlace_producto" href="#"><p
+                        <a class="enlace_producto" href="./alergias.html"><p
                                 class="botones_info">Allergens</p></a>
                         <a class="enlace_producto"
                             href="../otros/Nutritional_tables_CtrlAlt_Coffee.pdf"
@@ -119,7 +119,7 @@ window.onload = function () {
                         ${element.productTitle}
                         </p>
                         <div class="informacion_producto_vendido_flex">
-                            <a class="enlace_producto" href="#"><p
+                            <a class="enlace_producto" href="./alergias.html"><p
                                     class="botones_info">Allergens</p></a>
                             <a class="enlace_producto"
                                 href="../otros/Nutritional_tables_CtrlAlt_Coffee.pdf"
@@ -170,7 +170,7 @@ window.onload = function () {
             ${element.productTitle}
             </p>
             <div class="informacion_producto_vendido_flex">
-                <a class="enlace_producto" href="#"><p
+                <a class="enlace_producto" href="./alergias.html"><p
                         class="botones_info">Allergens</p></a>
                 <a class="enlace_producto"
                     href="../otros/Nutritional_tables_CtrlAlt_Coffee.pdf"
