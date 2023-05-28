@@ -510,12 +510,16 @@ a:visited {
     padding-right: 1.6vw;
     height: 1.8vw;
     cursor: pointer;
+    top: 10vw;
+    display: flex;
+    align-items: center;
 }
 
 .carrito{
     width: 1.4vw;
     cursor: pointer;
     position: relative;
+    display: flex;
 }
 
 .contador_productos {
