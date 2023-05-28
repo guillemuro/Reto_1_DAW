@@ -78,39 +78,38 @@
                 <div class="sumario_productos">
                     <h1>Shopping cart</h1>
                     <!-- INSERTAR PRODUCTO -->
-                    <div class="producto_agregado_carrito">
-                        <img class="img_carrito"
-                            src="../imagenes/imagen_prueba.png" alt="carrito" />
-                        <img class="basura" src="../imagenes/basura.png"
-                            alt="basura" />
-                        <div class="informacion_producto_carrito">
-                            <h2>Java Coffee</h2>
-                            <p>Ginger macchiato with nutmeg</p>
-                            <div class="flex">
-                                <div class="quantity">
-                                    <p>Quantity: </p>
-                                    <div class="quantity_boton">
-                                        <span class="resta"><strong>-</strong></span>
-                                        <span class="numero"><strong>1</strong></span>
-                                        <span class="suma"><strong>+</strong></span>
+                    <!-- <div class="display_none"> -->
+                        <div class="producto_agregado_carrito">
+                            <img class="img_carrito" src="../imagenes/imagen_prueba.png" alt="carrito"/>
+                            <img class="basura" src="../imagenes/basura.png" alt="basura"/>
+                            <div class="informacion_producto_carrito">
+                                <h2>Nombre</h2>
+                                <div class="flex">
+                                    <div class="quantity">
+                                        <p>Quantity </p>
+                                        <div class="quantity_boton">
+                                            <span class="resta"><strong>-</strong></span>
+                                            <span class="numero"><strong>1</strong></span>
+                                            <span class="suma"><strong>+</strong></span>
+                                        </div>
                                     </div>
+                                    <h4 class="precio_producto_individual">$ 0.00</h4>
+                                    <h4 class="precio_producto_total">$ 0.00</h4>
                                 </div>
-                                <h3>$ 10.00</h3>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
 
                 <div class="detalles_pago">
                     <div class="checkout">
                         <div class="subtitulo_checkout">
-                            <img class="ubicacion" src="../imagenes/lapiz_2.png"
-                                alt="lapiz" />
+                            <img class="ubicacion" src="../imagenes/lapiz_2.png" alt="lapiz" />
                             <h3>Order summary</h3>
                         </div>
                         <div class="subtitulo_espacio">
                             <p>Subtotal</p>
-                            <p>$ 8.98</p>
+                            <p>$ 0.00</p>
                         </div>
                         <div class="subtitulo_espacio">
                             <p>Shipping costs</p>
@@ -119,101 +118,48 @@
                         <hr class="linea_2">
                         <div class="subtitulo_espacio">
                             <p><strong>Total</strong></p>
-                            <p><strong>$ 11.48</strong></p>
+                            <p><strong>$ 0.00</strong></p>
                         </div>
                         <p class="vat"><em>*VAT included</em></p>
                     </div>
                     <br>
                     <div class="checkout">
-                        <div class="subtitulo_checkout">
-                            <img class="enviado" src="../imagenes/enviado.png"
-                                alt="envio" />
-                            <h3>Delivery</h3>
-                        </div>
                         <form>
-                            <input type="text" name="nombre_tarjeta"
-                                class="hueco_checkout" placeholder="Full name">
-                            <input type="text" name="nombre_tarjeta"
-                                class="hueco_checkout" placeholder="Address">
-                            <div class="cvv_expiry">
-                                <input type="number" name="nombre_tarjeta"
-                                    class="hueco_checkout"
-                                    id="hueco_checkout_tamanyo"
-                                    placeholder="Postal code">
-                                <input type="number" name="cvv"
-                                    class="hueco_checkout"
-                                    id="hueco_checkout_tamanyo"
-                                    placeholder="City: New York" readonly>
-                            </div>
-                            <div class="cvv_expiry">
-                                <input type="text" name="nombre_tarjeta"
-                                    class="hueco_checkout"
-                                    id="hueco_checkout_tamanyo"
-                                    placeholder="Mail">
-                                <input type="number" name="cvv"
-                                    class="hueco_checkout"
-                                    id="hueco_checkout_tamanyo"
-                                    placeholder="Phone">
-                            </div>
-                            <br>
-                            <div class="separador">
-                                <hr class="linea">
-                                <p>or</p>
-                                <hr class="linea">
-                            </div>
                             <div class="subtitulo_checkout">
-                                <img class="ubicacion"
-                                    src="../imagenes/ubicacion.png"
-                                    alt="ubicacion" />
+                                <img class="ubicacion" src="../imagenes/ubicacion.png" alt="ubicacion" />
                                 <h3>In-store pickup</h3>
                             </div>
                             <div class="eleccion_tienda">
                                 <div class="opcion_tienda"
                                     onclick="toggleHoverColor(this)">
-                                    <img class="estatua_libertad"
-                                        src="../imagenes/manhattan.png"
-                                        alt="nueva york 1" />
+                                    <img class="estatua_libertad" src="../imagenes/manhattan.png" alt="nueva york 1" />
                                     <p>7 Park Avenue, NY 10016</p>
                                 </div>
-                                <div class="opcion_tienda"
-                                    onclick="toggleHoverColor(this)">
-                                    <img class="estatua_libertad"
-                                        src="../imagenes/edificio-empire-state.png"
-                                        alt="nueva york 2" />
+                                <div class="opcion_tienda" onclick="toggleHoverColor(this)">
+                                    <img class="estatua_libertad" src="../imagenes/edificio-empire-state.png" alt="nueva york 2" />
                                     <p>3 Riverview Ave. Flushing, NY 11354</p>
                                 </div>
                                 <div class="opcion_tienda"
                                     onclick="toggleHoverColor(this)">
-                                    <img class="estatua_libertad"
-                                        src="../imagenes/estatua-de-la-libertad.png"
-                                        alt="nueva york 3" />
+                                    <img class="estatua_libertad" src="../imagenes/estatua-de-la-libertad.png" alt="nueva york 3" />
                                     <p>616 Fulton Dr. Elmont, NY 11003</p>
                                 </div>
                             </div>
-                            <div class="horario_recoger_pedido">
-                                <label for="horario"><strong>What time do you
-                                        want to pick it up?*</strong></label>
-                                <input type="text" name="nombre_tarjeta"
-                                    class="hueco_checkout"
-                                    id="hueco_checkout_tamanyo2"
-                                    placeholder="08:00 am">
+
+
+                            <input type="text" name="nombre_tarjeta" class="hueco_checkout" placeholder="Full name">
+                            <div class="cvv_expiry">
+                                <input type="number" name="nombre_tarjeta" class="hueco_checkout" id="hueco_checkout_tamanyo" placeholder="Email">
+                                <input type="number" name="cvv" class="hueco_checkout" id="hueco_checkout_tamanyo" placeholder="Phone">
                             </div>
-                            <p class="texto_reclamacion"><em>*The order will
-                                    have a minimum preparation time of 20 min.
-                                    If the customer doesn't pick up the maximum
-                                    order in 1h, only the delivery will be
-                                    refunded.
-                                    For more information, visit the <strong>Shipping
-                                        & Returns</strong> page or <a
-                                        class="link_2" href="./contact.html"><strong>contact
-                                            us</strong></a>.</em>
-                            </p>
+                            <div class="horario_recoger_pedido">
+                                <label for="horario"><strong>What time do you want to pick it up?*</strong></label>
+                                <input type="text" name="nombre_tarjeta" class="hueco_checkout" id="hueco_checkout_tamanyo2" placeholder="08:00 am">
+                            </div>
+                            <p class="texto_reclamacion"><em>*The order will have a minimum preparation time of 20 min. If the customer doesn't pick up the maximum order in 1h, only the delivery will be refunded. For more information, visit the <strong>Shipping & Returns</strong> page or <a class="link_2" href="./contact.html"><strong>contact us</strong></a>.</em></p>
                             <div class="horario_cafeteria">
-                                <img class="reloj" src="../imagenes/reloj.png"
-                                    alt="horario" />
-                                <p><strong>OUR SCHEDULE</strong><br>SUNDAY to
-                                    THURSDAY: 6:00 am to 7:00 pm.<br>FRIDAY to
-                                    SATURDAY: 6:00 am to 5:00 pm.</p>
+                                <img class="reloj" src="../imagenes/reloj.png" alt="horario" />
+                                <p><strong>OUR SCHEDULE</strong><br>SUNDAY to THURSDAY: 6:00 am to 7:00 pm.<br>FRIDAY to SATURDAY: 6:00 am to 5:00 pm.</p>
                             </div>
                         </form>
                     </div>

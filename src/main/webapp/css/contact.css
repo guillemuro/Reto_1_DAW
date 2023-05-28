@@ -7,38 +7,37 @@
     /* width: 100%; */
     /* margin: 0 auto; */
     display: flex;
-    flex-direction: column;
+
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 17vw;
-    padding-left: 4.5vw;
-    width: 30vw;
+    margin-left: 4.5vw;
+    width: 35vw;
+    background-color: #43241a;
+    color: #fff;
+    border-radius: 10px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    padding: 3vw;
+    /* gap: 10px; */
     /* max-width: 350px; */
-    background-color: #43241a;
+    /* background-color: #43241a;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 10px; */
     /* position: relative; */
 }
 
-.message {
+/* .message {
     color: rgba(88, 87, 87, 0.822);
     font-size: 14px;
-}
+} */
 
-.flex {
-    display: flex;
-    width: 100%;
-    gap: 6px;
-}
 
-.form label {
+
+/* .form label {
     position: relative;
 }
 
@@ -63,9 +62,9 @@
 .form label .input:placeholder-shown+span {
     top: 15px;
     font-size: 0.9em;
-}
+} */
 
-.form label .input:focus+span,
+/* .form label .input:focus+span,
 .form label .input:valid+span {
     top: 30px;
     font-size: 0.7em;
@@ -82,9 +81,9 @@
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 5px;
-}
+} */
 
-.form label .input01+span {
+/* .form label .input01+span {
     position: absolute;
     left: 10px;
     top: 50px;
@@ -97,9 +96,9 @@
 .form label .input01:placeholder-shown+span {
     top: 40px;
     font-size: 0.9em;
-}
+} */
 
-.form label .input01:focus+span,
+/* .form label .input01:focus+span,
 .form label .input01:valid+span {
     top: 50px;
     font-size: 0.7em;
@@ -108,9 +107,9 @@
 
 .form label .input01:valid+span {
     color: green;
-}
+} */
 
-.fancy {
+/* .fancy {
     background-color: transparent;
     border: 2px solid #cacaca;
     border-radius: 0px;
@@ -145,9 +144,9 @@
     transform: translateX(230%);
     transform-origin: center;
     transition: background 0.3s linear, width 0.3s linear;
-}
+} */
 
-.fancy .text {
+/* .fancy .text {
     font-size: 1.125em;
     line-height: 1.33333em;
     padding-left: 2em;
@@ -158,8 +157,8 @@
     text-decoration: none;
     color: #818181;
     transform: translateX(30%);
-}
-
+} */
+/* 
 .fancy .top-key {
     height: 2px;
     width: 1.5625rem;
@@ -168,9 +167,9 @@
     position: absolute;
     background: white;
     transition: width 0.5s ease-out, left 0.3s ease-out;
-}
+} */
 
-.fancy .bottom-key-1 {
+/* .fancy .bottom-key-1 {
     height: 2px;
     width: 1.5625rem;
     right: 1.875rem;
@@ -214,7 +213,7 @@
 .fancy:hover .bottom-key-2 {
     right: 0;
     width: 0;
-}
+} */
 
 
 /*ESTA ES LA BASE*/
@@ -332,16 +331,6 @@ a:visited {
     color: black;
     text-decoration: none;
 }
-
-.usuario {
-    width: 1.4vw;
-    padding-right: 1.2vw;
-}
-
-.carrito {
-    width: 1.4vw;
-}
-
 
 .banner {
     width: 100%;
@@ -644,12 +633,16 @@ a:visited {
     padding-right: 1.6vw;
     height: 1.8vw;
     cursor: pointer;
+    top: 10vw;
+    display: flex;
+    align-items: center;
 }
 
 .carrito{
     width: 1.4vw;
     cursor: pointer;
     position: relative;
+    display: flex;
 }
 
 .contador_productos {
