@@ -69,7 +69,7 @@ public class ProductAction implements IAction {
         int productType = Integer.parseInt(req.getParameter("CATEGORIA"));
         String productTitle = req.getParameter("TITLE");
 
-        Product product = new Product(0, productName, productType, productPrice, productTitle, productImg, productDesc);
+        Product product = new Product(0, productName, productType, productPrice, productTitle, productDesc, productImg);
 
         ProductDAO productDAO = new ProductDAO(); // Instancia del ProductDAO
 

@@ -118,8 +118,8 @@ public class ProductDAO implements IDAO<Product> {
                 product.setProductType(rs.getInt("PRODUCT_TYPE"));
                 product.setProductPrice(rs.getDouble("PRODUCT_PRICE"));
                 product.setProductImg(rs.getString("PRODUCT_TITLE"));
-                product.setProductDesc(rs.getString("PRODUCT_DESC"));
                 product.setProductTitle(rs.getString("PRODUCT_IMG"));
+                product.setProductDesc(rs.getString("PRODUCT_DESC"));
 
             }
             motorOracle.disconnect();
