@@ -8,6 +8,7 @@
         <meta name="authors" content="Paula, Guillermo" />
         <title>Contact us</title>
         <link rel="stylesheet" href="../css/contact.css">
+        <link rel="stylesheet" href="../css/login.css">
         <link rel="shortcut icon" href="../imagenes/favicon_ctrl.png"
             type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +72,31 @@
             <div class="contenedor_privacy_policy">
                 <h1 class="titulo_principal">Contact Us<br><span class="subtitulos"><em>If coffee is the gasoline of your life, <br>contact us and we will fill your tank</em></span></h1>
                 <div class="formulario">
+
+                    <form id="myForm">
+                        <div class="form-container">
+                            <div class="input-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name"><br><br>
+                            </div>
+        
+                            <div class="input-group">
+                                <label for="message">Email:</label>
+                                <input type="password" id="message"><br><br>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="message">Contact number:</label>
+                                <input type="password" id="message"><br><br>
+                            </div>
+        
+                            <a href="../index.html"><button class="sign" input
+                                    type="submit"
+                                    onclick="registrar()">Sign in</button></a>
+                        </div>
+        
+                    </form>
+
                     <form class="form">
                             <label for="name">First name</label><br>
                             <input type="text" id="name"><br>
