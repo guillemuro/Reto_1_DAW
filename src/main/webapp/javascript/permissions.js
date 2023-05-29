@@ -61,11 +61,12 @@ button_add.addEventListener('click', function () {
     let nombre = document.getElementById("input_name").value;
     let descripcion = document.getElementById("input_description").value;
     let precio = document.getElementById("input_price").value;
-    let imagen = encodeURI(document.getElementById("input_img").value);
+    let imagen_absolute = document.getElementById("input_img").value;
+    let imagen = ("../imagenes/" + imagen_absolute);
     let categoria = document.getElementById("select_categoria").value;
     let titulo = document.getElementById("input_title").value;
 
-    fetch('http://localhost:8081/src/Controller?ACTION=PRODUCT.ADD&NAME=' + nombre + '&DESC=' + descripcion + '&PRECIO=' + precio + '&IMG=' + titulo + '&CATEGORIA=' + categoria + '&TITLE=' + imagen).then(function (response) {
+    fetch('http://localhost:8081/src/Controller?ACTION=PRODUCT.ADD&NAME=' + nombre + '&DESC=' + descripcion + '&PRECIO=' + precio + '&IMG=' + imagen + '&CATEGORIA=' + categoria + '&TITLE=' + titulo).then(function (response) {
 
         response.json().then(function (json) {
             if (json == '0') {
@@ -83,6 +84,38 @@ button_add.addEventListener('click', function () {
             console.log('Hubo un problema con la petición Fetch:' + error.message);
         });
 });
+
+
+
+//ELIMINAR PRODUCCTOS
+
+const productoE = document.getElementById('productoEliminar')
+
+document.getElementById("botonEliminar").addEventListener("click", function (event) {
+    event.preventDefault()
+    let productoEliminar = productoE.value
+    let van = false
+
+    for (let i = 0; i < productos.length; i++) {
+        if (productos[i].nombre == productoEliminar) {
+            productos.splice(i, 1)
+            van = true
+        }
+    }
+
+    if (van == false) {
+        mensaje.classList.add('noExsiteError')
+        setTimeout(() => { mensaje.classList.remove('noExsiteError') }, 2500);
+    }
+    else {
+        mensaje.classList.add('realizado')
+        setTimeout(() => {
+            mensaje.classList.remove('realizado')
+            window.location.reload()
+        }, 1500);
+    }
+    guardarAlmacenamientoLocal('productos', productos);
+})
 
 
 

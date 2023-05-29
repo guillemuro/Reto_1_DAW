@@ -67,9 +67,9 @@ public class ProductDAO implements IDAO<Product> {
                 product.setProductName(rs.getString("PRODUCT_NAME"));
                 product.setProductType(rs.getInt("PRODUCT_TYPE"));
                 product.setProductPrice(rs.getDouble("PRODUCT_PRICE"));
-                product.setProductImg(rs.getString("PRODUCT_TITLE"));
+                product.setProductImg(rs.getString("PRODUCT_IMG"));
                 product.setProductDesc(rs.getString("PRODUCT_DESC"));
-                product.setProductTitle(rs.getString("PRODUCT_IMG"));
+                product.setProductTitle(rs.getString("PRODUCT_TITLE"));
                 lstProduct.add(product);
             }
             motorOracle.disconnect();
@@ -117,8 +117,8 @@ public class ProductDAO implements IDAO<Product> {
                 product.setProductName(rs.getString("PRODUCT_NAME"));
                 product.setProductType(rs.getInt("PRODUCT_TYPE"));
                 product.setProductPrice(rs.getDouble("PRODUCT_PRICE"));
-                product.setProductImg(rs.getString("PRODUCT_TITLE"));
-                product.setProductTitle(rs.getString("PRODUCT_IMG"));
+                product.setProductImg(rs.getString("PRODUCT_IMG"));
+                product.setProductTitle(rs.getString("PRODUCT_TITLE"));
                 product.setProductDesc(rs.getString("PRODUCT_DESC"));
 
             }

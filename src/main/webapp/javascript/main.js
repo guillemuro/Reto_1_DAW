@@ -10,9 +10,9 @@ window.onload = function () {
                     div.innerHTML = `
                         <div class="producto_cafe">
                             <div class="informacion_producto_vendido">
-                                <h4>${element.productDesc}</h4>
+                                <h4>${element.productTitle}</h4>
                                 <p class="informacion_prod_vend_texto">
-                                    ${element.productTitle}
+                                    ${element.productDesc}
                                 </p>
                                 <div class="informacion_producto_vendido_flex">
                                     <a href="./alergias.html" class="enlace_producto">
@@ -57,9 +57,9 @@ window.onload = function () {
                     div.innerHTML = `
                         <div class="producto_cafe">
                             <div class="informacion_producto_vendido">
-                                <h4>${element.productDesc}</h4>
+                                <h4>${element.productTitle}</h4>
                                 <p class="informacion_prod_vend_texto">
-                                    ${element.productTitle}
+                                    ${element.productDesc}
                                 </p>
                             </div>
                             <div class="elemento_ocultado_posteriormente">
