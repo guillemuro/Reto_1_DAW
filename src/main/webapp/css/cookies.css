@@ -276,10 +276,6 @@ a:visited {
     margin-bottom: 2vw;
 }
   
-#boton_scroll:hover {
-    background-color: red; 
-}
-
 .contenedor_correo {
     position: relative;
     margin: 2.5vw auto;
@@ -406,7 +402,6 @@ a:visited {
     padding-right: 1vw;
 }
 
-/*CARRITO*/
 .usuario_carrito {
     position: absolute;
     right: 0;

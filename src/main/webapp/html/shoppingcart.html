@@ -78,13 +78,11 @@
                 <div class="sumario_productos">
                     <h1>Shopping cart</h1>
                     <div id="carrito"></div> 
-                    <!-- INSERTAR PRODUCTO -->
-                    <!-- <div class="display_none"> -->
+                    <div class="display_none">
                         <div class="producto_agregado_carrito">
-                            <img class="img_carrito" src="../imagenes/imagen_prueba.png" alt="carrito"/>
                             <div class="informacion_producto_carrito">
-                                <h2>Name</h2>
                                 <div class="flex">
+                                    <h2>Name</h2>
                                     <div class="quantity">
                                         <p>Quantity </p>
                                         <div class="quantity_boton">
@@ -96,7 +94,7 @@
                                 </div>
                             </div>
                         </div>
-                    <!-- </div> -->
+                    </div>
                 </div>
 
                 <div class="detalles_pago">
@@ -147,7 +145,7 @@
 
                             <input type="text" name="nombre_tarjeta" class="hueco_checkout" placeholder="Full name">
                             <div class="cvv_expiry">
-                                <input type="number" name="nombre_tarjeta" class="hueco_checkout" id="hueco_checkout_tamanyo" placeholder="Email">
+                                <input type="text" name="nombre_tarjeta" class="hueco_checkout" id="hueco_checkout_tamanyo" placeholder="Email">
                                 <input type="number" name="cvv" class="hueco_checkout" id="hueco_checkout_tamanyo" placeholder="Phone">
                             </div>
                         </form>
@@ -168,13 +166,9 @@
                         <br>
                         <label for="card_number">Card number/ Expiry date/ CVV</label>
                         <div class="cvv_expiry_2">
-                            <input type="text" name="nombre_tarjeta"
-                                class="hueco_checkout"
-                                placeholder="0000 0000 0000 0000">
-                            <input type="text" name="nombre_tarjeta"
-                                class="hueco_checkout" placeholder="00/00">
-                            <input type="password" name="nombre_tarjeta"
-                                class="hueco_checkout" placeholder="CVV">
+                            <input type="text" name="nombre_tarjeta" class="hueco_checkout" placeholder="0000 0000 0000 0000">
+                            <input type="text" name="nombre_tarjeta" class="hueco_checkout" placeholder="00/00">
+                            <input type="number" name="nombre_tarjeta" class="hueco_checkout" placeholder="CVV">
                         </div>
                     </div>
                     <br>
@@ -182,23 +176,8 @@
                 </div>
             </div>
 
-            <!-- POP UP COMPRA REALIZADA -->
             <div class="popup_pedidorealizado">
-                <div class="elemento"></div>
-                <svg version="1.1" class="tick"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;"
-                    xml:space="preserve">
-                    <path class="circ path"
-                        style="fill:none;stroke:#fff;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                        d="
-                M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z" />
-                    <polyline class="tick path"
-                        style="fill:none;stroke:#fff;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;"
-                        points="
-                11.6,20 15.9,24.2 26.4,13.8 " />
-                </svg>
+                <img class="bolsa_pedido" src="../imagenes/bolsa-de-la-compra.png" alt="pedido realizado"/>
                 <h2 class="h2_popup">Order placed!</h2>
                 <p class="boxContainer_titulo"> You will receive more details
                     about your order shortly</p>
@@ -300,6 +279,7 @@
             </footer>
             <script src="../javascript/scroll_pZone.js"></script>
             <script src="../javascript/shoppingcart.js"></script>
+            <script src="../javascript/popupPago.js"></script>
         </div>
     </body>
 </html>

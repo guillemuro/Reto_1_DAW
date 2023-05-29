@@ -1,23 +1,17 @@
-/*CSS DEL FORMULARIO DE NUEVO REGISTRO*/
-
-
 .form {
     background-color: white;
-    padding: 4.125vw;
+    padding: 2.5vw;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.75);
     width: 18vw;
-    height: 23vw;
     position: absolute;
-    top: 0;
-    margin-left: 40vw;
-    margin-top: 12vw;
+    top: 12vw;
+    left: 50%;
+    transform: translate(-50%);
     font-size: 1vw;
-
-
 }
 
 
@@ -32,47 +26,55 @@
 
 .form--input {
     width: 100%;
-    margin-bottom: 1.25em;
+    margin-bottom: 0.2vw;
     border-radius: 5px;
     border: 1px solid gray;
-    padding: 0.8vw;
     font-family: 'Inter', sans-serif;
     outline: none;
-
+    height: 2vw;
+    font-size: 1vw;
 }
 
 .form--input:focus {
     border: 1px solid #639;
     outline: none;
+    font-size: 1vw;
 }
 
 .form--marketing {
     display: flex;
-    margin-bottom: 1.25em;
+    margin-bottom: 1vw;
     align-items: center;
+    font-size: 1vw;
+
 }
 
 .form--marketing>input {
     margin-right: 0.625em;
+    font-size: 1vw;
 }
 
 .form--marketing>label {
     color: grey;
+    font-size: 1vw;
 }
 
 .checkbox,
 input[type="checkbox"] {
     accent-color: #639;
+    margin-top: 2vw;
+    font-size: 1vw;
 }
 
 .form--submit {
     width: 50%;
-    padding: 0.625em;
+    padding: 0.6vw;
     border-radius: 5px;
     color: white;
     background-color: #639;
     border: 1px dashed #639;
     cursor: pointer;
+    font-size: 1vw;
 }
 
 .form--submit:hover {
@@ -81,11 +83,9 @@ input[type="checkbox"] {
     border: 1px dashed #639;
     cursor: pointer;
     transition: 0.5s;
+    font-size: 1vw;
 }
 
-
-
-/*RESTO DEL CSS*/
 .box {
     font-family: 'Inter', sans-serif;
 }
@@ -366,10 +366,6 @@ a:visited {
     margin-bottom: 2vw;
 }
 
-#boton_scroll:hover {
-    background-color: red;
-}
-
 .contenedor_correo {
     position: relative;
     margin: 2.5vw auto;
@@ -486,7 +482,6 @@ a:visited {
     top: 18vw;
 }
 
-/*CARRITO*/
 .usuario_carrito {
     position: absolute;
     right: 0;
