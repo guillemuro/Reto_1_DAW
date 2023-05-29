@@ -2,7 +2,7 @@
 .new {
     top: 42.5vw;
     position: fixed;
-    font-size: 1.2em;
+    font-size: 1.5vw;
     padding: 0.7em 1.4em;
     background-color: #dfddb6;
     text-decoration: none;
@@ -59,18 +59,18 @@
 
 .title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     line-height: 2rem;
     font-weight: 700;
 }
 
 .form {
-    margin-top: 1.5rem;
+    margin-top: 1.5vw;
 }
 
 .input-group {
     margin-top: 0.25rem;
-    font-size: 0.875rem;
+    font-size: 1vw;
     line-height: 1.25rem;
 }
 

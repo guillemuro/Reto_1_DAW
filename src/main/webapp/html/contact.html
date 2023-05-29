@@ -8,7 +8,6 @@
         <meta name="authors" content="Paula, Guillermo" />
         <title>Contact us</title>
         <link rel="stylesheet" href="../css/contact.css">
-        <link rel="stylesheet" href="../css/login.css">
         <link rel="shortcut icon" href="../imagenes/favicon_ctrl.png"
             type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,7 +70,14 @@
 
             <div class="contenedor_privacy_policy">
                 <h1 class="titulo_principal">Contact Us<br><span class="subtitulos"><em>If coffee is the gasoline of your life, <br>contact us and we will fill your tank</em></span></h1>
-                <div class="formulario">
+                <div class="contenido_contacto">
+                    <img class="contacto_img" src="../imagenes/atencion-al-cliente.png">
+                    <p>Life is short, but coffee is long! If you need a shot of energy, make a suggestion, share your experiences (good and bad) or you just want to chat about life and coffee, our contact team is here to brighten your day. Contact us and live a cup full of flavor, humor and unforgettable coffee moments!</p>
+                    <button class="boton_enviar" type="submit"><a href="mailto:ctrlaltcoffe@gmail.com? Subject=Mandanos%20tu%20curriculum Subject=Manda%20tu%20curriculum"><strong>SUBMIT</strong></a></button></a>
+                </div>
+
+
+                <!-- <div class="formulario">
 
                     <form id="myForm">
                         <div class="form-container">
@@ -81,12 +87,17 @@
                             </div>
         
                             <div class="input-group">
-                                <label for="message">Email:</label>
+                                <label for="email">Email:</label>
                                 <input type="password" id="message"><br><br>
                             </div>
 
                             <div class="input-group">
-                                <label for="message">Contact number:</label>
+                                <label for="contact number">Contact number:</label>
+                                <input type="number" id="message"><br><br>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="message">Message:</label>
                                 <input type="number" id="message"><br><br>
                             </div>
         
@@ -97,29 +108,18 @@
         
                     </form>
 
-                    <form class="form">
-                            <label for="name">First name</label><br>
-                            <input type="text" id="name"><br>
-                            <label for="name">Last name</label><br>
-                            <input type="text" id="name"><br>
-                            <label for="name">Email</label><br>
-                            <input type="text" id="name"><br>
-                            <label for="name">Contact number</label><br>
-                            <input type="text" id="name"><br>
-                            <label for="name">Message</label><br>
-                            <textarea required rows="3" placeholder class="input01"></textarea><br>
-                        <button class="boton_submit">SUBMIT</button>
+
 
                     
     
-                        <!-- <button class="fancy" href="#">
+                         <button class="fancy" href="#">
                             <span class="top-key"></span>
                             <span class="text">submit</span>
                             <span class="bottom-key-1"></span>
                             <span class="bottom-key-2"></span>
                         </button> -->
-                    </form>
-                </div>
+                    <!-- </form> -->
+                <!-- </div>  -->
                 <img class="banner" src="../imagenes/contact_us.png" alt="banner"/>
             </div>
 
@@ -216,6 +216,7 @@
             </footer>
             <script src="../javascript/main.js"></script>
             <script src="../javascript/shoppingcart.js"></script>
+            <script src="../javascript/scroll_pZone.js"></script>
         </div>
     </body>
 </html>
