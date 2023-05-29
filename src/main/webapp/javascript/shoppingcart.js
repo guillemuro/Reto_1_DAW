@@ -166,27 +166,6 @@ function toggleHoverColor(element) {
 }
 
 
-//POPUP PEDIDO REALIZADO
-var button_pay = document.querySelector(".boton_pagar"),
-  elemento = document.querySelector(".elemento"),
-  popupPedido = document.querySelector(".popup_pedidorealizado"),
-  cerrarPopupPedidoRealizado = document.querySelector(".cerrar_popup"),
-  circulo_tick = document.querySelector(".circ"),
-  clicPrimero = true;
-
-button_pay.addEventListener("click", function () {
-  elemento.classList.toggle("drawn");
-  popupPedido.classList.add("active");
-});
-
-cerrarPopupPedidoRealizado.addEventListener("click", function () {
-  popupPedido.classList.remove("active");
-  elemento.classList.remove("drawn");
-  if (clicPrimero) {
-    circulo_tick.classList.add("transicion-activa");
-    clicPrimero = false;
-  }
-});
 
 
 //BOTON QUANTITY (LOCAL STORAGE)
