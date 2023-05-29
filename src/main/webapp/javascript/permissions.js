@@ -47,7 +47,9 @@ Promise.all(peticiones).then(function (rs) {
                     `
                 cuerpoMenu.appendChild(div);
             });
+
         }));
+
 })
     .catch(function (error) {
         console.log('Error try again' + error.message);
@@ -63,17 +65,15 @@ button_add.addEventListener('click', function () {
     let categoria = document.getElementById("select_categoria").value;
     let titulo = document.getElementById("input_title").value;
 
-    fetch('http://localhost:8081/src/Controller?ACTION=PRODUCT.ADD&NAME=' + nombre + '&DESC=' + descripcion + '&PRECIO=' + precio + '&IMG=' + imagen + '&CATEGORIA=' + categoria + '&TITLE=' + titulo).then(function (response) {
-        console.log(response.status);
-        console.log(response.statusText);
-        console.log(response.text());
+    fetch('http://localhost:8081/src/Controller?ACTION=PRODUCT.ADD&NAME=' + nombre + '&DESC=' + descripcion + '&PRECIO=' + precio + '&IMG=' + titulo + '&CATEGORIA=' + categoria + '&TITLE=' + imagen).then(function (response) {
 
         response.json().then(function (json) {
-            if (json == '1') {
+            if (json == '0') {
+                alert("The data has been saved succesfully")
+
+            } else {
                 alert("The data has been saved succesfully")
                 window.location.href = "../index.html"
-            } else {
-                alert("Try again")
             }
 
 
