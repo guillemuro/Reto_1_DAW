@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/auditoria.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins'
+            rel='stylesheet'>
+        <title>auditoria</title>
+    </head>
+    <body>
+        <script>
+            // Función para guardar los datos en el localStorage
+            function guardarDatos() {
+                var email = document.getElementById('email').value;
+                var contraseña = document.getElementById('contraseña').value;
+                var repetirContraseña = document.getElementById('repetirContraseña').value;
+        
+                // Verificar si las contraseñas coinciden
+                if (contraseña !== repetirContraseña) {
+                alert("The passwords do not match. Please try again");
+                return;
+                }
+                if (email === '' || contraseña === '' || repetirContraseña === '') {
+                    alert("Please complete all fields of the form.");
+                    return;
+                }
+        
+
+                // Verificar si el navegador admite localStorage
+                if (typeof(Storage) !== "undefined") {
+                // Guardar los datos en el localStorage
+                localStorage.setItem("email", email);
+                localStorage.setItem("contraseña", contraseña);
+                localStorage.setItem("repetirContraseña", repetirContraseña);
+        
+
+                alert("Hola Vanesa Bienvenida, esto es la autoria");
+                window.location.href = "../index.html"
+                } else {
+                    alert("You entered incorrect fields");
+                
+                }
+                window.location.href = "../index.html"
+            }
+            
+        </script>
+        <!--CUERPO DEL BODY-->
+        <div class="cuerpo_menu" id="classMenu">
+            <div class="cafe">
+                <img class="corazon" src="../imagenes/like.png" alt="corazon" />
+                <div class="nuevaImagenAutoria">
+                    <div class="circulo"></div>
+                    <div class="circulo" id="circulo2"></div>
+                    <img class="ImagenAutoria"
+                        src="../imagenes/SBX-UK-MOP-Latte.jpg.jpeg" alt="cafe 1" />
+                </div>
+                <div class="informacionAutoria">
+                    <h2 class="titulo_bebida">Café expresso</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur cupiditate assume</p>
+                </div>
+                <button class="button">Añadir</button>
+            </div>
+
+            <div class="cafe">
+                <img class="corazon" src="../imagenes/like.png" alt="corazon" />
+                <div class="nuevaImagenAutoria">
+                    <div class="circulo"></div>
+                    <div class="circulo" id="circulo2"></div>
+                    <img class="ImagenAutoria"
+                        src="../imagenes/SBX-UK-MOP-Latte.jpg.jpeg" alt="cafe 1" />
+                </div>
+                <div class="informacionAutoria">
+                    <h2 class="titulo_bebida">Café expresso</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur cupiditate assume</p>
+                </div>
+                <button class="button">Añadir</button>
+            </div>
+
+            <div class="cafe">
+                <img class="corazon" src="../imagenes/like.png" alt="corazon" />
+                <div class="nuevaImagenAutoria">
+                    <div class="circulo"></div>
+                    <div class="circulo" id="circulo2"></div>
+                    <img class="ImagenAutoria"
+                        src="../imagenes/SBX-UK-MOP-Latte.jpg.jpeg" alt="cafe 1" />
+                </div>
+                <div class="informacionAutoria">
+                    <h2 class="titulo_bebida">Café expresso</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur cupiditate assume</p>
+                </div>
+                <button class="button">Añadir</button>
+            </div>
+
+            <div class="cafe">
+                <img class="corazon" src="../imagenes/like.png" alt="corazon" />
+                <div class="nuevaImagenAutoria">
+                    <div class="circulo"></div>
+                    <div class="circulo" id="circulo2"></div>
+                    <img class="ImagenAutoria"
+                        src="../imagenes/SBX-UK-MOP-Latte.jpg.jpeg" alt="cafe 1" />
+                </div>
+                <div class="informacionAutoria">
+                    <h2 class="titulo_bebida">Café expresso</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur cupiditate assume</p>
+                </div>
+                <button class="button">Añadir</button>
+            </div>
+        </div>
+        <!--CONTENIDO DEL FORMULARIO DE CUENTA NUEVA-->
+
+        <!--CONTENIDO DEL FORMULARIO DE CUENTA NUEVA-->
+        <form class="form">
+            <h3 class="signup">Sign Up</h3>
+            <label for="email">Email:</label>
+            <input class="form--input" type="email" id="email" required><br><br>
+            <label for="contraseña">Password:</label>
+            <input class="form--input" type="password" id="contraseña"
+                required><br><br>
+
+            <label for="repetirContraseña">Repeat
+                Password:</label>
+            <input class="form--input" type="password"
+                id="repetirContraseña" required>
+            <div class="form--marketing">
+                <input id="okayToEmail" type="checkbox">
+                <label for="okayToEmail" class="checkbox">
+                    I want to join the newsletter
+                </label>
+            </div>
+
+            <input class="form--submit"
+                type="button" value="Join us"
+                onclick="guardarDatos()">
+        </form>
+
+    </body>
+    <script src="../javascript/scroll_pZone.js"></script>
+    <script src="../javascript/shoppingcart.js"></script>
+</html>
