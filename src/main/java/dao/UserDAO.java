@@ -14,7 +14,7 @@ public class UserDAO implements IDAO<User> {
     public int add(User bean) {
         try {
             motorOracle.connect();
-            String sql = "SELECT MAX(COFFEEUSER_ID) FROM COFFEEUSER";
+            String sql = "SELECT MAX(COFFEE_USER_ID) FROM COFFEE_USER";
             ResultSet rs = motorOracle.executeQuery(sql);
             int maxId = 0;
             if (rs.next()) {
@@ -23,13 +23,13 @@ public class UserDAO implements IDAO<User> {
             }
 
             // Construye la consulta SQL para insertar un nuevo usuario en la base de datos
-            sql = "INSERT INTO COFFEEUSER VALUES (" + maxId + ",'" + bean.getName() + "', '" + bean.getPass()
+            sql = "INSERT INTO COFFEE_USER VALUES (" + maxId + ",'" + bean.getName() + "', '" + bean.getPass()
                     + "', '" + bean.getEmail() + "')";
             motorOracle.executeUpdate(sql);
             motorOracle.disconnect();
 
             // Obtiene el ID del usuario recién insertado
-            sql = "SELECT COFFEEUSER_ID FROM COFFEEUSER CU WHERE CU.COFFEEUSER_EMAIL = " + bean.getEmail();
+            sql = "SELECT COFFEE_USER_ID FROM COFFEE_USER CU WHERE CU.COFFEE_USER_EMAIL = " + bean.getEmail();
             rs = motorOracle.executeQuery(sql);
             int userId = 0;
             if (rs.next()) {
